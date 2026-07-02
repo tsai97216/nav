@@ -1,147 +1,221 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chi 的工具箱</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      padding: 30px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chi Portal</title>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 30px;
+  }
 
-    .section {
-      margin-bottom: 40px;
-    }
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-    .title {
-      font-size: 20px;
-      margin: 20px 0 10px;
-      border-left: 4px solid #38bdf8;
-      padding-left: 10px;
-    }
+  .section {
+    margin-bottom: 50px;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-    }
+  .title {
+    font-size: 20px;
+    margin: 20px 0 15px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
+  }
 
-    a {
-      display: block;
-      text-decoration: none;
-      color: #e2e8f0;
-      background: #1e293b;
-      padding: 12px;
-      border-radius: 10px;
-      transition: 0.2s;
-      font-size: 14px;
-    }
+  .term {
+    margin-top: 20px;
+    font-size: 16px;
+    opacity: 0.9;
+  }
 
-    a:hover {
-      background: #334155;
-      transform: translateY(-2px);
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
 
-    .desc {
-      font-size: 12px;
-      opacity: 0.7;
-    }
-  </style>
+  a {
+    display: block;
+    text-decoration: none;
+    color: #e2e8f0;
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    background: #334155;
+    transform: translateY(-2px);
+  }
+
+  .desc {
+    font-size: 12px;
+    opacity: 0.7;
+  }
+</style>
+
 </head>
 <body>
 
-<h1>🚀 Chi 的工具箱</h1>
+<h1>🚀 Chi Portal</h1>
 
-<!-- 常用網站 -->
+<!-- ================= 常用網站 ================= -->
 <div class="section">
   <div class="title">常用網站</div>
   <div class="grid">
-    <a href="https://www.google.com" target="_blank">Google<br><span class="desc">搜尋引擎</span></a>
-    <a href="https://chat.openai.com/" target="_blank">ChatGPT<br><span class="desc">AI 對話工具</span></a>
-    <a href="https://www.youtube.com/" target="_blank">YouTube<br><span class="desc">影音平台</span></a>
-    <a href="https://github.com/" target="_blank">GitHub<br><span class="desc">程式碼託管</span></a>
-    <a href="https://www.acgbox.link/" target="_blank">ACGBox<br><span class="desc">二次元資源</span></a>
-    <a href="https://tools.liumingye.cn/" target="_blank">劉明野工具箱<br><span class="desc">工具集合</span></a>
+    <a href="https://www.google.com/">Google<br><span class="desc">搜尋引擎</span></a>
+    <a href="https://chat.openai.com/">ChatGPT<br><span class="desc">AI 對話工具</span></a>
+    <a href="https://www.youtube.com/">YouTube<br><span class="desc">影音平台</span></a>
+    <a href="https://github.com/">GitHub<br><span class="desc">程式碼託管平台</span></a>
+    <a href="https://www.acgbox.link/">ACGBox<br><span class="desc">二次元資源站</span></a>
+    <a href="https://tools.liumingye.cn/">劉明野工具箱<br><span class="desc">工具集合</span></a>
   </div>
 </div>
 
-<!-- AI 工具 -->
+<!-- ================= AI 工具 ================= -->
 <div class="section">
   <div class="title">AI 工具</div>
   <div class="grid">
-    <a href="https://gemini.google.com/" target="_blank">Gemini</a>
-    <a href="https://claude.ai/" target="_blank">Claude</a>
-    <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>
-    <a href="https://www.perplexity.ai/" target="_blank">Perplexity</a>
-    <a href="https://grok.com/" target="_blank">Grok</a>
+    <a href="https://gemini.google.com/">Gemini</a>
+    <a href="https://claude.ai/">Claude</a>
+    <a href="https://chat.deepseek.com/">DeepSeek</a>
+    <a href="https://www.doubao.com/chat/">豆包</a>
+    <a href="https://www.perplexity.ai/">Perplexity</a>
+    <a href="https://grok.com/">Grok</a>
   </div>
 </div>
 
-<!-- 影音娛樂 -->
+<!-- ================= 影音娛樂 ================= -->
 <div class="section">
   <div class="title">影音娛樂</div>
+
+  <div class="term">串流平台</div>
   <div class="grid">
-    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-    <a href="https://music.youtube.com/" target="_blank">YouTube Music</a>
-    <a href="https://www.netflix.com/tw/" target="_blank">Netflix</a>
-    <a href="https://www.bilibili.com/" target="_blank">Bilibili</a>
-    <a href="https://www.twitch.tv/" target="_blank">Twitch</a>
-    <a href="https://open.spotify.com/" target="_blank">Spotify</a>
+    <a href="https://www.youtube.com/">YouTube</a>
+    <a href="https://music.youtube.com/">YouTube Music</a>
+    <a href="https://www.netflix.com/tw/">Netflix</a>
+    <a href="https://www.bilibili.com/">Bilibili</a>
+    <a href="https://www.twitch.tv/">Twitch</a>
+    <a href="https://open.spotify.com/">Spotify</a>
+    <a href="https://www.ofiii.com/">Ofiii</a>
+  </div>
+
+  <div class="term">動漫與創作</div>
+  <div class="grid">
+    <a href="https://ani.gamer.com.tw/">動畫瘋</a>
+    <a href="https://tw.manhuagui.com/">漫畫櫃</a>
+    <a href="https://anime1.me/">Anime1</a>
+    <a href="https://www.pixiv.net/">Pixiv</a>
+    <a href="https://mobinovels.com/">MobiNovels</a>
   </div>
 </div>
 
-<!-- 遊戲 -->
+<!-- ================= 遊戲資料 ================= -->
 <div class="section">
   <div class="title">遊戲與資料</div>
+
+  <div class="term">遊戲資料站</div>
   <div class="grid">
-    <a href="https://homdgcat.wiki/" target="_blank">玉衡杯</a>
-    <a href="https://hakush.in/" target="_blank">Hakush.in</a>
-    <a href="https://www.hoyolab.com/" target="_blank">HoYoLAB</a>
-    <a href="https://www.prydwen.gg/" target="_blank">Prydwen</a>
-    <a href="https://howlongtobeat.com/" target="_blank">HowLongToBeat</a>
+    <a href="https://homdgcat.wiki/">玉衡杯</a>
+    <a href="https://hakush.in/">Hakush.in</a>
+    <a href="https://www.hoyolab.com/">HoYoLAB</a>
+    <a href="https://tuopaimf.com/">宇宙市場趨勢</a>
+    <a href="https://www.prydwen.gg/">Prydwen</a>
+    <a href="https://genpkm.com/">GenPKM</a>
+    <a href="https://howlongtobeat.com/">HowLongToBeat</a>
+  </div>
+
+  <div class="term">資源與折扣</div>
+  <div class="grid">
+    <a href="https://steamdb.info/">SteamDB</a>
+    <a href="https://isthereanydeal.com/giveaways/">IsThereAnyDeal</a>
+    <a href="https://wiki.biligame.com/">Bwiki</a>
+    <a href="https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB">4Gamers</a>
+    <a href="https://web.cloudmoonapp.com/zh/">CloudMoon</a>
+    <a href="https://www.gamer520.com/">遊戲520</a>
+    <a href="https://wutafuncat.blogspot.com/">屋塔房小貓</a>
   </div>
 </div>
 
-<!-- 社群 -->
+<!-- ================= 社群 ================= -->
 <div class="section">
   <div class="title">社群網站</div>
+
+  <div class="term">社交平台</div>
   <div class="grid">
-    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-    <a href="https://discord.com/login" target="_blank">Discord</a>
-    <a href="https://x.com/" target="_blank">X</a>
-    <a href="https://www.threads.net/" target="_blank">Threads</a>
+    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="https://www.messenger.com/">Messenger</a>
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="https://discord.com/login">Discord</a>
+    <a href="https://x.com/">X</a>
+    <a href="https://www.threads.net/">Threads</a>
+  </div>
+
+  <div class="term">論壇社群</div>
+  <div class="grid">
+    <a href="https://www.gamer.com.tw">巴哈姆特</a>
+    <a href="https://www.reddit.com/">Reddit</a>
+    <a href="https://bbs.nga.cn/">NGA</a>
+    <a href="https://apk.tw/">APK.tw</a>
   </div>
 </div>
 
-<!-- 工具 -->
+<!-- ================= 工具 ================= -->
 <div class="section">
   <div class="title">工具與轉換</div>
+
+  <div class="term">轉換工具</div>
   <div class="grid">
-    <a href="https://is.gd/" target="_blank">短網址</a>
-    <a href="https://tw.piliapp.com/" target="_blank">工具邦</a>
-    <a href="https://translate.google.com.tw/" target="_blank">翻譯</a>
-    <a href="https://cobalt.tools/" target="_blank">影音下載</a>
-    <a href="https://photopea.com/" target="_blank">Photopea</a>
-    <a href="https://www.canva.com/" target="_blank">Canva</a>
+    <a href="https://is.gd/">短網址</a>
+    <a href="https://tw.piliapp.com/">工具邦</a>
+    <a href="https://translate.google.com.tw/">翻譯</a>
+    <a href="https://terabox.com/">TeraBox</a>
+    <a href="https://cobalt.tools/">Cobalt</a>
+    <a href="https://gofile.io/">Gofile</a>
+    <a href="https://pairdrop.net/">PairDrop</a>
+  </div>
+
+  <div class="term">媒體工具</div>
+  <div class="grid">
+    <a href="https://audiomass.co/">AudioMass</a>
+    <a href="https://podcast.adobe.com/enhance">Adobe Podcast</a>
+    <a href="https://www.capcut.com/editor">CapCut</a>
+    <a href="https://tinywow.com/">TinyWOW</a>
+    <a href="https://tools.pdf24.org/zh/">PDF24</a>
+    <a href="https://www.photopea.com/">Photopea</a>
+    <a href="https://www.canva.com/zh_tw/">Canva</a>
   </div>
 </div>
 
-<!-- 安全 -->
+<!-- ================= 安全 ================= -->
 <div class="section">
   <div class="title">安全工具</div>
   <div class="grid">
-    <a href="https://www.virustotal.com/" target="_blank">VirusTotal</a>
-    <a href="https://haveibeenpwned.com/" target="_blank">HIBP</a>
+    <a href="https://www.virustotal.com/">VirusTotal</a>
+    <a href="https://haveibeenpwned.com/">Have I Been Pwned</a>
+  </div>
+</div>
+
+<!-- ================= 進階 ================= -->
+<div class="section">
+  <div class="title">進階工具</div>
+  <div class="grid">
+    <a href="https://gchq.github.io/CyberChef/">CyberChef</a>
+    <a href="https://tsai97216.github.io/alist/">Alist</a>
+    <a href="https://mzbpfgxz.ap-northeast-1.clawcloudrun.com">Bilitool</a>
+    <a href="https://iufgfqinvdqn.ap-northeast-1.clawcloudrun.com">Twitch Miner</a>
+    <a href="https://apps.apptesters.org">AppTesters</a>
+    <a href="https://rentry.org/pgames">盜版遊戲聖經</a>
   </div>
 </div>
 
