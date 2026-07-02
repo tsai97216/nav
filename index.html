@@ -6,243 +6,340 @@
 <title>Chi Portal</title>
 
 <style>
-  body{
-    margin:0;
-    font-family:Arial;
-    background:#0f172a;
-    color:#e2e8f0;
-    padding:30px;
-  }
+:root{
+  --bg:#0b1220;
+  --panel:#111a2e;
+  --card:#1a2440;
+  --hover:#243256;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#38bdf8;
+}
 
-  h1{
-    text-align:center;
-    margin-bottom:40px;
-  }
+*{box-sizing:border-box;}
 
-  .section{
-    margin-bottom:50px;
-  }
+body{
+  margin:0;
+  font-family:system-ui,Arial;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+}
 
-  .title{
-    font-size:20px;
-    border-left:4px solid #38bdf8;
-    padding-left:10px;
-    margin:20px 0 15px;
-  }
+/* sidebar */
+.sidebar{
+  width:240px;
+  background:var(--panel);
+  padding:20px;
+  position:fixed;
+  height:100vh;
+  overflow:auto;
+}
 
-  .term{
-    margin-top:20px;
-    font-size:16px;
-    opacity:0.9;
-  }
+.sidebar h2{
+  font-size:18px;
+  margin-bottom:15px;
+  color:var(--accent);
+}
 
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:10px;
-    margin-top:10px;
-  }
+.nav a{
+  display:block;
+  padding:8px 10px;
+  margin:6px 0;
+  color:var(--text);
+  text-decoration:none;
+  border-radius:8px;
+  font-size:14px;
+}
 
-  a{
-    text-decoration:none;
-    color:#e2e8f0;
-    background:#1e293b;
-    padding:12px;
-    border-radius:10px;
-    display:block;
-    transition:0.2s;
-  }
+.nav a:hover{
+  background:var(--hover);
+}
 
-  a:hover{
-    background:#334155;
-    transform:translateY(-2px);
-  }
+/* main */
+main{
+  margin-left:240px;
+  padding:30px;
+  width:100%;
+}
 
-  .desc{
-    font-size:12px;
-    opacity:0.7;
-  }
+.section{
+  margin-bottom:50px;
+}
+
+.section-title{
+  font-size:20px;
+  border-left:4px solid var(--accent);
+  padding-left:10px;
+  margin-bottom:15px;
+}
+
+/* category */
+.category{
+  margin-top:20px;
+  margin-bottom:10px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+
+.card{
+  background:var(--card);
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--text);
+  transition:.2s;
+  display:block;
+}
+
+.card:hover{
+  background:var(--hover);
+  transform:translateY(-2px);
+}
+
+.title{
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.desc{
+  font-size:12px;
+  color:var(--muted);
+}
+
 </style>
-
 </head>
 
 <body>
 
-<h1>🚀 Chi Portal</h1>
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>🚀 Chi Portal</h2>
+  <div class="nav">
+    <a href="#common">常用網站</a>
+    <a href="#ai">AI 工具</a>
+    <a href="#media">影音娛樂</a>
+    <a href="#game">遊戲資料</a>
+    <a href="#social">社群網站</a>
+    <a href="#tools">工具轉換</a>
+    <a href="#safe">安全工具</a>
+    <a href="#advanced">進階工具</a>
+  </div>
+</div>
 
-<!-- ================= 常用網站 ================= -->
-<div class="section">
-<div class="title">常用網站</div>
+<main>
+
+<!-- ================= 常用 ================= -->
+<section id="common" class="section">
+<div class="section-title">常用網站</div>
+
 <div class="grid">
 
-<a href="https://www.google.com/">Google<br><span class="desc">全球最大搜尋引擎，用來查找各種資訊</span></a>
-<a href="https://chat.openai.com/">ChatGPT<br><span class="desc">AI 對話與問題解決助手</span></a>
-<a href="https://www.youtube.com/">YouTube<br><span class="desc">影片觀看與創作者平台</span></a>
-<a href="https://github.com/">GitHub<br><span class="desc">程式碼託管與開發平台</span></a>
-<a href="https://www.acgbox.link/">ACGBox<br><span class="desc">二次元資源整合網站</span></a>
-<a href="https://tools.liumingye.cn/">劉明野工具箱<br><span class="desc">線上影音與工具集合站</span></a>
+<a class="card" href="https://www.google.com/">
+<div class="title">Google</div><div class="desc">搜尋引擎</div>
+</a>
+
+<a class="card" href="https://chat.openai.com/">
+<div class="title">ChatGPT</div><div class="desc">AI 對話工具</div>
+</a>
+
+<a class="card" href="https://www.youtube.com/">
+<div class="title">YouTube</div><div class="desc">影音平台</div>
+</a>
+
+<a class="card" href="https://github.com/">
+<div class="title">GitHub</div><div class="desc">程式碼託管平台</div>
+</a>
+
+<a class="card" href="https://www.acgbox.link/">
+<div class="title">ACGBox</div><div class="desc">二次元資源整合站</div>
+</a>
+
+<a class="card" href="https://tools.liumingye.cn/">
+<div class="title">劉明野工具箱</div><div class="desc">線上工具集合</div>
+</a>
 
 </div>
-</div>
+</section>
 
-<!-- ================= AI 工具 ================= -->
-<div class="section">
-<div class="title">AI 工具</div>
+<!-- ================= AI ================= -->
+<section id="ai" class="section">
+<div class="section-title">AI 工具</div>
+
 <div class="grid">
 
-<a href="https://gemini.google.com/">Gemini<br><span class="desc">Google 的 AI 對話模型</span></a>
-<a href="https://claude.ai/">Claude<br><span class="desc">強化文字理解與程式分析 AI</span></a>
-<a href="https://chat.deepseek.com/">DeepSeek<br><span class="desc">推理能力較強的 AI 模型</span></a>
-<a href="https://www.doubao.com/chat/">豆包<br><span class="desc">輕量中文 AI 助手</span></a>
-<a href="https://www.perplexity.ai/">Perplexity<br><span class="desc">AI 搜尋引擎</span></a>
-<a href="https://grok.com/">Grok<br><span class="desc">X 平台 AI 助手</span></a>
+<a class="card" href="https://gemini.google.com/">
+<div class="title">Gemini</div><div class="desc">Google AI 模型</div>
+</a>
+
+<a class="card" href="https://claude.ai/">
+<div class="title">Claude</div><div class="desc">文字與程式分析 AI</div>
+</a>
+
+<a class="card" href="https://chat.deepseek.com/">
+<div class="title">DeepSeek</div><div class="desc">推理型 AI 模型</div>
+</a>
+
+<a class="card" href="https://www.doubao.com/chat/">
+<div class="title">豆包</div><div class="desc">輕量 AI 助手</div>
+</a>
+
+<a class="card" href="https://www.perplexity.ai/">
+<div class="title">Perplexity</div><div class="desc">AI 搜尋引擎</div>
+</a>
+
+<a class="card" href="https://grok.com/">
+<div class="title">Grok</div><div class="desc">X 平台 AI</div>
+</a>
 
 </div>
-</div>
+</section>
 
-<!-- ================= 影音娛樂 ================= -->
-<div class="section">
-<div class="title">影音娛樂</div>
+<!-- ================= 影音 ================= -->
+<section id="media" class="section">
+<div class="section-title">影音娛樂</div>
 
-<div class="term">串流平台</div>
+<div class="category">串流平台</div>
 <div class="grid">
 
-<a href="https://www.youtube.com/">YouTube<br><span class="desc">影片平台</span></a>
-<a href="https://music.youtube.com/">YouTube Music<br><span class="desc">音樂串流服務</span></a>
-<a href="https://www.netflix.com/tw/">Netflix<br><span class="desc">影視串流平台</span></a>
-<a href="https://www.bilibili.com/">Bilibili<br><span class="desc">動畫與影片平台</span></a>
-<a href="https://www.twitch.tv/">Twitch<br><span class="desc">直播平台</span></a>
-<a href="https://open.spotify.com/">Spotify<br><span class="desc">音樂串流服務</span></a>
-<a href="https://www.ofiii.com/">Ofiii<br><span class="desc">免費影視平台</span></a>
+<a class="card" href="https://www.youtube.com/"><div class="title">YouTube</div><div class="desc">影片平台</div></a>
+<a class="card" href="https://music.youtube.com/"><div class="title">YouTube Music</div><div class="desc">音樂串流</div></a>
+<a class="card" href="https://www.netflix.com/tw/"><div class="title">Netflix</div><div class="desc">影視平台</div></a>
+<a class="card" href="https://www.bilibili.com/"><div class="title">Bilibili</div><div class="desc">動畫與影片</div></a>
+<a class="card" href="https://www.twitch.tv/"><div class="title">Twitch</div><div class="desc">直播平台</div></a>
+<a class="card" href="https://open.spotify.com/"><div class="title">Spotify</div><div class="desc">音樂串流</div></a>
+<a class="card" href="https://www.ofiii.com/"><div class="title">Ofiii</div><div class="desc">免費影視</div></a>
 
 </div>
 
-<div class="term">動漫與創作</div>
+<div class="category">動漫創作</div>
 <div class="grid">
 
-<a href="https://ani.gamer.com.tw/">動畫瘋<br><span class="desc">正版動畫播放平台</span></a>
-<a href="https://tw.manhuagui.com/">漫畫櫃<br><span class="desc">線上漫畫閱讀網站</span></a>
-<a href="https://anime1.me/">Anime1<br><span class="desc">動畫觀看網站</span></a>
-<a href="https://www.pixiv.net/">Pixiv<br><span class="desc">插畫與同人創作平台</span></a>
-<a href="https://mobinovels.com/">MobiNovels<br><span class="desc">輕小說與電子書平台</span></a>
+<a class="card" href="https://ani.gamer.com.tw/"><div class="title">動畫瘋</div><div class="desc">正版動畫</div></a>
+<a class="card" href="https://tw.manhuagui.com/"><div class="title">漫畫櫃</div><div class="desc">漫畫閱讀</div></a>
+<a class="card" href="https://anime1.me/"><div class="title">Anime1</div><div class="desc">動畫網站</div></a>
+<a class="card" href="https://www.pixiv.net/"><div class="title">Pixiv</div><div class="desc">插畫平台</div></a>
+<a class="card" href="https://mobinovels.com/"><div class="title">MobiNovels</div><div class="desc">輕小說</div></a>
 
 </div>
-</div>
+</section>
 
-<!-- ================= 遊戲與資料 ================= -->
-<div class="section">
-<div class="title">遊戲與資料</div>
+<!-- ================= 遊戲 ================= -->
+<section id="game" class="section">
+<div class="section-title">遊戲與資料</div>
 
-<div class="term">遊戲資料站</div>
+<div class="category">資料站</div>
 <div class="grid">
 
-<a href="https://homdgcat.wiki/">玉衡杯<br><span class="desc">遊戲數據資料庫</span></a>
-<a href="https://hakush.in/">Hakush.in<br><span class="desc">遊戲資料查詢工具</span></a>
-<a href="https://www.hoyolab.com/">HoYoLAB<br><span class="desc">米哈遊社群平台</span></a>
-<a href="https://tuopaimf.com/">宇宙市場趨勢<br><span class="desc">星鐵角色分析網站</span></a>
-<a href="https://www.prydwen.gg/">Prydwen<br><span class="desc">角色強度分析網站</span></a>
-<a href="https://genpkm.com/">GenPKM<br><span class="desc">寶可夢資料工具</span></a>
-<a href="https://howlongtobeat.com/">HowLongToBeat<br><span class="desc">遊戲時長資料庫</span></a>
+<a class="card" href="https://homdgcat.wiki/"><div class="title">玉衡杯</div><div class="desc">遊戲資料庫</div></a>
+<a class="card" href="https://hakush.in/"><div class="title">Hakush.in</div><div class="desc">數據查詢</div></a>
+<a class="card" href="https://www.hoyolab.com/"><div class="title">HoYoLAB</div><div class="desc">米哈遊社群</div></a>
+<a class="card" href="https://tuopaimf.com/"><div class="title">宇宙市場</div><div class="desc">角色排行</div></a>
+<a class="card" href="https://www.prydwen.gg/"><div class="title">Prydwen</div><div class="desc">強度分析</div></a>
+<a class="card" href="https://genpkm.com/"><div class="title">GenPKM</div><div class="desc">寶可夢資料</div></a>
+<a class="card" href="https://howlongtobeat.com/"><div class="title">HowLongToBeat</div><div class="desc">遊戲時長</div></a>
 
 </div>
 
-<div class="term">資源與折扣</div>
+<div class="category">折扣資源</div>
 <div class="grid">
 
-<a href="https://steamdb.info/">SteamDB<br><span class="desc">Steam 遊戲資料庫</span></a>
-<a href="https://isthereanydeal.com/giveaways/">IsThereAnyDeal<br><span class="desc">遊戲折扣追蹤網站</span></a>
-<a href="https://wiki.biligame.com/">Bwiki<br><span class="desc">遊戲百科資料庫</span></a>
-<a href="https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB">4Gamers<br><span class="desc">限免遊戲資訊</span></a>
-<a href="https://web.cloudmoonapp.com/zh/">CloudMoon<br><span class="desc">雲端遊戲平台</span></a>
-<a href="https://www.gamer520.com/">遊戲520<br><span class="desc">遊戲資源網站</span></a>
-<a href="https://wutafuncat.blogspot.com/">屋塔房小貓<br><span class="desc">軟體與資源分享站</span></a>
+<a class="card" href="https://steamdb.info/"><div class="title">SteamDB</div><div class="desc">Steam 資料庫</div></a>
+<a class="card" href="https://isthereanydeal.com/giveaways/"><div class="title">IsThereAnyDeal</div><div class="desc">折扣追蹤</div></a>
+<a class="card" href="https://wiki.biligame.com/"><div class="title">Bwiki</div><div class="desc">遊戲百科</div></a>
+<a class="card" href="https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB"><div class="title">4Gamers</div><div class="desc">限免資訊</div></a>
+<a class="card" href="https://web.cloudmoonapp.com/zh/"><div class="title">CloudMoon</div><div class="desc">雲端遊戲</div></a>
+<a class="card" href="https://www.gamer520.com/"><div class="title">遊戲520</div><div class="desc">資源站</div></a>
+<a class="card" href="https://wutafuncat.blogspot.com/"><div class="title">屋塔房</div><div class="desc">工具分享</div></a>
 
 </div>
-</div>
+</section>
 
 <!-- ================= 社群 ================= -->
-<div class="section">
-<div class="title">社群網站</div>
+<section id="social" class="section">
+<div class="section-title">社群網站</div>
 
-<div class="term">社交平台</div>
+<div class="category">社交平台</div>
 <div class="grid">
 
-<a href="https://www.facebook.com/">Facebook<br><span class="desc">社交平台</span></a>
-<a href="https://www.messenger.com/">Messenger<br><span class="desc">即時通訊工具</span></a>
-<a href="https://www.instagram.com/">Instagram<br><span class="desc">圖片社群平台</span></a>
-<a href="https://discord.com/login">Discord<br><span class="desc">社群聊天工具</span></a>
-<a href="https://x.com/">X<br><span class="desc">即時資訊平台</span></a>
-<a href="https://www.threads.net/">Threads<br><span class="desc">文字社群平台</span></a>
+<a class="card" href="https://www.facebook.com/"><div class="title">Facebook</div><div class="desc">社交平台</div></a>
+<a class="card" href="https://www.messenger.com/"><div class="title">Messenger</div><div class="desc">通訊</div></a>
+<a class="card" href="https://www.instagram.com/"><div class="title">Instagram</div><div class="desc">圖片社群</div></a>
+<a class="card" href="https://discord.com/login"><div class="title">Discord</div><div class="desc">聊天工具</div></a>
+<a class="card" href="https://x.com/"><div class="title">X</div><div class="desc">資訊平台</div></a>
+<a class="card" href="https://www.threads.net/"><div class="title">Threads</div><div class="desc">文字社群</div></a>
 
 </div>
 
-<div class="term">論壇社群</div>
+<div class="category">論壇</div>
 <div class="grid">
 
-<a href="https://www.gamer.com.tw">巴哈姆特<br><span class="desc">ACG 與遊戲論壇</span></a>
-<a href="https://www.reddit.com/">Reddit<br><span class="desc">全球討論論壇</span></a>
-<a href="https://bbs.nga.cn/">NGA<br><span class="desc">遊戲論壇社群</span></a>
-<a href="https://apk.tw/">APK.tw<br><span class="desc">Android 資源論壇</span></a>
+<a class="card" href="https://www.gamer.com.tw"><div class="title">巴哈姆特</div><div class="desc">ACG 論壇</div></a>
+<a class="card" href="https://www.reddit.com/"><div class="title">Reddit</div><div class="desc">全球論壇</div></a>
+<a class="card" href="https://bbs.nga.cn/"><div class="title">NGA</div><div class="desc">遊戲社群</div></a>
+<a class="card" href="https://apk.tw/"><div class="title">APK.tw</div><div class="desc">Android 論壇</div></a>
 
 </div>
-</div>
+</section>
 
 <!-- ================= 工具 ================= -->
-<div class="section">
-<div class="title">工具與轉換</div>
+<section id="tools" class="section">
+<div class="section-title">工具與轉換</div>
 
-<div class="term">轉換工具</div>
 <div class="grid">
 
-<a href="https://is.gd/">短網址<br><span class="desc">網址縮短工具</span></a>
-<a href="https://tw.piliapp.com/">工具邦<br><span class="desc">線上工具集合</span></a>
-<a href="https://translate.google.com.tw/">Google 翻譯<br><span class="desc">翻譯工具</span></a>
-<a href="https://terabox.com/">TeraBox<br><span class="desc">雲端儲存服務</span></a>
-<a href="https://cobalt.tools/">Cobalt<br><span class="desc">影音下載工具</span></a>
-<a href="https://gofile.io/">Gofile<br><span class="desc">檔案分享服務</span></a>
-<a href="https://pairdrop.net/">PairDrop<br><span class="desc">裝置間傳輸工具</span></a>
+<a class="card" href="https://is.gd/"><div class="title">短網址</div><div class="desc">網址縮短</div></a>
+<a class="card" href="https://tw.piliapp.com/"><div class="title">工具邦</div><div class="desc">工具集合</div></a>
+<a class="card" href="https://translate.google.com.tw/"><div class="title">翻譯</div><div class="desc">Google 翻譯</div></a>
+<a class="card" href="https://terabox.com/"><div class="title">TeraBox</div><div class="desc">雲端儲存</div></a>
+<a class="card" href="https://cobalt.tools/"><div class="title">Cobalt</div><div class="desc">下載工具</div></a>
+<a class="card" href="https://gofile.io/"><div class="title">Gofile</div><div class="desc">檔案分享</div></a>
+<a class="card" href="https://pairdrop.net/"><div class="title">PairDrop</div><div class="desc">裝置傳輸</div></a>
+
+<a class="card" href="https://audiomass.co/"><div class="title">AudioMass</div><div class="desc">音訊編輯</div></a>
+<a class="card" href="https://podcast.adobe.com/enhance"><div class="title">Adobe Podcast</div><div class="desc">音質強化</div></a>
+<a class="card" href="https://www.capcut.com/editor"><div class="title">CapCut</div><div class="desc">剪輯工具</div></a>
+<a class="card" href="https://tinywow.com/"><div class="title">TinyWOW</div><div class="desc">文件工具</div></a>
+<a class="card" href="https://tools.pdf24.org/zh/"><div class="title">PDF24</div><div class="desc">PDF 工具</div></a>
+<a class="card" href="https://www.photopea.com/"><div class="title">Photopea</div><div class="desc">修圖工具</div></a>
+<a class="card" href="https://www.canva.com/zh_tw/"><div class="title">Canva</div><div class="desc">設計工具</div></a>
 
 </div>
-
-<div class="term">媒體工具</div>
-<div class="grid">
-
-<a href="https://audiomass.co/">AudioMass<br><span class="desc">音訊編輯工具</span></a>
-<a href="https://podcast.adobe.com/enhance">Adobe Podcast<br><span class="desc">音質強化工具</span></a>
-<a href="https://www.capcut.com/editor">CapCut<br><span class="desc">影片剪輯工具</span></a>
-<a href="https://tinywow.com/">TinyWOW<br><span class="desc">文件處理工具</span></a>
-<a href="https://tools.pdf24.org/zh/">PDF24<br><span class="desc">PDF 工具集合</span></a>
-<a href="https://www.photopea.com/">Photopea<br><span class="desc">線上圖片編輯器</span></a>
-<a href="httpswww.canva.com/zh_tw/">Canva<br><span class="desc">設計工具</span></a>
-
-</div>
-</div>
+</section>
 
 <!-- ================= 安全 ================= -->
-<div class="section">
-<div class="title">安全工具</div>
+<section id="safe" class="section">
+<div class="section-title">安全工具</div>
 <div class="grid">
 
-<a href="https://www.virustotal.com/">VirusTotal<br><span class="desc">檔案安全掃描</span></a>
-<a href="https://haveibeenpwned.com/">Have I Been Pwned<br><span class="desc">帳號外洩查詢</span></a>
+<a class="card" href="https://www.virustotal.com/"><div class="title">VirusTotal</div><div class="desc">檔案掃描</div></a>
+<a class="card" href="https://haveibeenpwned.com/"><div class="title">HIBP</div><div class="desc">帳號外洩查詢</div></a>
 
 </div>
-</div>
+</section>
 
 <!-- ================= 進階 ================= -->
-<div class="section">
-<div class="title">進階工具</div>
+<section id="advanced" class="section">
+<div class="section-title">進階工具</div>
 <div class="grid">
 
-<a href="https://gchq.github.io/CyberChef/">CyberChef<br><span class="desc">加解密與數據處理工具</span></a>
-<a href="https://tsai97216.github.io/alist/">Alist<br><span class="desc">雲端檔案管理系統</span></a>
-<a href="https://mzbpfgxz.ap-northeast-1.clawcloudrun.com">Bilitool<br><span class="desc">Bilibili 自動工具</span></a>
-<a href="https://iufgfqinvdqn.ap-northeast-1.clawcloudrun.com">Twitch Miner<br><span class="desc">Twitch 工具</span></a>
-<a href="https://apps.apptesters.org">AppTesters<br><span class="desc">IPA 下載平台</span></a>
-<a href="https://rentry.org/pgames">盜版遊戲聖經<br><span class="desc">遊戲資源索引</span></a>
+<a class="card" href="https://gchq.github.io/CyberChef/"><div class="title">CyberChef</div><div class="desc">加解密工具</div></a>
+<a class="card" href="https://tsai97216.github.io/alist/"><div class="title">Alist</div><div class="desc">雲端管理</div></a>
+<a class="card" href="https://mzbpfgxz.ap-northeast-1.clawcloudrun.com"><div class="title">Bilitool</div><div class="desc">B站工具</div></a>
+<a class="card" href="https://iufgfqinvdqn.ap-northeast-1.clawcloudrun.com"><div class="title">Twitch Miner</div><div class="desc">Twitch 工具</div></a>
+<a class="card" href="https://apps.apptesters.org"><div class="title">AppTesters</div><div class="desc">IPA 下載</div></a>
+<a class="card" href="https://rentry.org/pgames"><div class="title">遊戲聖經</div><div class="desc">資源索引</div></a>
 
 </div>
-</div>
+</section>
 
+</main>
 </body>
 </html>
