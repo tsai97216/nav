@@ -551,18 +551,11 @@ const toolboxData = [
     links: [
       { title: "Decrypt.day", url: "https://decrypt.day/", description: "iOS 應用程式（IPA）解密資源庫，主要提供已砸殼的應用程式下載。" },
       { title: "CyberChef", url: "https://gchq.github.io/CyberChef/", description: "英國 GCHQ 開發的 Web 數據處理工具，用於資料編碼、解碼、加密與格式變更。" },
-      { title: "Alist", url: "https://tsai97216.github.io/alist/", description: "分散式雲端硬碟掛載工具，整合多個雲端空間（如網盤、本地存儲）的統一管理介面。" },
-      { title: "Bilitool", url: "https://mzbpfgxz.ap-northeast-1.clawcloudrun.com", description: "Bilibili 帳號自動化每日任務執行腳本（部署於 ClawCloud 運行中）。" },
-      { title: "Twitch Miner", url: "https://iufgfqinvdqn.ap-northeast-1.clawcloudrun.com", description: "Twitch 自動掛台獲取忠誠點數與掉落物（Drops）的雲端採集腳本。" },
+      { title: "Alist", url: "https://alist.chi.dpdns.org", description: "分散式雲端硬碟掛載工具，整合多個雲端空間（如網盤、本地存儲）的統一管理介面。" },
+      { title: "Bilitool", url: "https://bili.chi.dpdns.org", description: "Bilibili 帳號自動化每日任務執行腳本。" },
+      { title: "Twitch Miner", url: "https://twitch.chi.dpdns.org", description: "Twitch 自動掛台獲取掉寶（Drops）的雲端採集腳本。" },
       { title: "AppTesters", url: "https://apps.apptesters.org", description: "第三方 iOS 應用程式分流平台，提供越獄或未越獄適用的解密 IPA 下載。" },
       { title: "盜版遊戲聖經", url: "https://rentry.org/pgames", description: "國外著名的盜版遊戲綜合導航與安全下載指引（Rentry 頁面），用於檢索各大破解論壇資源。" },
-      { 
-        title: "Discord Quest Script", 
-        url: "javascript:void(0);", 
-        description: "瀏覽器主控台專用腳本（內含程式碼），用於自動完成 Discord 遊戲與影片觀看任務並領取獎勵。",
-        is_copy: true,
-        copy_content: `(async()=>{delete window.$;let e=webpackChunkdiscord_app.push([[Symbol()],{},e=>e]);webpackChunkdiscord_app.pop();let t=Object.values(e.c).find(e=>e?.exports?.A?.__proto__?.getQuest).exports.A,n=Object.values(e.c).find(e=>e?.exports?.Ay?.getRunningGames).exports.Ay,o=Object.values(e.c).find(e=>e?.exports?.h?.__proto__?.flushWaitQueue).exports.h,s=Object.values(e.c).find(e=>e?.exports?.Bo?.get).exports.Bo,r=["WATCH_VIDEO","PLAY_ON_DESKTOP","STREAM_ON_DESKTOP","PLAY_ACTIVITY","WATCH_VIDEO_ON_MOBILE"],a=[...t.quests.values()].filter(e=>e.userStatus?.enrolledAt&&!e.userStatus?.completedAt&&new Date(e.config.expiresAt).getTime()>Date.now()&&r.some(t=>Object.keys(e.config.taskConfig??e.config.taskConfigV2.tasks).includes(t))),i="undefined"!=typeof DiscordNative;if(0===a.length)return console.log("❌ 找不到未完成任務");console.log(\`🚀 發現 \${a.length} 個任務，開始接力...\`);let l=async()=>{let e=a.pop();if(!e)return console.log("✅ 全部完成");let d=e.config.messages.questName;console.log(\`>> 執行：\${d}\`);let p=Math.floor(3e4*Math.random())+1e3,c=e.config.taskConfig??e.config.taskConfigV2,u=r.find(e=>null!=c.tasks[e]),g=c.tasks[u].target,m=e.userStatus?.progress?.[u]?.value??0;if(u.includes("VIDEO")){let f=7,h=new Date(e.userStatus.enrolledAt).getTime();for(;;){let v=m+f;if(Math.floor((Date.now()-h)/1e3)+10-m>=f){let y=await s.post({url:\`/quests/\${e.id}/video-progress\`,body:{timestamp:Math.min(g,v+Math.random())}});if(y.body.completed_at)break;m=Math.min(g,v),console.log(\`⏳ 進度：\${Math.floor(m)}/\${g}\`)}if(v>=g)break;await new Promise(e=>setTimeout(e,1e3))}console.log(\`✔ \${d} 完成\`),l()}else if("PLAY_ON_DESKTOP"===u){if(!i)return l();s.get({url:\`/applications/public?application_ids=\${e.config.application.id}\`}).then(t=>{let r=t.body[0],i=r.executables?.find(e=>"win32"===e.os)?.name?.replace(">","")||"game.exe",a={id:e.config.application.id,name:r.name,exeName:i,pid:p,start:Date.now()},d=n.getRunningGames;n.getRunningGames=()=>[a],o.dispatch({type:"RUNNING_GAMES_CHANGE",removed:[],added:[a],games:[a]});let c=e=>{let t=Math.floor(e.userStatus.progress.PLAY_ON_DESKTOP.value);console.log(\`⏳ 進度：\${t}/\${g}\`),t>=g&&(n.getRunningGames=d,o.unsubscribe("QUESTS_SEND_HEARTBEAT_SUCCESS",c),console.log(\`✔ \${d} 完成\`),l())};o.subscribe("QUESTS_SEND_HEARTBEAT_SUCCESS",c)})}};l()})();`
-      },
       { 
         title: "YouTube Music Likes List Downloader", 
         url: "javascript:void(0);", 
