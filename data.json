@@ -1,0 +1,548 @@
+[
+  {
+    "taxonomy": "常用推薦",
+    "icon": "fas fa-shuttle-van",
+    "links": [
+      {
+        "title": "Google",
+        "url": "https://www.google.com/",
+        "description": "日常搜尋、查資料、找教學與解決問題。"
+      },
+      {
+        "title": "ChatGPT",
+        "url": "https://chat.openai.com/",
+        "description": "AI 助手，用於問答、分析、寫作與程式協助。"
+      },
+      {
+        "title": "YouTube",
+        "url": "https://www.youtube.com/",
+        "description": "影片、直播與創作者內容平台。"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/",
+        "description": "程式碼管理、開源專案與開發者社群。"
+      },
+      {
+        "title": "ACGBox",
+        "url": "https://www.acgbox.link/",
+        "description": "二次元網站導航與資源整理。"
+      },
+      {
+        "title": "劉明野工具箱",
+        "url": "https://tools.liumingye.cn/",
+        "description": "線上工具集合，包含影音與各種實用功能。"
+      }
+    ]
+  },
+
+
+  {
+    "taxonomy": "人工智慧",
+    "icon": "fas fa-microchip",
+    "links": [
+      {
+        "title": "ChatGPT",
+        "url": "https://chat.openai.com/",
+        "description": "通用 AI 助手，適合分析、寫作與程式協助。"
+      },
+      {
+        "title": "Gemini",
+        "url": "https://gemini.google.com/",
+        "description": "Google AI 助手，整合 Google 生態服務。"
+      },
+      {
+        "title": "Claude",
+        "url": "https://claude.ai/",
+        "description": "長文本分析與程式撰寫能力優秀的 AI。"
+      },
+      {
+        "title": "DeepSeek",
+        "url": "https://chat.deepseek.com/",
+        "description": "偏重推理與技術問題處理的 AI 模型。"
+      },
+      {
+        "title": "豆包",
+        "url": "https://www.doubao.com/chat/",
+        "description": "字節跳動 AI 助手。"
+      },
+      {
+        "title": "Perplexity",
+        "url": "https://www.perplexity.ai/",
+        "description": "結合搜尋與 AI 摘要的答案型搜尋工具。"
+      },
+      {
+        "title": "Grok",
+        "url": "https://grok.com/",
+        "description": "xAI 開發的 AI 對話模型。"
+      }
+    ]
+  },
+
+
+  {
+    "taxonomy": "影音娛樂",
+    "icon": "fas fa-vr-cardboard",
+    "list": [
+      {
+        "term": "線上串流",
+        "links": [
+          {
+            "title": "YouTube",
+            "url": "https://www.youtube.com/",
+            "description": "影片觀看、直播與創作者內容。"
+          },
+          {
+            "title": "YouTube Music",
+            "url": "https://music.youtube.com/",
+            "description": "音樂串流、歌單與音樂探索。"
+          },
+          {
+            "title": "Netflix",
+            "url": "https://www.netflix.com/tw/",
+            "description": "電影、影集與動畫串流平台。"
+          },
+          {
+            "title": "Bilibili",
+            "url": "https://www.bilibili.com/",
+            "description": "彈幕影片網站，包含動漫、遊戲與生活內容。"
+          },
+          {
+            "title": "Twitch",
+            "url": "https://www.twitch.tv/",
+            "description": "遊戲直播與實況社群平台。"
+          },
+          {
+            "title": "Spotify",
+            "url": "https://open.spotify.com/",
+            "description": "音樂串流服務。"
+          },
+          {
+            "title": "ofiii 歐飛",
+            "url": "https://www.ofiii.com/",
+            "description": "正版影音平台，提供電影、戲劇、動漫與直播。"
+          }
+        ]
+      },
+
+
+      {
+        "term": "動漫二次元",
+        "links": [
+          {
+            "title": "巴哈姆特動畫瘋",
+            "url": "https://ani.gamer.com.tw/",
+            "description": "台灣正版動畫觀看平台。"
+          },
+          {
+            "title": "Pixiv",
+            "url": "https://www.pixiv.net/",
+            "description": "插畫創作者與同人作品社群。"
+          },
+          {
+            "title": "漫畫櫃",
+            "url": "https://tw.manhuagui.com/",
+            "description": "漫畫閱讀網站。"
+          },
+          {
+            "title": "Anime1",
+            "url": "https://anime1.me/",
+            "description": "動畫觀看網站，介面簡潔。"
+          },
+          {
+            "title": "MobiNovels",
+            "url": "https://mobinovels.com/",
+            "description": "電子書與輕小說資源網站。"
+          }
+        ]
+      }
+    ]
+  },
+
+
+  {
+    "taxonomy": "遊戲工具",
+    "icon": "fas fa-terminal",
+    "list": [
+      {
+        "term": "數據與攻略",
+        "links": [
+          {
+            "title": "Nanoka",
+            "url": "https://nanoka.cc/",
+            "description": "遊戲角色數值、技能倍率與機制資料庫。"
+          },
+          {
+            "title": "HoYoLAB",
+            "url": "https://www.hoyolab.com/",
+            "description": "米哈遊官方社群、簽到與遊戲資料。"
+          },
+          {
+            "title": "Prydwen",
+            "url": "https://www.prydwen.gg/",
+            "description": "二次元手遊攻略與強度分析網站。"
+          },
+          {
+            "title": "GenPKM",
+            "url": "https://genpkm.com/",
+            "description": "寶可夢 IV 查詢與對戰分析工具。"
+          },
+          {
+            "title": "HowLongToBeat",
+            "url": "https://howlongtobeat.com/",
+            "description": "查詢遊戲通關時間與完成度。"
+          }
+        ]
+      },
+
+
+      {
+        "term": "資源下載",
+        "links": [
+          {
+            "title": "SteamDB",
+            "url": "https://steamdb.info/",
+            "description": "Steam 資料庫、價格歷史與玩家數據。"
+          },
+          {
+            "title": "IsThereAnyDeal",
+            "url": "https://isthereanydeal.com/giveaways/",
+            "description": "追蹤 PC 遊戲折扣與免費活動。"
+          },
+          {
+            "title": "Bwiki",
+            "url": "https://wiki.biligame.com/",
+            "description": "玩家共同編輯的遊戲 Wiki。"
+          },
+          {
+            "title": "4Gamers 限免",
+            "url": "https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB",
+            "description": "台灣遊戲媒體限時免費資訊。"
+          },
+          {
+            "title": "CloudMoon",
+            "url": "https://web.cloudmoonapp.com/zh/",
+            "description": "雲端手機遊戲服務。"
+          }
+        ]
+      }
+    ]
+  },,
+  {
+    "taxonomy": "社群網路",
+    "icon": "fas fa-network-wired",
+    "list": [
+      {
+        "term": "個人社交",
+        "links": [
+          {
+            "title": "Facebook",
+            "url": "https://www.facebook.com/",
+            "description": "社群交流、朋友動態與社團討論。"
+          },
+          {
+            "title": "Messenger",
+            "url": "https://www.messenger.com/",
+            "description": "Meta 即時通訊服務。"
+          },
+          {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/",
+            "description": "圖片、短影音與創作者分享平台。"
+          },
+          {
+            "title": "Discord",
+            "url": "https://discord.com/",
+            "description": "遊戲社群、聊天與語音交流平台。"
+          },
+          {
+            "title": "X (Twitter)",
+            "url": "https://x.com/",
+            "description": "即時消息、動漫創作者與社群討論平台。"
+          },
+          {
+            "title": "Threads",
+            "url": "https://www.threads.net/",
+            "description": "Meta 旗下文字社群平台。"
+          }
+        ]
+      },
+      {
+        "term": "討論論壇",
+        "links": [
+          {
+            "title": "巴哈姆特",
+            "url": "https://www.gamer.com.tw/",
+            "description": "台灣大型動漫與遊戲論壇。"
+          },
+          {
+            "title": "Reddit",
+            "url": "https://www.reddit.com/",
+            "description": "全球大型討論社群。"
+          },
+          {
+            "title": "NGA 玩家社區",
+            "url": "https://bbs.nga.cn/",
+            "description": "遊戲攻略與深度討論論壇。"
+          },
+          {
+            "title": "APK.tw",
+            "url": "https://apk.tw/",
+            "description": "Android 軟體與手機技術論壇。"
+          }
+        ]
+      }
+    ]
+  },
+
+
+  {
+    "taxonomy": "實用工具",
+    "icon": "fas fa-cogs",
+    "list": [
+      {
+        "term": "數據與檔案處理",
+        "links": [
+          {
+            "title": "is.gd",
+            "url": "https://is.gd/",
+            "description": "網址縮短服務。"
+          },
+          {
+            "title": "工具邦",
+            "url": "https://tw.piliapp.com/",
+            "description": "各類線上小工具集合。"
+          },
+          {
+            "title": "Google 翻譯",
+            "url": "https://translate.google.com.tw/",
+            "description": "文字、網頁與語音翻譯工具。"
+          },
+          {
+            "title": "TeraBox",
+            "url": "https://www.terabox.com/",
+            "description": "雲端檔案儲存與分享服務。"
+          },
+          {
+            "title": "Cobalt",
+            "url": "https://cobalt.tools/",
+            "description": "簡潔無廣告的多媒體下載工具。"
+          },
+          {
+            "title": "Gofile",
+            "url": "https://gofile.io/",
+            "description": "檔案分享與暫存服務。"
+          },
+          {
+            "title": "PairDrop",
+            "url": "https://pairdrop.net/",
+            "description": "跨裝置區域網路檔案傳輸工具。"
+          }
+        ]
+      },
+
+
+      {
+        "term": "音訊處理",
+        "links": [
+          {
+            "title": "AudioMass",
+            "url": "https://audiomass.co/",
+            "description": "瀏覽器內音訊剪輯工具。"
+          },
+          {
+            "title": "Adobe Podcast",
+            "url": "https://podcast.adobe.com/enhance",
+            "description": "AI 人聲降噪與音質提升工具。"
+          },
+          {
+            "title": "Audio Converter",
+            "url": "https://audio-convert.com/cn",
+            "description": "線上音訊格式轉換工具。"
+          },
+          {
+            "title": "Vocal Remover",
+            "url": "https://vocalremover.org/zh/",
+            "description": "AI 分離人聲與伴奏。"
+          },
+          {
+            "title": "123Apps 音訊",
+            "url": "https://mp3cut.net/tw/",
+            "description": "簡易 MP3 剪輯工具。"
+          }
+        ]
+      },
+
+
+      {
+        "term": "影片處理",
+        "links": [
+          {
+            "title": "CapCut Web",
+            "url": "https://www.capcut.com/editor",
+            "description": "線上影片剪輯與 AI 特效工具。"
+          },
+          {
+            "title": "Flixier",
+            "url": "https://flixier.com/",
+            "description": "雲端影片編輯平台。"
+          },
+          {
+            "title": "123Apps 影片",
+            "url": "https://online-video-cutter.com/tw/video-editor",
+            "description": "影片裁切與簡易編輯工具。"
+          }
+        ]
+      },
+
+
+      {
+        "term": "文件工具",
+        "links": [
+          {
+            "title": "TinyWOW",
+            "url": "https://tinywow.com/",
+            "description": "PDF、圖片與文件處理工具集合。"
+          },
+          {
+            "title": "PDF24 Tools",
+            "url": "https://tools.pdf24.org/zh/",
+            "description": "PDF 合併、壓縮與轉換工具。"
+          },
+          {
+            "title": "Convertio",
+            "url": "https://convertio.co/zh/",
+            "description": "多格式檔案轉換工具。"
+          },
+          {
+            "title": "DeepL 翻譯",
+            "url": "https://www.deepl.com/translator/files",
+            "description": "高品質文件翻譯工具。"
+          },
+          {
+            "title": "iLovePDF",
+            "url": "https://www.ilovepdf.com/zh-tw",
+            "description": "PDF 編輯與格式處理工具。"
+          }
+        ]
+      },
+
+
+      {
+        "term": "圖檔與靈感",
+        "links": [
+          {
+            "title": "Photopea",
+            "url": "https://www.photopea.com/",
+            "description": "類似 Photoshop 的線上圖片編輯器。"
+          },
+          {
+            "title": "Polarr",
+            "url": "https://photoeditor.polarr.co/",
+            "description": "照片調色與濾鏡工具。"
+          },
+          {
+            "title": "Edit.photo",
+            "url": "https://edit.photo/",
+            "description": "簡易線上修圖工具。"
+          },
+          {
+            "title": "Canva",
+            "url": "https://www.canva.com/zh_tw/",
+            "description": "快速製作圖片、簡報與設計作品。"
+          },
+          {
+            "title": "Pinterest",
+            "url": "https://www.pinterest.com/",
+            "description": "圖片靈感收藏平台。"
+          },
+          {
+            "title": "iLoveIMG",
+            "url": "https://www.iloveimg.com/zh-tw",
+            "description": "圖片壓縮、裁切與批次處理工具。"
+          },
+          {
+            "title": "Excalidraw",
+            "url": "https://excalidraw.com/",
+            "description": "手繪風格線上白板工具。"
+          }
+        ]
+      }
+    ]
+  },,
+  {
+    "taxonomy": "資訊安全",
+    "icon": "fas fa-shield-alt",
+    "links": [
+      {
+        "title": "VirusTotal",
+        "url": "https://www.virustotal.com/gui/home/upload",
+        "description": "檔案與網址安全掃描工具，整合多種防毒引擎。"
+      },
+      {
+        "title": "Have I Been Pwned",
+        "url": "https://haveibeenpwned.com/",
+        "description": "檢查電子郵件是否出現在已知資料外洩事件。"
+      }
+    ]
+  },
+
+
+  {
+    "taxonomy": "進階工具",
+    "icon": "fas fa-user-secret",
+    "links": [
+      {
+        "title": "CyberChef",
+        "url": "https://gchq.github.io/CyberChef/",
+        "description": "資料編碼、解碼、加密與格式處理工具。"
+      },
+      {
+        "title": "Decrypt.day",
+        "url": "https://decrypt.day/",
+        "description": "iOS 應用程式研究與資訊平台。"
+      },
+      {
+        "title": "Alist",
+        "url": "https://alist.chi.dpdns.org",
+        "description": "自己的雲端掛載服務，整合多個儲存空間。"
+      },
+      {
+        "title": "Bilitool",
+        "url": "https://bili.chi.dpdns.org",
+        "description": "Bilibili 自動化工具服務。"
+      },
+      {
+        "title": "Twitch Miner",
+        "url": "https://twitch.chi.dpdns.org",
+        "description": "Twitch Drops 自動掛台服務。"
+      },
+      {
+        "title": "AppTesters",
+        "url": "https://apps.apptesters.org",
+        "description": "第三方 iOS 應用程式測試與分發平台。"
+      },
+      {
+        "title": "盜版遊戲聖經",
+        "url": "https://rentry.org/pgames",
+        "description": "遊戲資源資訊整理頁面。"
+      }
+    ]
+  },
+
+
+  {
+    "taxonomy": "腳本工具",
+    "icon": "fas fa-code",
+    "links": [
+      {
+        "title": "YouTube Music Likes List Downloader",
+        "url": "javascript:void(0);",
+        "description": "瀏覽器 Console 腳本，將 YouTube Music 喜歡歌曲清單匯出為文字檔。",
+        "is_copy": true,
+        "copy_content": "(async function(){console.log('開始抓取 YouTube Music 喜歡歌曲清單');let lastHeight=0;let count=0;while(true){window.scrollTo(0,document.body.scrollHeight);await new Promise(r=>setTimeout(r,2000));let h=document.body.scrollHeight;if(h===lastHeight){count++;if(count>2)break}else{lastHeight=h;count=0}}const rows=document.querySelectorAll('ytmusic-playlist-shelf-renderer ytmusic-responsive-list-item-renderer');let text='我的 YouTube Music 喜歡歌曲清單\\n總數:'+rows.length+' 首\\n====================\\n';rows.forEach((r,i)=>{let title=r.querySelector('.title-column yt-formatted-string')?.innerText||'未知';let artist=r.querySelectorAll('.secondary-flex-columns yt-formatted-string')[0]?.innerText||'未知';text+=`${i+1}. ${title} - ${artist}\\n`});let blob=new Blob([text],{type:'text/plain'});let url=URL.createObjectURL(blob);let a=document.createElement('a');a.href=url;a.download='YTM_Likes_List.txt';a.click();URL.revokeObjectURL(url);console.log('完成')})();"
+      }
+    ]
+  }
+]
+
