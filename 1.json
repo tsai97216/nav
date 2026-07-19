@@ -1,0 +1,70 @@
+[
+  {
+    "taxonomy": "常用推薦",
+    "icon": "fas fa-shuttle-van",
+    "links": [
+      {
+        "title": "Google",
+        "url": "https://www.google.com/",
+        "description": "日常搜尋、查資料、找教學與解決問題。"
+      },
+      {
+        "title": "ChatGPT",
+        "url": "https://chat.openai.com/",
+        "description": "AI 助手，用於問答、分析、寫作與程式協助。"
+      },
+      {
+        "title": "YouTube",
+        "url": "https://www.youtube.com/",
+        "description": "影片、直播與創作者內容平台。"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/",
+        "description": "程式碼管理、開源專案與開發者社群。"
+      },
+      {
+        "title": "ACGBox",
+        "url": "https://www.acgbox.link/",
+        "description": "二次元網站導航與資源整理。"
+      },
+      {
+        "title": "劉明野工具箱",
+        "url": "https://tools.liumingye.cn/",
+        "description": "線上工具集合，包含影音與各種實用功能。"
+      }
+    ]
+  },
+
+
+  {
+    "taxonomy": "人工智慧",
+    "icon": "fas fa-microchip",
+    "links": [
+      {
+        "title": "ChatGPT",
+        "url": "https://chat.openai.com/",
+        "description": "通用 AI 助手，適合分析、寫作與程式協助。"
+      },
+      {
+        "title": "Gemini",
+        "url": "https://gemini.google.com/",
+        "description": "Google AI 助手，整合 Google 生態服務。"
+      },
+      {
+        "title": "Claude",
+        "url": "https://claude.ai/",
+        "description": "長文本分析與程式撰寫能力優秀的 AI。"
+      },
+      {
+        "title": "DeepSeek",
+        "url": "https://chat.deepseek.com/",
+        "description": "偏重推理與技術問題處理的 AI 模型。"
+      },
+      {
+        "title": "豆包",
+        "url": "https://www.doubao.com/chat/",
+        "description": "字節跳動 AI 助手。"
+      },
+      {
+  }
