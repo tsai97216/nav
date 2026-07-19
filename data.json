@@ -489,23 +489,47 @@
       }
     ]
   },
-
+  
 
   {
+  "taxonomy": "雲端服務",
+  "icon": "fas fa-cloud",
+  "links": [
+    {
+      "title": "Cloudflare Dashboard",
+      "url": "https://dash.cloudflare.com/",
+      "description": "Cloudflare 管理控制台，用於 DNS、Tunnel、網域與安全設定。"
+    },
+    {
+      "title": "Oracle Cloud Console",
+      "url": "https://cloud.oracle.com/",
+      "description": "Oracle Cloud Infrastructure 管理平台，用於 VPS、網路與雲端資源管理。"
+    },
+    {
+      "title": "Alist",
+      "url": "https://alist.chi.dpdns.org",
+      "description": "自己的雲端掛載服務，整合多個儲存空間。"
+    },
+    {
+      "title": "Bilitool",
+      "url": "https://bili.chi.dpdns.org",
+      "description": "Bilibili 自動化工具服務。"
+    },
+    {
+      "title": "Twitch Miner",
+      "url": "https://twitch.chi.dpdns.org",
+      "description": "Twitch Drops 自動掛台服務。"
+    }
+  ]
+},
+
+  {
+    
     "taxonomy": "進階工具",
     "icon": "fas fa-user-secret",
     "links": [
       
-       {
-         "title": "Cloudflare Dashboard",
-         "url": "https://dash.cloudflare.com/",
-         "description": "Cloudflare 管理控制台，用於 DNS、Tunnel、網域與安全設定。"
-       },
-       {
-         "title": "Oracle Cloud Console",
-         "url": "https://cloud.oracle.com/",
-         "description": "Oracle Cloud Infrastructure 管理平台，用於 VPS、網路與雲端資源管理。"
-      },
+ 
       {
         "title": "CyberChef",
         "url": "https://gchq.github.io/CyberChef/",
@@ -516,21 +540,7 @@
         "url": "https://decrypt.day/",
         "description": "iOS 應用程式研究與資訊平台。"
       },
-      {
-        "title": "Alist",
-        "url": "https://alist.chi.dpdns.org",
-        "description": "自己的雲端掛載服務，整合多個儲存空間。"
-      },
-      {
-        "title": "Bilitool",
-        "url": "https://bili.chi.dpdns.org",
-        "description": "Bilibili 自動化工具服務。"
-      },
-      {
-        "title": "Twitch Miner",
-        "url": "https://twitch.chi.dpdns.org",
-        "description": "Twitch Drops 自動掛台服務。"
-      },
+    
       {
         "title": "AppTesters",
         "url": "https://apps.apptesters.org",
