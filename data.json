@@ -130,10 +130,16 @@
     ]
   },
   {
+    "taxonomy": "二次元內容",
+    "icon": "fas fa-palette",
+    "links": [
+      {"title":"列車組的不專業烤肉翻譯","url":"https://www.shironkestrel.com/","description":"二遊相關漫畫、二創作品的烤肉翻譯。"}
+    ]
+  },
+  {
     "taxonomy": "文字與中文工具",
     "icon": "fas fa-language",
     "links": [
-      {"title":"Shiron Kestrel","url":"https://www.shironkestrel.com/","description":"文字與語言相關的實用工具網站。"},
       {"title":"能不能好好說話","url":"https://lab.magiconch.com/nbnhhsh/","description":"將中文縮寫、拼音縮寫轉換成較完整的文字。"}
     ]
   },
