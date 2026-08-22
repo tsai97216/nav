@@ -24,6 +24,7 @@ function createCard(link){
  const fallback=`<span class="avatar-fallback" style="${domain?"display:none":""}">${letter}</span>`;
  return `<article class="card" data-key="${encodeURIComponent(key)}" data-copy-enabled="${link.is_copy?"true":"false"}" data-search="${escapeHtml(`${link.title} ${link.description||""}`.toLowerCase())}"><button class="favorite-btn ${fav?"is-favorite":""}" type="button" aria-label="${fav?"取消收藏":"加入收藏"}"><i class="fa-${fav?"solid":"regular"} fa-star"></i></button>${link.is_copy?'<span class="copy-badge"><i class="fa-regular fa-copy"></i> 腳本</span>':""}<div class="card-top"><div class="card-logo-container" style="background:${colorFor(link.title||"?")}">${favicon}${fallback}</div><div class="card-title">${title}</div></div>${desc?`<div class="card-desc">${desc}</div>`:""}</article>`;
 }
+function isHiddenFromRecommendations(link,taxonomy){return taxonomy==="常用推薦"&&favorites.has(linkKey(link))}
 function renderNav(){
  navMenu.innerHTML="";
  if(favorites.size||recent.length)navMenu.insertAdjacentHTML("beforeend",'<div class="nav-divider"></div>');
@@ -36,9 +37,28 @@ function renderNav(){
  if(others.length){const label=document.createElement("div");label.className="nav-group-title";label.innerHTML='<i class="fa-solid fa-folder"></i><span>其他</span>';navMenu.appendChild(label);others.forEach(({s,i})=>{const a=document.createElement("a");a.className="nav-item category-nav";a.href=`#section-${i}`;a.dataset.section=s.taxonomy;a.innerHTML=`<i class="${escapeHtml(s.icon)}"></i><span>${escapeHtml(s.taxonomy)}</span>`;navMenu.appendChild(a)})}
 }
 function renderQuickSections(){const favLinks=allLinks.filter(l=>favorites.has(linkKey(l))),recentLinks=recent.map(k=>linkMap.get(k)).filter(Boolean);let html="";if(favLinks.length)html+=`<section class="section quick-section" id="section-favorites"><div class="section-header"><i class="fa-solid fa-star"></i><span>我的收藏</span></div><div class="grid">${favLinks.map(createCard).join("")}</div></section>`;if(recentLinks.length)html+=`<section class="section quick-section" id="section-recent"><div class="section-header"><i class="fa-solid fa-clock-rotate-left"></i><span>最近使用</span></div><div class="grid">${recentLinks.map(createCard).join("")}</div></section>`;quickSections.innerHTML=html;renderNav()}
-function renderContent(){mainContent.innerHTML="";sections.forEach((s,i)=>{const el=document.createElement("section");el.className="section";el.id=`section-${i}`;el.dataset.taxonomy=s.taxonomy;let html=`<div class="section-header"><i class="${escapeHtml(s.icon)}"></i><span>${escapeHtml(s.taxonomy)}</span></div>`;if(Array.isArray(s.list))s.list.forEach(g=>{const links=Array.isArray(g.links)?g.links:[];if(links.length)html+=`<div class="term-container"><div class="term-title">${escapeHtml(g.term||"")}</div><div class="grid">${links.map(createCard).join("")}</div></div>`});else if(Array.isArray(s.links))html+=`<div class="grid">${s.links.map(createCard).join("")}</div>`;el.innerHTML=html;mainContent.appendChild(el)})}
+function renderContent(){
+ mainContent.innerHTML="";
+ sections.forEach((s,i)=>{
+  const el=document.createElement("section");el.className="section";el.id=`section-${i}`;el.dataset.taxonomy=s.taxonomy;
+  let html=`<div class="section-header"><i class="${escapeHtml(s.icon)}"></i><span>${escapeHtml(s.taxonomy)}</span></div>`;
+  let visibleCount=0;
+  if(Array.isArray(s.list))s.list.forEach(g=>{
+   const links=(Array.isArray(g.links)?g.links:[]).filter(l=>!isHiddenFromRecommendations(l,s.taxonomy));
+   if(links.length){visibleCount+=links.length;html+=`<div class="term-container"><div class="term-title">${escapeHtml(g.term||"")}</div><div class="grid">${links.map(createCard).join("")}</div></div>`}
+  });
+  else if(Array.isArray(s.links)){
+   const links=s.links.filter(l=>!isHiddenFromRecommendations(l,s.taxonomy));
+   visibleCount=links.length;if(links.length)html+=`<div class="grid">${links.map(createCard).join("")}</div>`;
+  }
+  el.innerHTML=html;
+  el.dataset.baseVisible=visibleCount;
+  if(!visibleCount)el.style.display="none";
+  mainContent.appendChild(el);
+ });
+}
 function refreshFavoriteButtons(){document.querySelectorAll(".favorite-btn").forEach(b=>{const c=b.closest(".card");if(!c)return;const active=favorites.has(decodeURIComponent(c.dataset.key||""));b.classList.toggle("is-favorite",active);b.setAttribute("aria-label",active?"取消收藏":"加入收藏");b.innerHTML=`<i class="fa-${active?"solid":"regular"} fa-star"></i>`})}
-function toggleFavorite(link){const k=linkKey(link);favorites.has(k)?favorites.delete(k):favorites.add(k);saveStorage(FAVORITES_KEY,[...favorites]);renderQuickSections();refreshFavoriteButtons();applySearch(searchInput.value)}
+function toggleFavorite(link){const k=linkKey(link);favorites.has(k)?favorites.delete(k):favorites.add(k);saveStorage(FAVORITES_KEY,[...favorites]);renderContent();renderQuickSections();refreshFavoriteButtons();applySearch(searchInput.value)}
 function addRecent(link){const k=linkKey(link);recent=[k,...recent.filter(x=>x!==k)].slice(0,RECENT_LIMIT);saveStorage(RECENT_KEY,recent);renderQuickSections()}
 function applySearch(value){const q=value.trim().toLowerCase();let count=0;quickSections.style.display=q?"none":"block";document.querySelectorAll(".section:not(.quick-section)").forEach(section=>{let n=0;section.querySelectorAll(".term-container").forEach(term=>{let m=0;term.querySelectorAll(".card").forEach(c=>{const ok=!q||(c.dataset.search||"").includes(q);c.style.display=ok?"":"none";if(ok){m++;count++}});term.style.display=m?"":"none";n+=m});const grid=section.querySelector(":scope > .grid");if(grid)grid.querySelectorAll(".card").forEach(c=>{const ok=!q||(c.dataset.search||"").includes(q);c.style.display=ok?"":"none";if(ok){n++;count++}});section.style.display=n?"":"none";const nav=[...document.querySelectorAll(".category-nav")].find(x=>x.dataset.section===section.dataset.taxonomy);if(nav)nav.style.display=n?"":"none"});if(q){resultInfo.textContent=`找到 ${count} 個結果`;resultInfo.style.display="inline"}else{resultInfo.textContent="";resultInfo.style.display="none";document.querySelectorAll(".category-nav").forEach(n=>n.style.display="")}}
 function setActiveNav(){let current="";for(const s of [...document.querySelectorAll(".section")].filter(x=>x.style.display!=="none"))if(scrollY>=s.offsetTop-100)current=s.id;document.querySelectorAll(".nav-item").forEach(x=>x.classList.remove("active"));const a=document.querySelector(`.nav-item[href="#${current}"]`);if(a)a.classList.add("active")}
