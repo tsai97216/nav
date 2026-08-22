@@ -3,27 +3,11 @@
     "taxonomy": "常用推薦",
     "icon": "fas fa-star",
     "links": [
-      {
-        "title": "Google",
-        "url": "https://www.google.com/",
-        "description": "日常搜尋、查資料、找教學與解決問題。"
-      },
-      {
-        "title": "ChatGPT",
-        "url": "https://chat.openai.com/",
-        "description": "AI 助手，用於問答、分析、寫作與程式協助。"
-      },
-      {
-        "title": "YouTube",
-        "url": "https://www.youtube.com/",
-        "description": "影片、直播與創作者內容平台。"
-      },
-      {
-        "title": "GitHub",
-        "url": "https://github.com/",
-        "description": "程式碼管理、開源專案與開發者社群。"
-      }
-     ]
+      {"title":"Google","url":"https://www.google.com/","description":"日常搜尋、查資料、找教學與解決問題。"},
+      {"title":"ChatGPT","url":"https://chat.openai.com/","description":"AI 助手，用於問答、分析、寫作與程式協助。"},
+      {"title":"YouTube","url":"https://www.youtube.com/","description":"影片、直播與創作者內容平台。"},
+      {"title":"GitHub","url":"https://github.com/","description":"程式碼管理、開源專案與開發者社群。"}
+    ]
   },
   {
     "taxonomy": "人工智慧",
@@ -63,19 +47,21 @@
     "taxonomy": "遊戲工具",
     "icon": "fas fa-terminal",
     "list": [
-      {"term":"數據與攻略","links":[
+      {"term":"二遊","links":[
         {"title":"Nanoka","url":"https://nanoka.cc/","description":"遊戲角色數值、技能倍率與機制資料庫。"},
         {"title":"HoYoLAB","url":"https://www.hoyolab.com/","description":"米哈遊官方社群、簽到與遊戲資料。"},
         {"title":"Prydwen","url":"https://www.prydwen.gg/","description":"二次元手遊攻略與強度分析網站。"},
-        {"title":"GenPKM","url":"https://genpkm.com/","description":"寶可夢工具。"},
-        {"title":"HowLongToBeat","url":"https://howlongtobeat.com/","description":"查詢遊戲通關時間與完成度。"}
+        {"title":"Bwiki","url":"https://wiki.biligame.com/","description":"玩家共同編輯的遊戲 Wiki。"},
+        {"title":"CloudMoon","url":"https://web.cloudmoonapp.com/zh/","description":"雲端手機遊戲服務。"}
       ]},
-      {"term":"資源下載","links":[
+      {"term":"寶可夢","links":[
+        {"title":"GenPKM","url":"https://genpkm.com/","description":"寶可夢工具。"}
+      ]},
+      {"term":"其他","links":[
+        {"title":"HowLongToBeat","url":"https://howlongtobeat.com/","description":"查詢遊戲通關時間與完成度。"},
         {"title":"SteamDB","url":"https://steamdb.info/","description":"Steam 資料庫、價格歷史與玩家數據。"},
         {"title":"IsThereAnyDeal","url":"https://isthereanydeal.com/giveaways/","description":"追蹤 PC 遊戲折扣與免費活動。"},
-        {"title":"Bwiki","url":"https://wiki.biligame.com/","description":"玩家共同編輯的遊戲 Wiki。"},
-        {"title":"4Gamers 限免","url":"https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB","description":"台灣遊戲媒體限時免費資訊。"},
-        {"title":"CloudMoon","url":"https://web.cloudmoonapp.com/zh/","description":"雲端手機遊戲服務。"}
+        {"title":"4Gamers 限免","url":"https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB","description":"台灣遊戲媒體限時免費資訊。"}
       ]}
     ]
   },
