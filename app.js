@@ -90,13 +90,13 @@ function updateSearchResults(keyword){
     if(navItem) navItem.style.display = sectionMatches ? "" : "none";
   });
 
+  const searchBox = document.querySelector(".search-box");
   let resultInfo = document.getElementById("search-result-info");
   if(!resultInfo){
-    resultInfo = document.createElement("div");
+    resultInfo = document.createElement("span");
     resultInfo.id = "search-result-info";
     resultInfo.setAttribute("aria-live","polite");
-    resultInfo.style.cssText = "margin:0 0 18px;color:#94a3b8;font-size:14px;display:none;";
-    mainContent.prepend(resultInfo);
+    searchBox.appendChild(resultInfo);
   }
 
   if(normalized){
