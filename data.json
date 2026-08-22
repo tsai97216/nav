@@ -51,13 +51,13 @@
         {"title":"Nanoka","url":"https://nanoka.cc/","description":"遊戲角色數值、技能倍率與機制資料庫。"},
         {"title":"HoYoLAB","url":"https://www.hoyolab.com/","description":"米哈遊官方社群、簽到與遊戲資料。"},
         {"title":"Prydwen","url":"https://www.prydwen.gg/","description":"二次元手遊攻略與強度分析網站。"},
-        {"title":"Bwiki","url":"https://wiki.biligame.com/","description":"玩家共同編輯的遊戲 Wiki。"},
-        {"title":"CloudMoon","url":"https://web.cloudmoonapp.com/zh/","description":"雲端手機遊戲服務。"}
+        {"title":"Bwiki","url":"https://wiki.biligame.com/","description":"玩家共同編輯的遊戲 Wiki。"}
       ]},
       {"term":"寶可夢","links":[
         {"title":"GenPKM","url":"https://genpkm.com/","description":"寶可夢工具。"}
       ]},
-      {"term":"其他","links":[
+      {"term":"其他遊戲","links":[
+        {"title":"CloudMoon","url":"https://web.cloudmoonapp.com/zh/","description":"雲端手機遊戲服務。"},
         {"title":"HowLongToBeat","url":"https://howlongtobeat.com/","description":"查詢遊戲通關時間與完成度。"},
         {"title":"SteamDB","url":"https://steamdb.info/","description":"Steam 資料庫、價格歷史與玩家數據。"},
         {"title":"IsThereAnyDeal","url":"https://isthereanydeal.com/giveaways/","description":"追蹤 PC 遊戲折扣與免費活動。"},
