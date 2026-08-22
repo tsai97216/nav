@@ -13,7 +13,7 @@
     const dark = mode === 'dark' || (mode === 'system' && media.matches);
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
     document.documentElement.dataset.themeMode = mode;
-    document.querySelectorAll('.theme-switch button').forEach(btn => {
+    document.querySelectorAll('.theme-float button').forEach(btn => {
       const active = btn.dataset.theme === mode;
       btn.classList.toggle('active', active);
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
@@ -22,8 +22,9 @@
 
   function createControl() {
     const box = document.createElement('div');
-    box.className = 'theme-control';
-    box.innerHTML = `<span class="theme-label">外觀</span><div class="theme-switch" role="group" aria-label="選擇外觀"><button type="button" data-theme="light" title="亮色"><i class="${icons.light}"></i><span>亮色</span></button><button type="button" data-theme="dark" title="暗色"><i class="${icons.dark}"></i><span>暗色</span></button><button type="button" data-theme="system" title="跟隨系統"><i class="${icons.system}"></i><span>系統</span></button></div>`;
+    box.className = 'theme-float';
+    box.setAttribute('aria-label', '外觀模式');
+    box.innerHTML = `<button type="button" data-theme="light" title="亮色" aria-label="亮色"><i class="${icons.light}"></i><span>亮色</span></button><button type="button" data-theme="dark" title="暗色" aria-label="暗色"><i class="${icons.dark}"></i><span>暗色</span></button><button type="button" data-theme="system" title="跟隨系統" aria-label="跟隨系統"><i class="${icons.system}"></i><span>系統</span></button>`;
     box.addEventListener('click', e => {
       const btn = e.target.closest('button[data-theme]');
       if (!btn) return;
@@ -34,27 +35,35 @@
     return box;
   }
 
-  let control = null;
-  function placeControl() {
-    const sidebar = document.querySelector('.sidebar');
-    const footer = document.querySelector('.site-footer');
-    if (!sidebar || !footer) return;
-    if (!control) control = createControl();
-    const mobile = window.matchMedia('(max-width: 720px)').matches;
-    const target = mobile ? footer : sidebar;
-    if (control.parentElement !== target) target.appendChild(control);
-    apply(getMode());
+  function createTopButton() {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.type = 'button';
+    btn.title = '回到最上面';
+    btn.setAttribute('aria-label', '回到最上面');
+    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    return btn;
   }
 
   function init() {
-    placeControl();
+    document.querySelector('.theme-control')?.remove();
+    if (!document.querySelector('.floating-actions')) {
+      const actions = document.createElement('div');
+      actions.className = 'floating-actions';
+      actions.append(createTopButton(), createControl());
+      document.body.appendChild(actions);
+    }
     apply(getMode());
+    const top = document.querySelector('.back-to-top');
+    const updateTop = () => top?.classList.toggle('visible', window.scrollY > 320);
+    window.addEventListener('scroll', updateTop, { passive: true });
+    updateTop();
   }
 
   media.addEventListener?.('change', () => {
     if (getMode() === 'system') apply('system');
   });
-  window.addEventListener('resize', placeControl);
   window.addEventListener('DOMContentLoaded', init);
   init();
 })();
