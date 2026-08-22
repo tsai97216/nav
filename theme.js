@@ -20,13 +20,10 @@
     });
   }
 
-  function renderControl() {
-    const sidebar = document.querySelector('.sidebar');
-    if (!sidebar || document.querySelector('.theme-control')) return;
+  function createControl() {
     const box = document.createElement('div');
     box.className = 'theme-control';
     box.innerHTML = `<span class="theme-label">外觀</span><div class="theme-switch" role="group" aria-label="選擇外觀"><button type="button" data-theme="light" title="亮色"><i class="${icons.light}"></i><span>亮色</span></button><button type="button" data-theme="dark" title="暗色"><i class="${icons.dark}"></i><span>暗色</span></button><button type="button" data-theme="system" title="跟隨系統"><i class="${icons.system}"></i><span>系統</span></button></div>`;
-    sidebar.appendChild(box);
     box.addEventListener('click', e => {
       const btn = e.target.closest('button[data-theme]');
       if (!btn) return;
@@ -34,19 +31,30 @@
       localStorage.setItem(KEY, mode);
       apply(mode);
     });
+    return box;
+  }
+
+  let control = null;
+  function placeControl() {
+    const sidebar = document.querySelector('.sidebar');
+    const footer = document.querySelector('.site-footer');
+    if (!sidebar || !footer) return;
+    if (!control) control = createControl();
+    const mobile = window.matchMedia('(max-width: 720px)').matches;
+    const target = mobile ? footer : sidebar;
+    if (control.parentElement !== target) target.appendChild(control);
+    apply(getMode());
   }
 
   function init() {
-    renderControl();
+    placeControl();
     apply(getMode());
   }
 
   media.addEventListener?.('change', () => {
     if (getMode() === 'system') apply('system');
   });
-
-  const observer = new MutationObserver(() => renderControl());
-  observer.observe(document.documentElement, { childList: true, subtree: true });
+  window.addEventListener('resize', placeControl);
   window.addEventListener('DOMContentLoaded', init);
   init();
 })();
