@@ -54,7 +54,8 @@
         {"title":"Bwiki","url":"https://wiki.biligame.com/","description":"玩家共同編輯的遊戲 Wiki。"}
       ]},
       {"term":"寶可夢","links":[
-        {"title":"GenPKM","url":"https://genpkm.com/","description":"寶可夢工具。"}
+        {"title":"GenPKM","url":"https://genpkm.com/","description":"寶可夢工具。"},
+        {"title":"PoGo Coordinates","url":"https://pogocoordinates.com/search","description":"Pokémon GO 座標搜尋工具。"}
       ]},
       {"term":"其他遊戲","links":[
         {"title":"CloudMoon","url":"https://web.cloudmoonapp.com/zh/","description":"雲端手機遊戲服務。"},
@@ -126,6 +127,14 @@
         {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"圖片壓縮、裁切與批次處理工具。"},
         {"title":"Excalidraw","url":"https://excalidraw.com/","description":"手繪風格線上白板工具。"}
       ]}
+    ]
+  },
+  {
+    "taxonomy": "文字與中文工具",
+    "icon": "fas fa-language",
+    "links": [
+      {"title":"Shiron Kestrel","url":"https://www.shironkestrel.com/","description":"文字與語言相關的實用工具網站。"},
+      {"title":"能不能好好說話","url":"https://lab.magiconch.com/nbnhhsh/","description":"將中文縮寫、拼音縮寫轉換成較完整的文字。"}
     ]
   },
   {
