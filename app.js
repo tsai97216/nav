@@ -1,5 +1,10 @@
 const navMenu=document.getElementById('js-nav-menu'),main=document.getElementById('js-main-content'),search=document.getElementById('search-input'),result=document.getElementById('search-result-info'),toast=document.getElementById('js-toast');
-const VERSION='v2.0.1',FAV='chi-nav-favorites',REC='chi-nav-recent',LIMIT=8;
+const VERSION='v2.1.1',FAV='chi-nav-favorites',REC='chi-nav-recent',THEME='chi-nav-theme',LIMIT=8;
+const themeSelect=document.getElementById('theme-select');
+function applyTheme(mode){const dark=mode==='dark'||(mode==='system'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';document.documentElement.dataset.themeMode=mode;if(themeSelect)themeSelect.value=mode;try{localStorage.setItem(THEME,mode)}catch{}}
+applyTheme(localStorage.getItem(THEME)||'system');
+themeSelect?.addEventListener('change',e=>applyTheme(e.target.value));
+const systemTheme=window.matchMedia('(prefers-color-scheme: dark)');systemTheme.addEventListener?.('change',()=>{if((localStorage.getItem(THEME)||'system')==='system')applyTheme('system')});
 const GROUPS=[
 {id:'ai',name:'AI & 搜尋',icon:'fa-solid fa-microchip',tabs:[['AI 助手','AI & 搜尋',0],['AI 搜尋','AI & 搜尋',1],['搜尋','AI & 搜尋',2]]},
 {id:'tools',name:'工具',icon:'fa-solid fa-screwdriver-wrench',tabs:[['檔案','工具',0],['文字與實用','工具',1],['文件與轉換','工具',2],['創作','工具',3]]},
