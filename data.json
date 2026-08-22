@@ -29,7 +29,7 @@
     "taxonomy": "工具",
     "icon": "fas fa-screwdriver-wrench",
     "list": [
-      {"term":"檔案","links":[
+      {"term":"檔案與分享","links":[
         {"title":"TeraBox","url":"https://www.terabox.com/","description":"提供雲端檔案儲存、管理與分享功能的服務。"},
         {"title":"Gofile","url":"https://gofile.io/","description":"提供檔案上傳、分享與暫存功能的服務。"},
         {"title":"PairDrop","url":"https://pairdrop.net/","description":"用於跨裝置區域網路檔案傳輸的工具。"}
@@ -47,22 +47,28 @@
         {"title":"Convertio","url":"https://convertio.co/zh/","description":"用於多種檔案格式轉換的線上工具。"},
         {"title":"iLovePDF","url":"https://www.ilovepdf.com/zh-tw","description":"用於 PDF 編輯、轉換與格式處理的工具集合。"}
       ]},
-      {"term":"創作","links":[
-        {"title":"Photopea","url":"https://www.photopea.com/","description":"用於圖片編輯與圖像處理的線上編輯器。","subgroup":"圖片與設計"},
-        {"title":"Polarr","url":"https://photoeditor.polarr.co/","description":"用於照片調色、修飾與套用濾鏡的圖片工具。","subgroup":"圖片與設計"},
-        {"title":"Edit.photo","url":"https://edit.photo/","description":"用於快速裁切、調整與修飾圖片的線上工具。","subgroup":"圖片與設計"},
-        {"title":"Canva","url":"https://www.canva.com/zh_tw/","description":"用於製作圖片、簡報與各類設計作品的設計平台。","subgroup":"圖片與設計"},
-        {"title":"Pinterest","url":"https://www.pinterest.com/","description":"用於探索、收藏與整理圖片靈感的內容平台。","subgroup":"圖片與設計"},
-        {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"用於圖片壓縮、裁切與批次處理的工具集合。","subgroup":"圖片與設計"},
-        {"title":"CapCut Web","url":"https://www.capcut.com/editor","description":"用於線上影片剪輯與套用 AI 特效的影片工具。","subgroup":"影片與動畫"},
-        {"title":"Flixier","url":"https://flixier.com/","description":"用於線上剪輯與處理影片的雲端編輯平台。","subgroup":"影片與動畫"},
-        {"title":"123Apps 影片","url":"https://online-video-cutter.com/tw/video-editor","description":"用於影片裁切與簡易編輯的線上工具。","subgroup":"影片與動畫"},
-        {"title":"AudioMass","url":"https://audiomass.co/","description":"用於剪輯與處理音訊的瀏覽器工具。","subgroup":"音訊"},
-        {"title":"Adobe Podcast","url":"https://podcast.adobe.com/enhance","description":"用於人聲降噪與提升音訊品質的 AI 工具。","subgroup":"音訊"},
-        {"title":"Audio Converter","url":"https://audio-convert.com/cn","description":"用於轉換音訊檔案格式的線上工具。","subgroup":"音訊"},
-        {"title":"Vocal Remover","url":"https://vocalremover.org/zh/","description":"用於分離人聲與伴奏的 AI 音訊工具。","subgroup":"音訊"},
-        {"title":"123Apps 音訊","url":"https://mp3cut.net/tw/","description":"用於剪輯與裁切 MP3 音訊的線上工具。","subgroup":"音訊"},
-        {"title":"Excalidraw","url":"https://excalidraw.com/","description":"用於繪圖、流程圖與自由筆記的線上白板工具。","subgroup":"繪圖與白板"}
+      {"term":"圖片與設計","links":[
+        {"title":"Photopea","url":"https://www.photopea.com/","description":"用於圖片編輯與圖像處理的線上編輯器。"},
+        {"title":"Polarr","url":"https://photoeditor.polarr.co/","description":"用於照片調色、修飾與套用濾鏡的圖片工具。"},
+        {"title":"Edit.photo","url":"https://edit.photo/","description":"用於快速裁切、調整與修飾圖片的線上工具。"},
+        {"title":"Canva","url":"https://www.canva.com/zh_tw/","description":"用於製作圖片、簡報與各類設計作品的設計平台。"},
+        {"title":"Pinterest","url":"https://www.pinterest.com/","description":"用於探索、收藏與整理圖片靈感的內容平台。"},
+        {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"用於圖片壓縮、裁切與批次處理的工具集合。"}
+      ]},
+      {"term":"影片處理","links":[
+        {"title":"CapCut Web","url":"https://www.capcut.com/editor","description":"用於線上影片剪輯與套用 AI 特效的影片工具。"},
+        {"title":"Flixier","url":"https://flixier.com/","description":"用於線上剪輯與處理影片的雲端編輯平台。"},
+        {"title":"123Apps 影片","url":"https://online-video-cutter.com/tw/video-editor","description":"用於影片裁切與簡易編輯的線上工具。"}
+      ]},
+      {"term":"音訊處理","links":[
+        {"title":"AudioMass","url":"https://audiomass.co/","description":"用於剪輯與處理音訊的瀏覽器工具。"},
+        {"title":"Adobe Podcast","url":"https://podcast.adobe.com/enhance","description":"用於人聲降噪與提升音訊品質的 AI 工具。"},
+        {"title":"Audio Converter","url":"https://audio-convert.com/cn","description":"用於轉換音訊檔案格式的線上工具。"},
+        {"title":"Vocal Remover","url":"https://vocalremover.org/zh/","description":"用於分離人聲與伴奏的 AI 音訊工具。"},
+        {"title":"123Apps 音訊","url":"https://mp3cut.net/tw/","description":"用於剪輯與裁切 MP3 音訊的線上工具。"}
+      ]},
+      {"term":"繪圖與白板","links":[
+        {"title":"Excalidraw","url":"https://excalidraw.com/","description":"用於繪圖、流程圖與自由筆記的線上白板工具。"}
       ]}
     ]
   },
@@ -107,13 +113,36 @@
         {"title":"YouTube Music","url":"https://music.youtube.com/","description":"提供音樂串流、歌單管理與音樂探索功能的服務。"},
         {"title":"Spotify","url":"https://open.spotify.com/","description":"提供音樂串流、歌單與音樂探索功能的服務。"}
       ]},
-      {"term":"二次元","links":[
+      {"term":"動畫","links":[
         {"title":"巴哈姆特動畫瘋","url":"https://ani.gamer.com.tw/","description":"提供正版動畫內容的台灣影音平台。"},
-        {"title":"Pixiv","url":"https://www.pixiv.net/","description":"提供插畫、漫畫與同人創作分享功能的創作社群。"},
+        {"title":"Anime1","url":"https://anime1.me/","description":"提供動畫線上觀看功能的網站。"}
+      ]},
+      {"term":"漫畫與小說","links":[
         {"title":"漫畫櫃","url":"https://tw.manhuagui.com/","description":"提供漫畫線上閱讀功能的網站。"},
-        {"title":"Anime1","url":"https://anime1.me/","description":"提供動畫線上觀看功能的網站。"},
         {"title":"列車組的不專業烤肉翻譯","url":"https://www.shironkestrel.com/","description":"提供二遊相關漫畫與二創作品翻譯內容的網站。"}
+      ]},
+      {"term":"二次元社群","links":[
+        {"title":"Pixiv","url":"https://www.pixiv.net/","description":"提供插畫、漫畫與同人創作分享功能的創作社群。"}
       ]}
+    ]
+  },
+  {
+    "taxonomy": "購物",
+    "icon": "fas fa-cart-shopping",
+    "list": [
+      {"term":"綜合電商","links":[]},
+      {"term":"二手與交易","links":[]},
+      {"term":"周邊與收藏","links":[]}
+    ]
+  },
+  {
+    "taxonomy": "學習",
+    "icon": "fas fa-book-open",
+    "list": [
+      {"term":"學習工具","links":[]},
+      {"term":"語言學習","links":[]},
+      {"term":"程式與技術","links":[]},
+      {"term":"資料與參考","links":[]}
     ]
   },
   {
