@@ -3,6 +3,17 @@
   const modes = ['light', 'dark', 'system'];
   const labels = { light: '亮色', dark: '暗色', system: '跟隨系統' };
   const icons = { light: 'fa-solid fa-sun', dark: 'fa-solid fa-moon', system: 'fa-solid fa-circle-half-stroke' };
+  const navIcons = {
+    '我的收藏': 'fa-solid fa-star',
+    '常用': 'fa-solid fa-bolt',
+    'AI & 搜尋': 'fa-solid fa-magnifying-glass',
+    '工具': 'fa-solid fa-wrench',
+    '開發 & 服務': 'fa-solid fa-code',
+    '娛樂': 'fa-solid fa-film',
+    '遊戲': 'fa-solid fa-gamepad',
+    '社群': 'fa-solid fa-users',
+    '最近使用': 'fa-solid fa-clock-rotate-left'
+  };
   const media = window.matchMedia('(prefers-color-scheme: dark)');
 
   function getMode() {
@@ -21,6 +32,28 @@
       btn.setAttribute('aria-label', `外觀模式：${labels[mode]}，點擊切換`);
       btn.dataset.theme = mode;
     }
+  }
+
+  function normalizeNavIcons() {
+    document.querySelectorAll('#js-nav-menu .nav-item').forEach(item => {
+      const label = item.textContent.trim();
+      const icon = navIcons[label];
+      if (!icon) return;
+      let el = item.querySelector('i');
+      if (!el) {
+        el = document.createElement('i');
+        item.prepend(el);
+      }
+      el.className = icon;
+      el.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  function observeNav() {
+    const nav = document.getElementById('js-nav-menu');
+    if (!nav) return;
+    normalizeNavIcons();
+    new MutationObserver(normalizeNavIcons).observe(nav, { childList: true, subtree: true });
   }
 
   function createControl() {
@@ -57,6 +90,7 @@
       document.body.appendChild(actions);
     }
     apply(getMode());
+    observeNav();
   }
 
   media.addEventListener?.('change', () => {
