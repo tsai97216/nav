@@ -130,8 +130,15 @@
     "taxonomy": "購物",
     "icon": "fas fa-cart-shopping",
     "list": [
-      {"term":"綜合電商","links":[]},
-      {"term":"二手與交易","links":[]},
+      {"term":"綜合電商","links":[
+        {"title":"淘寶","url":"https://world.taobao.com/","description":"提供商品搜尋、購買與跨境購物功能的綜合電商平台。"},
+        {"title":"蝦皮購物","url":"https://shopee.tw/","description":"提供商品搜尋、購買與賣家交易功能的電商平台。"},
+        {"title":"momo 購物網","url":"https://www.momoshop.com.tw/","description":"提供多元商品搜尋與線上購物服務的綜合電商平台。"},
+        {"title":"PChome 24h 購物","url":"https://24h.pchome.com.tw/","description":"提供多元商品與快速配送服務的綜合電商平台。"}
+      ]},
+      {"term":"二手與交易","links":[
+        {"title":"賣貨便","url":"https://myship.7-11.com.tw/","description":"提供個人賣家商品寄送、交易與取貨服務的平台。"}
+      ]},
       {"term":"周邊與收藏","links":[]}
     ]
   },
