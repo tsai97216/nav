@@ -6,13 +6,11 @@
       {"title":"Google","url":"https://www.google.com/","description":"日常搜尋、查資料與尋找網站。"},
       {"title":"ChatGPT","url":"https://chat.openai.com/","description":"AI 助手，適合問答、分析、寫作與程式協助。"},
       {"title":"YouTube","url":"https://www.youtube.com/","description":"影片、直播與創作者內容平台。"},
-      {"title":"GitHub","url":"https://github.com/","description":"程式碼管理、開源專案與開發者平台。"},
-      {"title":"Discord","url":"https://discord.com/","description":"社群、聊天、語音與遊戲交流平台。"},
-      {"title":"HoYoLAB","url":"https://www.hoyolab.com/","description":"米哈遊官方社群、簽到與遊戲資料平台。"}
+      {"title":"GitHub","url":"https://github.com/","description":"程式碼管理、開源專案與開發者平台。"}
     ]
   },
   {
-    "taxonomy": "AI 與搜尋",
+    "taxonomy": "AI",
     "icon": "fas fa-microchip",
     "list": [
       {"term":"AI 助手","links":[
@@ -24,9 +22,15 @@
         {"title":"Grok","url":"https://grok.com/","description":"xAI 開發的 AI 對話模型。"}
       ]},
       {"term":"AI 搜尋","links":[
-        {"title":"Perplexity","url":"https://www.perplexity.ai/","description":"結合網路搜尋與 AI 摘要的答案型搜尋工具。"},
-        {"title":"Google","url":"https://www.google.com/","description":"傳統網路搜尋與資訊探索。"}
+        {"title":"Perplexity","url":"https://www.perplexity.ai/","description":"結合網路搜尋與 AI 摘要的答案型搜尋工具。"}
       ]}
+    ]
+  },
+  {
+    "taxonomy": "搜尋與資訊",
+    "icon": "fas fa-magnifying-glass",
+    "links": [
+      {"title":"Google","url":"https://www.google.com/","description":"傳統網路搜尋與資訊探索。"}
     ]
   },
   {
@@ -103,27 +107,40 @@
     ]
   },
   {
-    "taxonomy": "檔案與轉換",
-    "icon": "fas fa-file-arrow-up",
+    "taxonomy": "檔案",
+    "icon": "fas fa-folder-open",
     "list": [
-      {"term":"檔案與分享","links":[
+      {"term":"雲端與分享","links":[
         {"title":"TeraBox","url":"https://www.terabox.com/","description":"雲端檔案儲存與分享服務。"},
-        {"title":"Gofile","url":"https://gofile.io/","description":"檔案分享與暫存服務。"},
-        {"title":"PairDrop","url":"https://pairdrop.net/","description":"跨裝置區域網路檔案傳輸工具。"},
-        {"title":"is.gd","url":"https://is.gd/","description":"網址縮短服務。"}
+        {"title":"Gofile","url":"https://gofile.io/","description":"檔案分享與暫存服務。"}
       ]},
-      {"term":"文件與格式轉換","links":[
-        {"title":"TinyWOW","url":"https://tinywow.com/","description":"PDF、圖片與文件處理工具集合。"},
-        {"title":"PDF24 Tools","url":"https://tools.pdf24.org/zh/","description":"PDF 合併、壓縮與轉換工具。"},
-        {"title":"Convertio","url":"https://convertio.co/zh/","description":"多格式檔案轉換工具。"},
-        {"title":"iLovePDF","url":"https://www.ilovepdf.com/zh-tw","description":"PDF 編輯與格式處理工具。"},
-        {"title":"Google 翻譯","url":"https://translate.google.com.tw/","description":"文字、網頁與語音翻譯工具。"},
-        {"title":"DeepL 翻譯","url":"https://www.deepl.com/translator/files","description":"高品質文件翻譯工具。"}
+      {"term":"裝置傳輸","links":[
+        {"title":"PairDrop","url":"https://pairdrop.net/","description":"跨裝置區域網路檔案傳輸工具。"}
       ]}
     ]
   },
   {
-    "taxonomy": "影音創作",
+    "taxonomy": "文件與轉換",
+    "icon": "fas fa-file-lines",
+    "list": [
+      {"term":"文件與格式轉換","links":[
+        {"title":"TinyWOW","url":"https://tinywow.com/","description":"PDF、圖片與文件處理工具集合。"},
+        {"title":"PDF24 Tools","url":"https://tools.pdf24.org/zh/","description":"PDF 合併、壓縮與轉換工具。"},
+        {"title":"Convertio","url":"https://convertio.co/zh/","description":"多格式檔案轉換工具。"},
+        {"title":"iLovePDF","url":"https://www.ilovepdf.com/zh-tw","description":"PDF 編輯與格式處理工具。"}
+      ]}
+    ]
+  },
+  {
+    "taxonomy": "翻譯",
+    "icon": "fas fa-language",
+    "links": [
+      {"title":"Google 翻譯","url":"https://translate.google.com.tw/","description":"文字、網頁與語音翻譯工具。"},
+      {"title":"DeepL 翻譯","url":"https://www.deepl.com/translator/files","description":"高品質文件翻譯工具。"}
+    ]
+  },
+  {
+    "taxonomy": "創作工具",
     "icon": "fas fa-wand-magic-sparkles",
     "list": [
       {"term":"音訊","links":[
@@ -144,35 +161,44 @@
         {"title":"Edit.photo","url":"https://edit.photo/","description":"簡易線上修圖工具。"},
         {"title":"Canva","url":"https://www.canva.com/zh_tw/","description":"快速製作圖片、簡報與設計作品。"},
         {"title":"Pinterest","url":"https://www.pinterest.com/","description":"圖片靈感收藏平台。"},
-        {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"圖片壓縮、裁切與批次處理工具。"},
+        {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"圖片壓縮、裁切與批次處理工具。"}
+      ]},
+      {"term":"繪圖與白板","links":[
         {"title":"Excalidraw","url":"https://excalidraw.com/","description":"手繪風格線上白板工具。"}
       ]}
     ]
   },
   {
-    "taxonomy": "文字工具",
-    "icon": "fas fa-language",
+    "taxonomy": "文字與實用工具",
+    "icon": "fas fa-screwdriver-wrench",
     "links": [
       {"title":"能不能好好說話","url":"https://lab.magiconch.com/nbnhhsh/","description":"將中文縮寫、拼音縮寫轉換成較完整的文字。"},
-      {"title":"工具邦","url":"https://tw.piliapp.com/","description":"各類線上小工具集合。"}
+      {"title":"工具邦","url":"https://tw.piliapp.com/","description":"各類線上小工具集合。"},
+      {"title":"is.gd","url":"https://is.gd/","description":"網址縮短服務。"}
     ]
   },
   {
-    "taxonomy": "開發與資安",
+    "taxonomy": "開發",
     "icon": "fas fa-code",
-    "list": [
-      {"term":"開發工具","links":[
-        {"title":"GitHub","url":"https://github.com/","description":"程式碼管理、開源專案與開發者平台。"},
-        {"title":"CyberChef","url":"https://gchq.github.io/CyberChef/","description":"資料編碼、解碼、雜湊與格式處理工具。"}
-      ]},
-      {"term":"資安工具","links":[
-        {"title":"VirusTotal","url":"https://www.virustotal.com/gui/home/upload","description":"檔案與網址安全掃描工具，整合多種防毒引擎。"},
-        {"title":"Have I Been Pwned","url":"https://haveibeenpwned.com/","description":"檢查電子郵件是否出現在已知資料外洩事件。"}
-      ]},
-      {"term":"iOS 工具","links":[
-        {"title":"Decrypt.day","url":"https://decrypt.day/home/","description":"iOS 應用程式研究與資訊平台。"},
-        {"title":"AppTesters","url":"https://apps.apptesters.org","description":"第三方 iOS 應用程式測試與分發平台。"}
-      ]}
+    "links": [
+      {"title":"GitHub","url":"https://github.com/","description":"程式碼管理、開源專案與開發者平台。"}
+    ]
+  },
+  {
+    "taxonomy": "資安與資料",
+    "icon": "fas fa-shield-halved",
+    "links": [
+      {"title":"CyberChef","url":"https://gchq.github.io/CyberChef/","description":"資料編碼、解碼、雜湊與格式處理工具。"},
+      {"title":"VirusTotal","url":"https://www.virustotal.com/gui/home/upload","description":"檔案與網址安全掃描工具，整合多種防毒引擎。"},
+      {"title":"Have I Been Pwned","url":"https://haveibeenpwned.com/","description":"檢查電子郵件是否出現在已知資料外洩事件。"}
+    ]
+  },
+  {
+    "taxonomy": "iOS 工具",
+    "icon": "fab fa-apple",
+    "links": [
+      {"title":"Decrypt.day","url":"https://decrypt.day/home/","description":"iOS 應用程式研究與資訊平台。"},
+      {"title":"AppTesters","url":"https://apps.apptesters.org","description":"第三方 iOS 應用程式測試與分發平台。"}
     ]
   },
   {
@@ -191,7 +217,7 @@
     ]
   },
   {
-    "taxonomy": "瀏覽器腳本",
+    "taxonomy": "我的腳本",
     "icon": "fas fa-terminal",
     "links": [
       {
