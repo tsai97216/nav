@@ -1,203 +1,23 @@
 const navMenu = document.getElementById("js-nav-menu");
 const mainContent = document.getElementById("js-main-content");
-
-const fallbackColors = [
-  "linear-gradient(135deg,#3b82f6,#1d4ed8)",
-  "linear-gradient(135deg,#10b981,#047857)",
-  "linear-gradient(135deg,#8b5cf6,#6d28d9)",
-  "linear-gradient(135deg,#f59e0b,#b45309)",
-  "linear-gradient(135deg,#ec4899,#be185d)",
-  "linear-gradient(135deg,#14b8a6,#0f766e)",
-  "linear-gradient(135deg,#ef4444,#b91c1c)"
-];
-
-function stringToColorIndex(str){
-  let hash = 0;
-  for(let i=0;i<str.length;i++){
-    hash = str.charCodeAt(i) + ((hash<<5)-hash);
-  }
-  return Math.abs(hash)%fallbackColors.length;
-}
-
-function createCard(link){
-  let domain="";
-  try{
-    if(link.url.startsWith("http")) domain = new URL(link.url).hostname;
-  }catch(e){}
-
-  const color = fallbackColors[stringToColorIndex(link.title)];
-  const letter = link.title.charAt(0);
-
-  const copyBadge = link.is_copy
-    ? `<span class="copy-badge"><i class="fa-regular fa-copy"></i> 腳本</span>`
-    : "";
-
-  const copyData = link.is_copy
-    ? `data-copy="${encodeURIComponent(link.copy_content)}"`
-    : "";
-
-  const favicon = domain
-    ? `<img class="card-logo" src="https://www.google.com/s2/favicons?sz=128&domain=${domain}" onerror="this.onerror=null;this.src='https://icon.horse/icon/${domain}' >`
-    : "";
-
-  return `
-    <div class="card" data-url="${link.url}" data-copy-enabled="${link.is_copy||false}" data-search="${(link.title+" "+(link.description||"")).toLowerCase()}" ${copyData}>
-      ${copyBadge}
-      <div class="card-top">
-        <div class="card-logo-container" style="background:${color}">
-          ${favicon}
-          <div class="avatar-fallback" style="${domain?'display:none':''}">${letter}</div>
-        </div>
-        <div class="card-title">${link.title}</div>
-      </div>
-      <div class="card-desc">${link.description||""}</div>
-    </div>
-  `;
-}
-
-function updateSearchResults(keyword){
-  const normalized = keyword.trim().toLowerCase();
-  const sections = document.querySelectorAll(".section");
-  let resultCount = 0;
-
-  sections.forEach(section=>{
-    let sectionMatches = 0;
-
-    section.querySelectorAll(".term-container").forEach(term=>{
-      let termMatches = 0;
-      term.querySelectorAll(".card").forEach(card=>{
-        const text = card.dataset.search || card.innerText.toLowerCase();
-        const matched = !normalized || text.includes(normalized);
-        card.style.display = matched ? "flex" : "none";
-        if(matched){ termMatches++; resultCount++; }
-      });
-      term.style.display = termMatches ? "" : "none";
-      sectionMatches += termMatches;
-    });
-
-    const directGrid = section.querySelector(":scope > .grid");
-    if(directGrid){
-      directGrid.querySelectorAll(".card").forEach(card=>{
-        const text = card.dataset.search || card.innerText.toLowerCase();
-        const matched = !normalized || text.includes(normalized);
-        card.style.display = matched ? "flex" : "none";
-        if(matched){ sectionMatches++; resultCount++; }
-      });
-    }
-
-    section.style.display = sectionMatches ? "" : "none";
-    const navItem = document.querySelector(`.nav-item[href="#${section.id}"]`);
-    if(navItem) navItem.style.display = sectionMatches ? "" : "none";
-  });
-
-  const searchBox = document.querySelector(".search-box");
-  let resultInfo = document.getElementById("search-result-info");
-  if(!resultInfo){
-    resultInfo = document.createElement("span");
-    resultInfo.id = "search-result-info";
-    resultInfo.setAttribute("aria-live","polite");
-    searchBox.appendChild(resultInfo);
-  }
-
-  if(normalized){
-    resultInfo.textContent = `找到 ${resultCount} 個結果`;
-    resultInfo.style.display = "block";
-  }else{
-    resultInfo.style.display = "none";
-  }
-}
-
-fetch("data.json")
-.then(res=>res.json())
-.then(data=>{
-  data.forEach((section,index)=>{
-    const id = `section-${index}`;
-
-    const nav = document.createElement("a");
-    nav.className = "nav-item" + (index===0?" active":"");
-    nav.href = "#"+id;
-    nav.innerHTML = `<i class="${section.icon}"></i><span>${section.taxonomy}</span>`;
-    navMenu.appendChild(nav);
-
-    const sectionDom = document.createElement("section");
-    sectionDom.className="section";
-    sectionDom.id=id;
-
-    let html = `<div class="section-header"><i class="${section.icon}"></i><span>${section.taxonomy}</span></div>`;
-
-    if(section.list){
-      section.list.forEach(group=>{
-        html += `<div class="term-container"><div class="term-title">${group.term}</div><div class="grid">`;
-        group.links.forEach(link=>{ html += createCard(link); });
-        html += `</div></div>`;
-      });
-    }else if(section.links){
-      html += `<div class="grid">`;
-      section.links.forEach(link=>{ html += createCard(link); });
-      html += `</div>`;
-    }
-
-    sectionDom.innerHTML=html;
-    mainContent.appendChild(sectionDom);
-  });
-
-  const search = document.getElementById("search-input");
-  search.addEventListener("input",()=>updateSearchResults(search.value));
-
-  document.addEventListener("keydown",e=>{
-    const tag = document.activeElement?.tagName?.toLowerCase();
-    const typing = tag === "input" || tag === "textarea" || document.activeElement?.isContentEditable;
-
-    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k"){
-      e.preventDefault();
-      search.focus();
-      search.select();
-      return;
-    }
-
-    if(e.key === "/" && !typing){
-      e.preventDefault();
-      search.focus();
-      return;
-    }
-
-    if(e.key === "Escape" && document.activeElement === search){
-      search.value = "";
-      updateSearchResults("");
-      search.blur();
-    }
-  });
-
-  mainContent.addEventListener("click",e=>{
-    const card = e.target.closest(".card");
-    if(!card) return;
-
-    const copy = card.dataset.copyEnabled==="true";
-    if(copy){
-      const text = decodeURIComponent(card.dataset.copy);
-      navigator.clipboard.writeText(text).then(()=>{
-        const toast = document.getElementById("js-toast");
-        toast.classList.add("show");
-        setTimeout(()=>toast.classList.remove("show"),5000);
-      });
-    }else{
-      const url = card.dataset.url;
-      if(url && url!=="javascript:void(0);"){
-        window.open(url,"_blank","noopener,noreferrer");
-      }
-    }
-  });
-
-  window.addEventListener("scroll",()=>{
-    let current="";
-    document.querySelectorAll(".section").forEach(section=>{
-      if(pageYOffset >= section.offsetTop-60) current = section.id;
-    });
-
-    document.querySelectorAll(".nav-item").forEach(item=>{
-      item.classList.remove("active");
-      if(item.href.endsWith("#"+current)) item.classList.add("active");
-    });
-  });
-})
-.catch(err=>console.error("data.json 載入失敗:",err));
+const FAVORITES_KEY = "chi-nav-favorites";
+const RECENT_KEY = "chi-nav-recent";
+const RECENT_LIMIT = 8;
+let allLinks = [];
+let linkMap = new Map();
+let favorites = new Set(loadStorage(FAVORITES_KEY));
+let recent = loadStorage(RECENT_KEY);
+const fallbackColors = ["linear-gradient(135deg,#3b82f6,#1d4ed8)","linear-gradient(135deg,#10b981,#047857)","linear-gradient(135deg,#8b5cf6,#6d28d9)","linear-gradient(135deg,#f59e0b,#b45309)","linear-gradient(135deg,#ec4899,#be185d)","linear-gradient(135deg,#14b8a6,#0f766e)","linear-gradient(135deg,#ef4444,#b91c1c)"];
+function loadStorage(key){try{const value=JSON.parse(localStorage.getItem(key)||"[]");return Array.isArray(value)?value:[]}catch(e){return[]}}
+function saveStorage(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch(e){}}
+function linkKey(link){return `${link.title}||${link.url}`}
+function stringToColorIndex(str){let hash=0;for(let i=0;i<str.length;i++)hash=str.charCodeAt(i)+((hash<<5)-hash);return Math.abs(hash)%fallbackColors.length}
+function createCard(link){let domain="";try{if(link.url.startsWith("http"))domain=new URL(link.url).hostname}catch(e){}const color=fallbackColors[stringToColorIndex(link.title)],letter=link.title.charAt(0),key=linkKey(link),isFavorite=favorites.has(key);const copyBadge=link.is_copy?`<span class="copy-badge"><i class="fa-regular fa-copy"></i> 腳本</span>`:"";const copyData=link.is_copy?`data-copy="${encodeURIComponent(link.copy_content)}"`:"";const favicon=domain?`<img class="card-logo" src="https://www.google.com/s2/favicons?sz=128&domain=${domain}" onerror="this.onerror=null;this.src='https://icon.horse/icon/${domain}' >`:"";return `<div class="card" data-key="${encodeURIComponent(key)}" data-url="${link.url}" data-copy-enabled="${link.is_copy||false}" data-search="${(link.title+" "+(link.description||"")).toLowerCase()}" ${copyData}>${copyBadge}<button class="favorite-btn ${isFavorite?"is-favorite":""}" type="button" aria-label="${isFavorite?"取消收藏":"加入收藏"}" title="${isFavorite?"取消收藏":"加入收藏"}"><i class="fa-${isFavorite?"solid":"regular"} fa-star"></i></button><div class="card-top"><div class="card-logo-container" style="background:${color}">${favicon}<div class="avatar-fallback" style="${domain?'display:none':''}">${letter}</div></div><div class="card-title">${link.title}</div></div><div class="card-desc">${link.description||""}</div></div>`}
+function createQuickSection(id,title,icon,links){if(!links.length)return"";return `<section class="section quick-section" id="${id}"><div class="section-header"><i class="${icon}"></i><span>${title}</span></div><div class="grid">${links.map(createCard).join("")}</div></section>`}
+function renderQuickSections(){let quick=document.getElementById("quick-sections");if(!quick){quick=document.createElement("div");quick.id="quick-sections";mainContent.prepend(quick)}const favoriteLinks=allLinks.filter(link=>favorites.has(linkKey(link))),recentLinks=recent.map(key=>linkMap.get(key)).filter(Boolean);quick.innerHTML=createQuickSection("section-favorites","我的收藏","fas fa-star",favoriteLinks)+createQuickSection("section-recent","最近使用","fas fa-clock-rotate-left",recentLinks);updateQuickNav()}
+function updateQuickNav(){document.querySelectorAll(".quick-nav-item").forEach(item=>item.remove());const items=[];if(favorites.size)items.push(["section-favorites","fas fa-star","我的收藏"]);if(recent.length)items.push(["section-recent","fas fa-clock-rotate-left","最近使用"]);items.reverse().forEach(([id,icon,title])=>{const nav=document.createElement("a");nav.className="nav-item quick-nav-item";nav.href=`#${id}`;nav.innerHTML=`<i class="${icon}"></i><span>${title}</span>`;navMenu.prepend(nav)})}
+function toggleFavorite(link){const key=linkKey(link);if(favorites.has(key))favorites.delete(key);else favorites.add(key);saveStorage(FAVORITES_KEY,[...favorites]);refreshCards();renderQuickSections()}
+function addRecent(link){const key=linkKey(link);recent=[key,...recent.filter(item=>item!==key)].slice(0,RECENT_LIMIT);saveStorage(RECENT_KEY,recent);renderQuickSections()}
+function refreshCards(){document.querySelectorAll(".card").forEach(card=>{const key=decodeURIComponent(card.dataset.key||""),button=card.querySelector(".favorite-btn");if(!button)return;const active=favorites.has(key);button.classList.toggle("is-favorite",active);button.setAttribute("aria-label",active?"取消收藏":"加入收藏");button.title=active?"取消收藏":"加入收藏";button.innerHTML=`<i class="fa-${active?"solid":"regular"} fa-star"></i>`})}
+function updateSearchResults(keyword){const normalized=keyword.trim().toLowerCase(),sections=document.querySelectorAll(".section:not(.quick-section)");let resultCount=0;const quick=document.getElementById("quick-sections");if(quick)quick.style.display=normalized?"none":"block";sections.forEach(section=>{let sectionMatches=0;section.querySelectorAll(".term-container").forEach(term=>{let termMatches=0;term.querySelectorAll(".card").forEach(card=>{const text=card.dataset.search||card.innerText.toLowerCase(),matched=!normalized||text.includes(normalized);card.style.display=matched?"flex":"none";if(matched){termMatches++;resultCount++}});term.style.display=termMatches?"":"none";sectionMatches+=termMatches});const directGrid=section.querySelector(":scope > .grid");if(directGrid)directGrid.querySelectorAll(".card").forEach(card=>{const text=card.dataset.search||card.innerText.toLowerCase(),matched=!normalized||text.includes(normalized);card.style.display=matched?"flex":"none";if(matched){sectionMatches++;resultCount++}});section.style.display=sectionMatches?"":"none";const navItem=document.querySelector(`.nav-item[href="#${section.id}"]`);if(navItem)navItem.style.display=sectionMatches?"":"none"});const searchBox=document.querySelector(".search-box");let resultInfo=document.getElementById("search-result-info");if(!resultInfo){resultInfo=document.createElement("span");resultInfo.id="search-result-info";resultInfo.setAttribute("aria-live","polite");searchBox.appendChild(resultInfo)}if(normalized){resultInfo.textContent=`找到 ${resultCount} 個結果`;resultInfo.style.display="block"}else resultInfo.style.display="none"}
+fetch("data.json").then(res=>res.json()).then(data=>{data.forEach((section,index)=>{const id=`section-${index}`,nav=document.createElement("a");nav.className="nav-item"+(index===0?" active":"");nav.href="#"+id;nav.innerHTML=`<i class="${section.icon}"></i><span>${section.taxonomy}</span>`;navMenu.appendChild(nav);const sectionDom=document.createElement("section");sectionDom.className="section";sectionDom.id=id;let html=`<div class="section-header"><i class="${section.icon}"></i><span>${section.taxonomy}</span></div>`;if(section.list){section.list.forEach(group=>{html+=`<div class="term-container"><div class="term-title">${group.term}</div><div class="grid">`;group.links.forEach(link=>{allLinks.push(link);linkMap.set(linkKey(link),link);html+=createCard(link)});html+=`</div></div>`})}else if(section.links){html+=`<div class="grid">`;section.links.forEach(link=>{allLinks.push(link);linkMap.set(linkKey(link),link);html+=createCard(link)});html+=`</div>`}sectionDom.innerHTML=html;mainContent.appendChild(sectionDom)});renderQuickSections();const search=document.getElementById("search-input");search.addEventListener("input",()=>updateSearchResults(search.value));document.addEventListener("keydown",e=>{const tag=document.activeElement?.tagName?.toLowerCase(),typing=tag==="input"||tag==="textarea"||document.activeElement?.isContentEditable;if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();search.focus();search.select();return}if(e.key==="/"&&!typing){e.preventDefault();search.focus();return}if(e.key==="Escape"&&document.activeElement===search){search.value="";updateSearchResults("");search.blur()}});mainContent.addEventListener("click",e=>{const favoriteButton=e.target.closest(".favorite-btn");if(favoriteButton){e.preventDefault();e.stopPropagation();const card=favoriteButton.closest(".card"),link=linkMap.get(decodeURIComponent(card.dataset.key||""));if(link)toggleFavorite(link);return}const card=e.target.closest(".card");if(!card)return;const link=linkMap.get(decodeURIComponent(card.dataset.key||"")),copy=card.dataset.copyEnabled==="true";if(copy){const text=decodeURIComponent(card.dataset.copy);navigator.clipboard.writeText(text).then(()=>{const toast=document.getElementById("js-toast");toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),5000)})}else{const url=card.dataset.url;if(url&&url!=="javascript:void(0);"){if(link)addRecent(link);window.open(url,"_blank","noopener,noreferrer")}}});window.addEventListener("scroll",()=>{let current="";document.querySelectorAll(".section").forEach(section=>{if(section.style.display!=="none"&&pageYOffset>=section.offsetTop-60)current=section.id});document.querySelectorAll(".nav-item").forEach(item=>{item.classList.remove("active");if(item.href.endsWith("#"+current))item.classList.add("active")})})}).catch(err=>console.error("data.json 載入失敗:",err));
