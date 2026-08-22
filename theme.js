@@ -43,7 +43,7 @@
     btn.type = 'button';
     btn.title = '回到最上面';
     btn.setAttribute('aria-label', '回到最上面');
-    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    btn.innerHTML = '<i class="fa-solid fa-location-arrow"></i>';
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     return btn;
   }
