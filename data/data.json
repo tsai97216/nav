@@ -33,19 +33,21 @@
     "taxonomy": "工具",
     "icon": "fas fa-screwdriver-wrench",
     "list": [
+      {"term":"實用","links":[
+        {"title":"能不能好好說話","url":"https://lab.magiconch.com/nbnhhsh/","description":"用於將中文縮寫與拼音縮寫轉換為完整文字的工具。"},
+        {"title":"工具邦","url":"https://tw.piliapp.com/","description":"提供各類線上小工具的工具集合網站。"},
+        {"title":"is.gd","url":"https://is.gd/","description":"用於縮短網址的線上服務。"},
+        {"title":"Raindrop.io","url":"https://app.raindrop.io/","description":"用於收藏、整理與管理網頁書籤的工具。"}
+      ]},
+      {"term":"文字","links":[
+        {"title":"Google 翻譯","url":"https://translate.google.com.tw/","description":"用於文字、網頁與語音翻譯的翻譯工具。"},
+        {"title":"DeepL 翻譯","url":"https://www.deepl.com/translator/files","description":"用於文字與文件翻譯的翻譯工具。"},
+        {"title":"Notion","url":"https://app.notion.com/","description":"用於筆記、文件整理、資料庫與個人工作管理的工具。"}
+      ]},
       {"term":"檔案與分享","links":[
         {"title":"TeraBox","url":"https://www.terabox.com/","description":"提供雲端檔案儲存、管理與分享功能的服務。"},
         {"title":"Gofile","url":"https://gofile.io/","description":"提供檔案上傳、分享與暫存功能的服務。"},
         {"title":"PairDrop","url":"https://pairdrop.net/","description":"用於跨裝置區域網路檔案傳輸的工具。"}
-      ]},
-      {"term":"實用","links":[
-        {"title":"能不能好好說話","url":"https://lab.magiconch.com/nbnhhsh/","description":"用於將中文縮寫與拼音縮寫轉換為完整文字的工具。"},
-        {"title":"工具邦","url":"https://tw.piliapp.com/","description":"提供各類線上小工具的工具集合網站。"},
-        {"title":"is.gd","url":"https://is.gd/","description":"用於縮短網址的線上服務。"}
-      ]},
-      {"term":"文字","links":[
-        {"title":"Google 翻譯","url":"https://translate.google.com.tw/","description":"用於文字、網頁與語音翻譯的翻譯工具。"},
-        {"title":"DeepL 翻譯","url":"https://www.deepl.com/translator/files","description":"用於文字與文件翻譯的翻譯工具。"}
       ]},
       {"term":"文件與轉換","links":[
         {"title":"TinyWOW","url":"https://tinywow.com/","description":"提供 PDF、圖片與文件處理功能的線上工具集合。"},
@@ -61,17 +63,17 @@
         {"title":"Pinterest","url":"https://www.pinterest.com/","description":"用於探索、收藏與整理圖片靈感的內容平台。"},
         {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"用於圖片壓縮、裁切與批次處理的工具集合。"}
       ]},
-      {"term":"影片處理","links":[
-        {"title":"CapCut Web","url":"https://www.capcut.com/editor","description":"用於線上影片剪輯與套用 AI 特效的影片工具。"},
-        {"title":"Flixier","url":"https://flixier.com/","description":"用於線上剪輯與處理影片的雲端編輯平台。"},
-        {"title":"123Apps 影片","url":"https://online-video-cutter.com/tw/video-editor","description":"用於影片裁切與簡易編輯的線上工具。"}
-      ]},
       {"term":"音訊處理","links":[
         {"title":"AudioMass","url":"https://audiomass.co/","description":"用於剪輯與處理音訊的瀏覽器工具。"},
         {"title":"Adobe Podcast","url":"https://podcast.adobe.com/enhance","description":"用於人聲降噪與提升音訊品質的 AI 工具。"},
         {"title":"Audio Converter","url":"https://audio-convert.com/cn","description":"用於轉換音訊檔案格式的線上工具。"},
         {"title":"Vocal Remover","url":"https://vocalremover.org/zh/","description":"用於分離人聲與伴奏的 AI 音訊工具。"},
         {"title":"123Apps 音訊","url":"https://mp3cut.net/tw/","description":"用於剪輯與裁切 MP3 音訊的線上工具。"}
+      ]},
+      {"term":"影片處理","links":[
+        {"title":"CapCut Web","url":"https://www.capcut.com/editor","description":"用於線上影片剪輯與套用 AI 特效的影片工具。"},
+        {"title":"Flixier","url":"https://flixier.com/","description":"用於線上剪輯與處理影片的雲端編輯平台。"},
+        {"title":"123Apps 影片","url":"https://online-video-cutter.com/tw/video-editor","description":"用於影片裁切與簡易編輯的線上工具。"}
       ]},
       {"term":"繪圖與白板","links":[
         {"title":"Excalidraw","url":"https://excalidraw.com/","description":"用於繪圖、流程圖與自由筆記的線上白板工具。"}
@@ -125,7 +127,8 @@
       ]},
       {"term":"漫畫與小說","links":[
         {"title":"漫畫櫃","url":"https://tw.manhuagui.com/","description":"提供漫畫線上閱讀功能的網站。"},
-        {"title":"列車組的不專業烤肉翻譯","url":"https://www.shironkestrel.com/","description":"提供二遊相關漫畫與二創作品翻譯內容的網站。"}
+        {"title":"列車組的不專業烤肉翻譯","url":"https://www.shironkestrel.com/","description":"提供二遊相關漫畫與二創作品翻譯內容的網站。"},
+        {"title":"包子漫畫","url":"https://www.baozimh.com/","description":"提供漫畫線上閱讀與作品瀏覽功能的網站。"}
       ]},
       {"term":"二次元社群","links":[
         {"title":"Pixiv","url":"https://www.pixiv.net/","description":"提供插畫、漫畫與同人創作分享功能的創作社群。"}
