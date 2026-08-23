@@ -1,5 +1,5 @@
 const navMenu=document.getElementById('js-nav-menu'),main=document.getElementById('js-main-content'),search=document.getElementById('search-input'),result=document.getElementById('search-result-info'),toast=document.getElementById('js-toast');
-const VERSION='v2.6.2',THEME='chi-nav-theme';
+const VERSION='v2.6.3',THEME='chi-nav-theme';
 let data=[],all=[],map=new Map(),favorites=getStoredFavorites(),recent=getStoredRecent(),active={};
 async function init(){const r=await fetch(`data/data.json?v=${VERSION}&t=${Date.now()}`,{cache:'no-store'});data=await r.json();data.forEach(s=>{if(s.links){s.links.forEach(l=>{l._taxonomy=s.taxonomy;l._term='常用';});}else{(s.list||[]).forEach(group=>group.links?.forEach(l=>{l._taxonomy=s.taxonomy;l._term=group.term;}));}flat(s).forEach(l=>{const k=key(l);if(!map.has(k))map.set(k,l);if(!all.some(x=>key(x)===k))all.push(l)});});favorites=normalizeFavorites(favorites,map);recent=normalizeRecent(recent,map);saveFavorites([...favorites]);saveRecent(recent);const versionLabel=document.getElementById('site-version');if(versionLabel)versionLabel.textContent=VERSION;home();initSearch();initSidebarToggle();
 const params=new URLSearchParams(location.search),view=params.get('view'),action=params.get('action');if(view==='favorites'||view==='recent'||view==='recommendations')page(view);if(action==='search')openCommand();
