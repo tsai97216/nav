@@ -3,8 +3,8 @@ const FAV='chi-nav-favorites',REC='chi-nav-recent',REC_TIME='chi-nav-recent-time
 function loadStore(key){return load(key)}
 function saveFavorites(items){save(FAV,items)}
 function saveRecent(items){save(REC,items.slice(0,LIMIT))}
-function loadRecentTimes(){return load(REC_TIME)}
-function saveRecentTime(url){const times=loadRecentTimes();times[url]=Date.now();save(REC_TIME,times)}
+function loadRecentTimes(){try{const x=JSON.parse(localStorage.getItem(REC_TIME)||'{}');return x&&typeof x==='object'&&!Array.isArray(x)?x:{} }catch{return {}}}
+function saveRecentTime(url){const times=loadRecentTimes();times[url]=Date.now();try{localStorage.setItem(REC_TIME,JSON.stringify(times))}catch{}}
 function normalizeFavorites(items,map){return new Set([...items].map(norm).filter(k=>map.has(k)))}
 function normalizeRecent(items,map){return [...new Set(items.map(norm).filter(k=>map.has(k)))].slice(0,LIMIT)}
 function toggleFavorite(item,favorites){const k=key(item);if(favorites.has(k))favorites.delete(k);else favorites.add(k);saveFavorites([...favorites]);return favorites}
