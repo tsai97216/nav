@@ -1,5 +1,5 @@
-const CACHE_NAME = "chi-nav-v2.3.4";
-const CORE_ASSETS = ["./", "./index.html", "./css/style.css?v=2.3.4", "./css/theme.css?v=2.3.4", "./js/data.js?v=2.3.4", "./js/storage.js?v=2.3.4", "./js/update.js?v=2.3.4", "./js/search.js?v=2.3.4", "./js/navigation.js?v=2.3.4", "./js/render.js?v=2.3.4", "./js/app.js?v=2.3.4", "./data/data.json", "./data/version.json", "./manifest.json", "./css/update.css?v=2.3.4", "./css/card-tooltip.css?v=2.3.4", "./css/enhancements.css?v=2.3.4", "./js/theme.js?v=2.3.4", "./js/card-tooltip.js?v=2.3.4", "./js/bootstrap.js?v=2.3.4"];
+const CACHE_NAME = "chi-nav-v2.3.5";
+const CORE_ASSETS = ["./", "./index.html", "./css/style.css?v=2.3.5", "./css/theme.css?v=2.3.5", "./js/data.js?v=2.3.5", "./js/storage.js?v=2.3.5", "./js/update.js?v=2.3.5", "./js/search.js?v=2.3.5", "./js/navigation.js?v=2.3.5", "./js/render.js?v=2.3.5", "./js/app.js?v=2.3.5", "./data/data.json", "./data/version.json", "./manifest.json", "./css/update.css?v=2.3.5", "./css/card-tooltip.css?v=2.3.5", "./css/enhancements.css?v=2.3.5", "./js/theme.js?v=2.3.5", "./js/card-tooltip.js?v=2.3.5", "./js/bootstrap.js?v=2.3.5"];
 self.addEventListener("install", event => { event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", event => {
