@@ -1,5 +1,5 @@
-const CACHE_NAME = "chi-nav-v2.2.19";
-const CORE_ASSETS = ["./", "./index.html", "./css/style.css", "./css/theme.css?v=2.2.19", "./js/app.js?v=2.2.19", "./data/data.json", "./data/version.json", "./manifest.json", "./css/update.css?v=2.2.19", "./css/card-tooltip.css?v=2.2.19", "./js/theme.js?v=2.2.19", "./js/card-tooltip.js?v=2.2.19"];
+const CACHE_NAME = "chi-nav-v2.2.21";
+const CORE_ASSETS = ["./", "./index.html", "./css/style.css", "./css/theme.css?v=2.2.21", "./js/update.js?v=2.2.21", "./js/app.js?v=2.2.21", "./data/data.json", "./data/version.json", "./manifest.json", "./css/update.css?v=2.2.21", "./css/card-tooltip.css?v=2.2.21", "./js/theme.js?v=2.2.21", "./js/card-tooltip.js?v=2.2.21"];
 self.addEventListener("install", event => { event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", event => {
