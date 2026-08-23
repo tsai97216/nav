@@ -78,8 +78,6 @@
     "list": [
       {"term":"開發","links":[
         {"title":"GitHub","url":"https://github.com/","description":"用於程式碼管理、開源專案協作與開發的程式碼平台。"},
-        {"title":"YouTube Music Likes List Downloader","url":"javascript:void(0);","description":"用於將 YouTube Music 喜歡歌曲清單匯出為文字檔的瀏覽器 Console 腳本。","is_copy":true,"copy_content":"(async function(){console.log('開始抓取 YouTube Music 喜歡歌曲清單');let lastHeight=0,count=0;while(true){window.scrollTo(0,document.body.scrollHeight);await new Promise(r=>setTimeout(r,2000));let h=document.body.scrollHeight;if(h===lastHeight){count++;if(count>2)break}else{lastHeight=h;count=0}}const rows=document.querySelectorAll('ytmusic-playlist-shelf-renderer ytmusic-responsive-list-item-renderer');let text='我的 YouTube Music 喜歡歌曲清單\\n總數: '+rows.length+' 首\\n\\n';rows.forEach((row,i)=>{const title=row.querySelector('.title-column')?.innerText?.trim()||'';const secondary=row.querySelector('.secondary-flex-columns')?.innerText?.trim()||'';text+=(i+1)+'. '+title+(secondary?' - '+secondary:'')+'\\n'});const blob=new Blob([text],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='YouTube_Music_Likes.txt';a.click();URL.revokeObjectURL(a.href);console.log('匯出完成，共 '+rows.length+' 首');})();"}
-      ]},
       {"term":"雲端與主機","links":[
         {"title":"Cloudflare Dashboard","url":"https://dash.cloudflare.com/","description":"用於管理 DNS、Tunnel、網域與安全設定的雲端服務控制台。"},
         {"title":"Oracle Cloud Console","url":"https://cloud.oracle.com/","description":"用於管理 VPS、網路與其他雲端資源的雲端控制台。"}
