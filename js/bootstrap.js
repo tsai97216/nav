@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=2.2.31',{updateViaCache:'none'}).catch(console.error));
