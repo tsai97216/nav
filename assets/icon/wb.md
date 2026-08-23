@@ -1,1 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect x="15" y="15" width="70" height="70" rx="0" transform="rotate(45 50 50)" fill="#000"/><text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="Geekomet Demo, sans-serif" font-size="58" font-weight="400" fill="#fff">C</text></svg>
