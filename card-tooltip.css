@@ -1,0 +1,49 @@
+.home-block{overflow:visible}
+.grid{overflow:visible}
+.card{overflow:visible}
+@media (hover:hover) and (pointer:fine){
+  .card.has-url-tooltip:hover{z-index:30}
+  .card-url-tooltip{
+    position:absolute;
+    left:0;
+    top:calc(100% + 8px);
+    z-index:40;
+    width:max-content;
+    max-width:min(420px,calc(100vw - 32px));
+    padding:7px 10px;
+    border:1px solid var(--border);
+    border-radius:7px;
+    background:var(--surface);
+    color:var(--muted);
+    box-shadow:0 8px 20px rgba(31,48,71,.12);
+    font:500 10px/1.4 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    pointer-events:none;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-3px);
+    transition:opacity .14s ease,transform .14s ease,visibility .14s ease;
+  }
+  .card-url-tooltip::before{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:-5px;
+    width:8px;
+    height:8px;
+    background:var(--surface);
+    border-left:1px solid var(--border);
+    border-top:1px solid var(--border);
+    transform:rotate(45deg);
+  }
+  .card.has-url-tooltip:hover .card-url-tooltip{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+}
+@media (max-width:720px){
+  .card-url-tooltip{display:none!important}
+}
