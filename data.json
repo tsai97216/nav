@@ -77,7 +77,8 @@
     "icon": "fas fa-code",
     "list": [
       {"term":"開發","links":[
-        {"title":"GitHub","url":"https://github.com/","description":"用於程式碼管理、開源專案協作與開發的程式碼平台。"},
+        {"title":"GitHub","url":"https://github.com/","description":"用於程式碼管理、開源專案協作與開發的程式碼平台。"}
+      ]},
       {"term":"雲端與主機","links":[
         {"title":"Cloudflare Dashboard","url":"https://dash.cloudflare.com/","description":"用於管理 DNS、Tunnel、網域與安全設定的雲端服務控制台。"},
         {"title":"Oracle Cloud Console","url":"https://cloud.oracle.com/","description":"用於管理 VPS、網路與其他雲端資源的雲端控制台。"}
@@ -113,7 +114,8 @@
       ]},
       {"term":"動畫","links":[
         {"title":"巴哈姆特動畫瘋","url":"https://ani.gamer.com.tw/","description":"提供正版動畫內容的台灣影音平台。"},
-        {"title":"Anime1","url":"https://anime1.me/","description":"提供動畫線上觀看功能的網站。"}
+        {"title":"Anime1","url":"https://anime1.me/","description":"提供動畫線上觀看功能的網站。"},
+        {"title":"Bangumi 番組計畫","url":"https://bgm.tv/","description":"提供動畫、漫畫與 ACG 作品資料、進度管理與社群交流功能的中文 ACG 資料庫。"}
       ]},
       {"term":"漫畫與小說","links":[
         {"title":"漫畫櫃","url":"https://tw.manhuagui.com/","description":"提供漫畫線上閱讀功能的網站。"},
@@ -147,7 +149,9 @@
       {"term":"學習工具","links":[]},
       {"term":"語言學習","links":[]},
       {"term":"程式與技術","links":[]},
-      {"term":"資料與參考","links":[]}
+      {"term":"資料與參考","links":[
+        {"title":"Wikipedia","url":"https://www.wikipedia.org/","description":"提供多語言百科全書與各類知識資料的線上參考平台。"}
+      ]}
     ]
   },
   {
