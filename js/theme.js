@@ -9,7 +9,7 @@
     '遊戲': 'fa-solid fa-gamepad', '社群': 'fa-solid fa-users', '最近使用': 'fa-solid fa-clock-rotate-left'
   };
   const media = window.matchMedia('(prefers-color-scheme: dark)');
-  function getMode() { const saved = localStorage.getItem(KEY); return modes.includes(saved) ? saved : 'system'; }
+  function getMode() { try { const saved = localStorage.getItem(KEY); return modes.includes(saved) ? saved : 'system'; } catch { return 'system'; } }
   function apply(mode) {
     const dark = mode === 'dark' || (mode === 'system' && media.matches);
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
@@ -28,7 +28,7 @@
   function createControl() {
     const box = document.createElement('div'); box.className = 'theme-float'; box.setAttribute('aria-label', '外觀模式');
     box.innerHTML = '<button type="button" aria-label="切換外觀模式"></button>';
-    box.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); const current = getMode(), next = modes[(modes.indexOf(current) + 1) % modes.length]; localStorage.setItem(KEY, next); apply(next); });
+    box.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); const current = getMode(), next = modes[(modes.indexOf(current) + 1) % modes.length]; try { localStorage.setItem(KEY, next); } catch {} apply(next); });
     return box;
   }
   function createTopButton() {
