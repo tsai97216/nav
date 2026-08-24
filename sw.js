@@ -18,7 +18,7 @@ const CORE_ASSETS = [
   "./js/theme.js?v=2.8.1",
   "./js/card-tooltip.js?v=2.8.1",
   "./js/bootstrap.js?v=2.8.1",
-  "./data/data.json",
+  "./data/data.json?v=2.8.1",
   "./data/version.json",
   "./manifest.json?v=2.8.1",
   "./assets/icon/icon-black.svg",
@@ -57,6 +57,10 @@ async function networkFirst(request) {
   } catch {
     const cached = await caches.match(request);
     if (cached) return cached;
+    if (request.url.endsWith("/data/data.json?v=2.8.1")) {
+      const fallback = await caches.match("./data/data.json?v=2.8.1");
+      if (fallback) return fallback;
+    }
     if (request.mode === "navigate") {
       const fallback = await caches.match("./index.html");
       if (fallback) return fallback;
