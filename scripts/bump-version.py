@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Bump Chi NAV's semantic version and update managed references."""
+"""Set the single source-of-truth NAV version.
+
+A GitHub Actions workflow propagates it to managed files safely, including
+large single-line assets that should not be rewritten by this local script.
+"""
 from pathlib import Path
 import json
 import re
@@ -8,38 +12,19 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 VERSION_FILE = ROOT / "data" / "version.json"
 
-def die(message):
-    print(f"ERROR: {message}")
+if len(sys.argv) != 2:
+    print("usage: python scripts/bump-version.py X.Y.Z")
     sys.exit(1)
 
-if len(sys.argv) != 2:
-    die("usage: python scripts/bump-version.py X.Y.Z")
+value = sys.argv[1].lstrip("v")
+if not re.fullmatch(r"\d+\.\d+\.\d+", value):
+    print("ERROR: version must be X.Y.Z")
+    sys.exit(1)
 
-new = sys.argv[1].lstrip("v")
-if not re.fullmatch(r"\d+\.\d+\.\d+", new):
-    die("version must be X.Y.Z")
-
-old = json.loads(VERSION_FILE.read_text(encoding="utf-8"))["version"]
-new_tag = f"v{new}"
-old_tag = old
-old_plain = old_tag[1:]
-
-# Files that contain explicit managed version references.
-paths = [
-    ROOT / "index.html",
-    ROOT / "js" / "app.js",
-    ROOT / "js" / "bootstrap.js",
-    ROOT / "sw.js",
-    ROOT / "manifest.json",
-]
-
-for path in paths:
-    if not path.exists():
-        die(f"missing managed file: {path.relative_to(ROOT)}")
-    text = path.read_text(encoding="utf-8")
-    text = text.replace(old_tag, new_tag).replace(old_plain, new)
-    path.write_text(text, encoding="utf-8")
-
-VERSION_FILE.write_text(json.dumps({"version": new_tag}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"Bumped {old_tag} -> {new_tag}")
-print("Run scripts/verify-version.py before committing.")
+new_tag = f"v{value}"
+VERSION_FILE.write_text(
+    json.dumps({"version": new_tag}, ensure_ascii=False, indent=2) + "\n",
+    encoding="utf-8",
+)
+print(f"Version source updated to {new_tag}.")
+print("GitHub Actions will synchronize managed references and run verification.")
