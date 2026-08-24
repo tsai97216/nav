@@ -8,6 +8,7 @@ const CORE_ASSETS = [
   "./css/update.css?v=2.8.1",
   "./css/card-tooltip.css?v=2.8.1",
   "./css/enhancements.css?v=2.8.1",
+  "./css/loading.css?v=2.8.1",
   "./js/data.js?v=2.8.1",
   "./js/storage.js?v=2.8.1",
   "./js/update.js?v=2.8.1",
@@ -55,12 +56,26 @@ async function networkFirst(request) {
     }
     return response;
   } catch {
+    const url = new URL(request.url);
+    const path = url.pathname;
+
+    // data.json is intentionally matched by pathname so query strings do not
+    // prevent the offline fallback from finding the cached dataset.
+    if (path.endsWith("/data/data.json")) {
+      const keys = [
+        request,
+        new Request(new URL("./data/data.json?v=2.8.1", self.location.origin)),
+        new Request(new URL("./data/data.json", self.location.origin))
+      ];
+      for (const key of keys) {
+        const cached = await caches.match(key);
+        if (cached) return cached;
+      }
+    }
+
     const cached = await caches.match(request);
     if (cached) return cached;
-    if (request.url.endsWith("/data/data.json?v=2.8.1")) {
-      const fallback = await caches.match("./data/data.json?v=2.8.1");
-      if (fallback) return fallback;
-    }
+
     if (request.mode === "navigate") {
       const fallback = await caches.match("./index.html");
       if (fallback) return fallback;
