@@ -33,7 +33,7 @@ jobs:
               old = ''
           old_plain = old[1:] if old.startswith('v') else old
 
-          files = [Path('index.html'), Path('js/bootstrap.js'), Path('sw.js'), Path('manifest.json'), Path('css/design-system.css')]
+          files = [Path('index.html'), Path('js/bootstrap.js'), Path('sw.js'), Path('manifest.json'), Path('css/design-system.css'), Path('css/card-layout.css')]
           for path in files:
               if not path.exists():
                   continue
@@ -57,7 +57,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html js/app.js js/bootstrap.js sw.js manifest.json css/design-system.css
+          git add index.html js/app.js js/bootstrap.js sw.js manifest.json css/design-system.css css/card-layout.css
           if git diff --cached --quiet; then
             echo 'No managed version changes needed.'
             exit 0
