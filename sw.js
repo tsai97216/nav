@@ -1,27 +1,27 @@
-const CACHE_NAME = "chi-nav-v2.8.4";
+const CACHE_NAME = "chi-nav-v2.8.5";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./css/style.css?v=2.8.4",
-  "./css/responsive.css?v=2.8.4",
-  "./css/theme.css?v=2.8.4",
-  "./css/update.css?v=2.8.4",
-  "./css/card-tooltip.css?v=2.8.4",
-  "./css/enhancements.css?v=2.8.4",
-  "./css/loading.css?v=2.8.4",
-  "./js/data.js?v=2.8.4",
-  "./js/storage.js?v=2.8.4",
-  "./js/update.js?v=2.8.4",
-  "./js/search.js?v=2.8.4",
-  "./js/navigation.js?v=2.8.4",
-  "./js/render.js?v=2.8.4",
-  "./js/app.js?v=2.8.4",
-  "./js/theme.js?v=2.8.4",
-  "./js/card-tooltip.js?v=2.8.4",
-  "./js/bootstrap.js?v=2.8.4",
-  "./data/data.json?v=2.8.4",
+  "./css/style.css?v=2.8.5",
+  "./css/responsive.css?v=2.8.5",
+  "./css/theme.css?v=2.8.5",
+  "./css/update.css?v=2.8.5",
+  "./css/card-tooltip.css?v=2.8.5",
+  "./css/enhancements.css?v=2.8.5",
+  "./css/loading.css?v=2.8.5",
+  "./js/data.js?v=2.8.5",
+  "./js/storage.js?v=2.8.5",
+  "./js/update.js?v=2.8.5",
+  "./js/search.js?v=2.8.5",
+  "./js/navigation.js?v=2.8.5",
+  "./js/render.js?v=2.8.5",
+  "./js/app.js?v=2.8.5",
+  "./js/theme.js?v=2.8.5",
+  "./js/card-tooltip.js?v=2.8.5",
+  "./js/bootstrap.js?v=2.8.5",
+  "./data/data.json?v=2.8.5",
   "./data/version.json",
-  "./manifest.json?v=2.8.4",
+  "./manifest.json?v=2.8.5",
   "./assets/icon/icon-black.svg",
   "./assets/icon/icon-white.svg"
 ];
@@ -62,7 +62,7 @@ async function networkFirst(request) {
     if (path.endsWith("/data/data.json")) {
       const keys = [
         request,
-        new Request(new URL("./data/data.json?v=2.8.4", self.location.origin)),
+        new Request(new URL("./data/data.json?v=2.8.5", self.location.origin)),
         new Request(new URL("./data/data.json", self.location.origin))
       ];
       for (const key of keys) {
