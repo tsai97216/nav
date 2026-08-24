@@ -1,27 +1,27 @@
-const CACHE_NAME = "chi-nav-v2.8.1";
+const CACHE_NAME = "chi-nav-v2.8.2";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./css/style.css?v=2.8.1",
-  "./css/responsive.css?v=2.8.1",
-  "./css/theme.css?v=2.8.1",
-  "./css/update.css?v=2.8.1",
-  "./css/card-tooltip.css?v=2.8.1",
-  "./css/enhancements.css?v=2.8.1",
-  "./css/loading.css?v=2.8.1",
-  "./js/data.js?v=2.8.1",
-  "./js/storage.js?v=2.8.1",
-  "./js/update.js?v=2.8.1",
-  "./js/search.js?v=2.8.1",
-  "./js/navigation.js?v=2.8.1",
-  "./js/render.js?v=2.8.1",
-  "./js/app.js?v=2.8.1",
-  "./js/theme.js?v=2.8.1",
-  "./js/card-tooltip.js?v=2.8.1",
-  "./js/bootstrap.js?v=2.8.1",
-  "./data/data.json?v=2.8.1",
+  "./css/style.css?v=2.8.2",
+  "./css/responsive.css?v=2.8.2",
+  "./css/theme.css?v=2.8.2",
+  "./css/update.css?v=2.8.2",
+  "./css/card-tooltip.css?v=2.8.2",
+  "./css/enhancements.css?v=2.8.2",
+  "./css/loading.css?v=2.8.2",
+  "./js/data.js?v=2.8.2",
+  "./js/storage.js?v=2.8.2",
+  "./js/update.js?v=2.8.2",
+  "./js/search.js?v=2.8.2",
+  "./js/navigation.js?v=2.8.2",
+  "./js/render.js?v=2.8.2",
+  "./js/app.js?v=2.8.2",
+  "./js/theme.js?v=2.8.2",
+  "./js/card-tooltip.js?v=2.8.2",
+  "./js/bootstrap.js?v=2.8.2",
+  "./data/data.json?v=2.8.2",
   "./data/version.json",
-  "./manifest.json?v=2.8.1",
+  "./manifest.json?v=2.8.2",
   "./assets/icon/icon-black.svg",
   "./assets/icon/icon-white.svg"
 ];
@@ -59,12 +59,10 @@ async function networkFirst(request) {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // data.json is intentionally matched by pathname so query strings do not
-    // prevent the offline fallback from finding the cached dataset.
     if (path.endsWith("/data/data.json")) {
       const keys = [
         request,
-        new Request(new URL("./data/data.json?v=2.8.1", self.location.origin)),
+        new Request(new URL("./data/data.json?v=2.8.2", self.location.origin)),
         new Request(new URL("./data/data.json", self.location.origin))
       ];
       for (const key of keys) {
