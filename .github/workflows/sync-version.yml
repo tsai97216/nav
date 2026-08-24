@@ -21,41 +21,34 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          VERSION="$(python - <<'PY'
-          import json
-          print(json.load(open('data/version.json', encoding='utf-8'))['version'])
-          PY
-          )"
-          PLAIN="${VERSION#v}"
-          OLD="$(git show HEAD^:data/version.json 2>/dev/null | python -c "import json,sys; print(json.load(sys.stdin)['version'])" || true)"
-          OLD_PLAIN="${OLD#v}"
           python - <<'PY'
           from pathlib import Path
-          import json
-          version=json.load(open('data/version.json',encoding='utf-8'))['version']
-          plain=version[1:]
-          old=''
+          import json, re, subprocess
+
+          version = json.loads(Path('data/version.json').read_text(encoding='utf-8'))['version']
+          plain = version[1:]
           try:
-              import subprocess
-              old=subprocess.check_output(['git','show','HEAD^:data/version.json'],text=True)
-              old=json.loads(old)['version']
+              old = json.loads(subprocess.check_output(['git','show','HEAD^:data/version.json'], text=True))['version']
           except Exception:
-              pass
-          old_plain=old[1:] if old.startswith('v') else old
-          files=[Path('index.html'),Path('js/bootstrap.js'),Path('sw.js'),Path('manifest.json'),Path('css/design-system.css')]
+              old = ''
+          old_plain = old[1:] if old.startswith('v') else old
+
+          files = [Path('index.html'), Path('js/bootstrap.js'), Path('sw.js'), Path('manifest.json'), Path('css/design-system.css')]
           for path in files:
               if not path.exists():
                   continue
-              text=path.read_text(encoding='utf-8')
+              text = path.read_text(encoding='utf-8')
               if old:
-                  text=text.replace(old,version).replace(old_plain,plain)
-              path.write_text(text,encoding='utf-8')
-          app=Path('js/app.js')
+                  text = text.replace(old, version).replace(old_plain, plain)
+              path.write_text(text, encoding='utf-8')
+
+          app = Path('js/app.js')
           if app.exists():
-              text=app.read_text(encoding='utf-8')
-              import re
-              text=re.sub(r"(const\\s+VERSION\\s*=\\s*['\"])v\\d+\\.\\d+\\.\\d+(['\"])", rf"\\g<1>{version}\\g<2>", text, count=1)
-              app.write_text(text,encoding='utf-8')
+              text = app.read_text(encoding='utf-8')
+              text, count = re.subn(r"(const\s+VERSION\s*=\s*['\"])v\d+\.\d+\.\d+(['\"])", rf"\g<1>{version}\g<2>", text, count=1)
+              if count != 1:
+                  raise SystemExit('Could not locate const VERSION in js/app.js')
+              app.write_text(text, encoding='utf-8')
           PY
 
       - name: Commit synchronized files
