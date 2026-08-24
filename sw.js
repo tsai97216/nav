@@ -57,6 +57,10 @@ async function networkFirst(request) {
   } catch {
     const cached = await caches.match(request);
     if (cached) return cached;
+    if (request.mode === "navigate") {
+      const fallback = await caches.match("./index.html");
+      if (fallback) return fallback;
+    }
     throw new Error("Network unavailable and no cached response");
   }
 }
