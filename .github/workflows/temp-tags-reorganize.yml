@@ -1,0 +1,89 @@
+name: Temporary Tags Reorganization
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  reorganize:
+    if: ${{ !contains(github.event.head_commit.message, 'chore: reorganize tags') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reorganize tags and bump version
+        run: |
+          python - <<'PY'
+          import json, pathlib, re
+
+          data_path = pathlib.Path('data/data.json')
+          data = json.loads(data_path.read_text(encoding='utf-8'))
+
+          for group in data:
+              if group.get('taxonomy') != '工具':
+                  continue
+              items = group.get('list', [])
+              note = next((x for x in items if x.get('term') == '筆記與知識管理'), None)
+              items = [x for x in items if x.get('term') != '筆記與知識管理']
+              if note is not None:
+                  idx = next((i for i, x in enumerate(items) if x.get('term') == '實用'), len(items)-1)
+                  items.insert(idx + 1, note)
+              group['list'] = items
+
+          for group in data:
+              if group.get('taxonomy') != '娛樂':
+                  continue
+              items = group.get('list', [])
+              pixiv = None
+              kept = []
+              for item in items:
+                  links = item.get('links', [])
+                  if item.get('term') == '二次元社群':
+                      moved = [x for x in links if x.get('title') == 'Pixiv']
+                      if moved:
+                          pixiv = moved[0]
+                      remaining = [x for x in links if x.get('title') != 'Pixiv']
+                      if remaining:
+                          item['links'] = remaining
+                          kept.append(item)
+                  else:
+                      kept.append(item)
+              if pixiv:
+                  new_item = {'term': '繪師與作品', 'links': [pixiv]}
+                  insert_at = next((i for i, x in enumerate(kept) if x.get('term') == '漫畫與小說'), len(kept)-1) + 1
+                  kept.insert(insert_at, new_item)
+              group['list'] = kept
+
+          data_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          nav_path = pathlib.Path('js/navigation.js')
+          nav = nav_path.read_text(encoding='utf-8')
+          nav = nav.replace("['實用','工具',0],['翻譯','工具',1]", "['實用','工具',0],['筆記與知識管理','工具',1],['翻譯','工具',2]")
+          nav = nav.replace("['檔案與分享','工具',2],['文件與轉換','工具',3],['圖片與設計','工具',4],['音訊處理','工具',5],['影片處理','工具',6],['繪圖與白板','工具',7],['筆記與知識管理','工具',8]", "['檔案與分享','工具',3],['文件與轉換','工具',4],['圖片與設計','工具',5],['音訊處理','工具',6],['影片處理','工具',7],['繪圖與白板','工具',8]")
+          nav = nav.replace("['漫畫與小說','娛樂',2],['二次元社群','娛樂',3]", "['漫畫與小說','娛樂',2],['繪師與作品','娛樂',3]")
+          nav_path.write_text(nav, encoding='utf-8')
+
+          version_path = pathlib.Path('data/version.json')
+          version_data = json.loads(version_path.read_text(encoding='utf-8'))
+          version_data['version'] = 'v2.7.10'
+          version_path.write_text(json.dumps(version_data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          for p in ['index.html','js/app.js','js/bootstrap.js','sw.js']:
+              path = pathlib.Path(p)
+              text = path.read_text(encoding='utf-8')
+              text = text.replace('2.7.9','2.7.10').replace('v2.7.9','v2.7.10')
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/data.json js/navigation.js data/version.json index.html js/app.js js/bootstrap.js sw.js
+          git commit -m 'chore: reorganize tags' || exit 0
+          git push
+
+          rm -f .github/workflows/temp-tags-reorganize.yml
+          git add .github/workflows/temp-tags-reorganize.yml
+          git commit -m 'chore: remove temporary tags workflow' || true
+          git push || true
