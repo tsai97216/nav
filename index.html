@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" href="assets/icon/icon-wb.png?v=2.8.1">
 <link rel="apple-touch-icon" href="assets/icon/icon-wb.png?v=2.8.1">
 <title>Chi 的工具箱</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="css/style.css?v=2.8.1">
 <link rel="stylesheet" href="css/responsive.css?v=2.8.1">
 <link rel="stylesheet" href="css/theme.css?v=2.8.1">
@@ -31,7 +31,7 @@
 </aside>
 <main id="home" class="main-content">
   <header class="topbar"><div class="page-intro"><span class="eyebrow">CHI NAV</span><h2>Chi 的工具箱</h2><p>常用網站與各個內容區塊，都可以直接在這裡瀏覽。</p></div><div class="search-box" role="search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="search-input" type="search" placeholder="搜尋網站、分類或關鍵字…" autocomplete="off" aria-label="搜尋網站、分類或關鍵字"><button class="search-clear" id="search-clear" type="button" aria-label="清除搜尋"><i class="fa-solid fa-xmark"></i></button><span class="shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span><span id="search-result-info" aria-live="polite"></span></div></header>
-  <div id="js-main-content"></div>
+  <div id="js-main-content" aria-live="polite" aria-busy="true"><div class="app-loading" role="status"><span class="app-loading-spinner" aria-hidden="true"></span><span>正在載入 NAV…</span></div></div>
   <footer class="site-footer"><span>Chi NAV</span><span id="site-version">v2.8.1</span></footer>
 </main>
 <div class="command-palette" id="command-palette" aria-hidden="true"><div class="command-backdrop" data-command-close></div><section class="command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-title"><div class="command-head"><i class="fa-solid fa-terminal" aria-hidden="true"></i><input id="command-input" type="search" placeholder="輸入網站、分類或指令…" autocomplete="off" aria-label="Command Palette"><button type="button" data-command-close aria-label="關閉"><i class="fa-solid fa-xmark"></i></button></div><div class="command-hint" id="command-hint">↑ ↓ 選擇　·　Enter 開啟　·　Esc 關閉</div><div class="command-results" id="command-results"></div></section></div>
