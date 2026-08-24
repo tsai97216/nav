@@ -1,1 +1,1 @@
-if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=2.8.6',{updateViaCache:'none'}).catch(console.error));
+if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=2.8.7',{updateViaCache:'none'}).catch(console.error));
