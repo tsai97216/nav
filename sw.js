@@ -25,14 +25,7 @@ const CORE_ASSETS = [
   "./assets/icon/icon-white.svg"
 ];
 
-const NETWORK_FIRST = [
-  "/",
-  "/index.html",
-  "/data/data.json",
-  "/data/version.json",
-  "/manifest.json"
-];
-
+const NETWORK_FIRST = ["/", "/index.html", "/data/data.json", "/data/version.json", "/manifest.json"];
 const CACHE_FIRST_EXTENSIONS = [".css", ".js", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".woff", ".woff2"];
 
 self.addEventListener("install", event => {
@@ -74,7 +67,7 @@ async function cacheFirst(request) {
 
   try {
     const response = await fetch(request);
-    if (response.ok && new URL(request.url).origin === self.location.origin) {
+    if (response.ok) {
       const cache = await caches.open(CACHE_NAME);
       await cache.put(request, response.clone());
     }
@@ -95,7 +88,7 @@ self.addEventListener("fetch", event => {
   const isCacheFirst = CACHE_FIRST_EXTENSIONS.some(extension => path.endsWith(extension));
 
   if (isNetworkFirst) {
-    event.respondWith(networkFirst(event.request).catch(() => caches.match("./index.html")));
+    event.respondWith(networkFirst(event.request));
     return;
   }
 
