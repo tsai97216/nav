@@ -7,4 +7,4 @@ function esc(v=''){return String(v).replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&l
 function src(n){return data.find(x=>x.taxonomy===n)}
 function flat(s){return s?(s.links?[...s.links]:(s.list||[]).flatMap(x=>x.links||[])):[]}
 function uniq(a){const seen=new Set();return a.filter(l=>{const k=key(l);if(seen.has(k))return false;seen.add(k);return true})}
-function tabData(g,t){const [label,source,index]=t,s=src(source);return uniq(s?.list&&index!=null?(s.list[index]?.links||[]):flat(s))}
+function tabData(g,t){const [label,source,term]=t,s=src(source);return uniq(s?.list?.find(group=>group.term===term)?.links||[])}
