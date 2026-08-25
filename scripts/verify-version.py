@@ -25,7 +25,7 @@ checks = {
     "index.html": [
         (r'manifest\.json\?v=' + re.escape(plain), "manifest version"),
         (r'\.(?:css|js)\?v=' + re.escape(plain), "asset versions"),
-        (r'Footer v' + re.escape(plain), "footer version"),
+        (r'id=["\']site-version["\'][^>]*>v' + re.escape(plain), "footer version"),
     ],
     "js/app.js": [(r"const\s+VERSION\s*=\s*['\"]" + re.escape(version), "app VERSION")],
     "js/bootstrap.js": [(r'sw\.js\?v=' + re.escape(plain), "bootstrap service-worker version")],
