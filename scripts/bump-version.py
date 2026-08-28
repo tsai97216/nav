@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Set the single source-of-truth NAV version.
 
-A GitHub Actions workflow propagates it to managed files safely, including
-large single-line assets that should not be rewritten by this local script.
+NAV uses four-part semantic versions: MAJOR.MINOR.PATCH.ADMIN.
 """
 from pathlib import Path
 import json
@@ -13,12 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION_FILE = ROOT / "data" / "version.json"
 
 if len(sys.argv) != 2:
-    print("usage: python scripts/bump-version.py X.Y.Z")
+    print("usage: python scripts/bump-version.py X.Y.Z.W")
     sys.exit(1)
 
 value = sys.argv[1].lstrip("v")
-if not re.fullmatch(r"\d+\.\d+\.\d+", value):
-    print("ERROR: version must be X.Y.Z")
+if not re.fullmatch(r"\d+\.\d+\.\d+\.\d+", value):
+    print("ERROR: version must be X.Y.Z.W")
     sys.exit(1)
 
 new_tag = f"v{value}"
