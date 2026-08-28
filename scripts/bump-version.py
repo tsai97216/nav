@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""Set the single source-of-truth NAV version.
-
-NAV uses four-part semantic versions: MAJOR.MINOR.PATCH.ADMIN.
-"""
+"""Set the single source-of-truth NAV version."""
 from pathlib import Path
 import json
 import re
