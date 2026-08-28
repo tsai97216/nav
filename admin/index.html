@@ -13,18 +13,17 @@
 <a class="back" href="../">← 返回 NAV</a>
 <h1>Chi NAV Admin</h1>
 <p class="muted">管理入口。此階段暫不啟用身份驗證。</p>
-<form id="quick-add" class="grid">
-<div class="field"><label for="title">網站名稱</label><input id="title" name="title" required placeholder="例如：Speedtest"></div>
-<div class="field"><label for="url">網址</label><input id="url" name="url" type="url" required placeholder="https://example.com"></div>
-<div class="field"><label for="taxonomy">分類</label><select id="taxonomy" name="taxonomy" required></select></div>
-<div class="field"><label for="subcategory">子分類</label><select id="subcategory" name="subcategory" required></select></div>
+<form id="quick-add" class="grid" novalidate>
+<div class="field"><label for="title">網站名稱</label><input id="title" name="title" placeholder="例如：Speedtest"></div>
+<div class="field"><label for="url">網址</label><input id="url" name="url" type="url" placeholder="https://example.com"></div>
+<div class="field"><label for="taxonomy">分類</label><select id="taxonomy" name="taxonomy"></select></div>
+<div class="field"><label for="subcategory">子分類</label><select id="subcategory" name="subcategory"></select></div>
 <div class="field"><label for="description">描述</label><textarea id="description" name="description" placeholder="簡短描述網站用途"></textarea></div>
 <div class="field"><label for="icon">Icon</label><input id="icon" name="icon" value="fa-solid fa-globe"></div>
-<div class="field"><label for="token">GitHub Token</label><input id="token" name="token" type="password" autocomplete="off" placeholder="暫不儲存"></div>
 <div class="actions"><button type="submit" class="primary">新增網站</button></div>
 <div id="status" class="status" aria-live="polite"></div>
 </form>
 </main>
-<script src="quick-add.js"></script>
+<script src="quick-add.js?v=3.0.0.5"></script>
 </body>
 </html>
