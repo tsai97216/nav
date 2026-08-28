@@ -26,6 +26,8 @@ jobs:
           import json, re, subprocess
 
           version = json.loads(Path('data/version.json').read_text(encoding='utf-8'))['version']
+          if not re.fullmatch(r'v\d+\.\d+\.\d+\.\d+', version):
+              raise SystemExit(f'Invalid NAV version: {version}')
           plain = version[1:]
           try:
               old = json.loads(subprocess.check_output(['git','show','HEAD^:data/version.json'], text=True))['version']
@@ -45,7 +47,7 @@ jobs:
           app = Path('js/app.js')
           if app.exists():
               text = app.read_text(encoding='utf-8')
-              text, count = re.subn(r"(const\s+VERSION\s*=\s*['\"])v\d+\.\d+\.\d+(['\"])", rf"\g<1>{version}\g<2>", text, count=1)
+              text, count = re.subn(r"(const\s+VERSION\s*=\s*['\"])v\d+\.\d+\.\d+\.\d+(['\"])", rf"\g<1>{version}\g<2>", text, count=1)
               if count != 1:
                   raise SystemExit('Could not locate const VERSION in js/app.js')
               app.write_text(text, encoding='utf-8')
