@@ -47,7 +47,7 @@ jobs:
           app = Path('js/app.js')
           if app.exists():
               text = app.read_text(encoding='utf-8')
-              text, count = re.subn(r"(const\s+VERSION\s*=\s*['\"])v\d+\.\d+\.\d+\.\d+(['\"])", rf"\g<1>{version}\g<2>", text, count=1)
+              text, count = re.subn(r"(const\s+VERSION\s*=\s*['\"])v\d+\.\d+\.\d+(?:\.\d+)?(['\"])", rf"\g<1>{version}\g<2>", text, count=1)
               if count != 1:
                   raise SystemExit('Could not locate const VERSION in js/app.js')
               app.write_text(text, encoding='utf-8')
