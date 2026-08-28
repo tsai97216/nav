@@ -46,7 +46,7 @@ for rel, patterns in checks.items():
         if not re.search(pattern, text):
             errors.append(f"✗ {rel}: missing {label} for {version}")
 
-# Scan tracked source/config files for managed old four-part versions.
+# Scan source/config files for old four-part semantic versions.
 ignore_dirs = {".git", "node_modules", "dist", "build", "__pycache__"}
 old_versions = set()
 all_files = []
