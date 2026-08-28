@@ -30,16 +30,32 @@ jobs:
           if not re.fullmatch(r'v\d+\.\d+\.\d+\.\d+', version):
               raise SystemExit(f'Invalid NAV version: {version}')
           plain = version[1:]
+          three_or_four = r'\d+\.\d+\.\d+(?:\.\d+)?'
 
-          files = [Path('index.html'), Path('js/app.js'), Path('js/bootstrap.js'), Path('sw.js'), Path('manifest.json'), Path('css/design-system.css'), Path('css/card-layout.css')]
-          version_pattern = re.compile(r'v\d+\.\d+\.\d+\.\d+|v\d+\.\d+\.\d+|(?<!\d)\d+\.\d+\.\d+\.\d+(?!\d)|(?<!\d)\d+\.\d+\.\d+(?!\d)')
+          def replace_query(text):
+              return re.sub(r'(?<=\\?v=)' + three_or_four, plain, text)
 
-          for path in files:
+          # Only replace NAV-managed version references. Do not touch unrelated
+          # dependency versions such as Font Awesome 6.4.0.
+          for name in ['index.html', 'js/bootstrap.js', 'sw.js', 'manifest.json', 'css/design-system.css', 'css/card-layout.css']:
+              path = Path(name)
               if not path.exists():
                   continue
               text = path.read_text(encoding='utf-8')
-              text = version_pattern.sub(lambda m: version if m.group(0).startswith('v') else plain, text)
+              text = replace_query(text)
+              if name == 'index.html':
+                  text = re.sub(r'(id=["\']site-version["\'][^>]*>v)' + three_or_four, rf'\g<1>{plain}', text)
+              if name == 'sw.js':
+                  text = re.sub(r'(CACHE_NAME\s*=\s*["\'][^"\']*?v)' + three_or_four, rf'\g<1>{plain}', text)
               path.write_text(text, encoding='utf-8')
+
+          app = Path('js/app.js')
+          if app.exists():
+              text = app.read_text(encoding='utf-8')
+              text, count = re.subn(r"(const\s+VERSION\s*=\s*['\"])v\d+\.\d+\.\d+(?:\.\d+)?(['\"])", rf'\g<1>{version}\g<2>', text, count=1)
+              if count != 1:
+                  raise SystemExit('Could not locate const VERSION in js/app.js')
+              app.write_text(text, encoding='utf-8')
           PY
 
       - name: Verify synchronized files
