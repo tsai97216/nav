@@ -3,18 +3,18 @@
 from pathlib import Path
 import re
 import sys
+import json
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION_FILE = ROOT / "data" / "version.json"
 
 try:
-    import json
     version = json.loads(VERSION_FILE.read_text(encoding="utf-8"))["version"]
 except Exception as exc:
     print(f"VERSION CHECK FAILED: cannot read {VERSION_FILE}: {exc}")
     sys.exit(1)
 
-if not re.fullmatch(r"v\d+\.\d+\.\d+", version):
+if not re.fullmatch(r"v\d+\.\d+\.\d+\.\d+", version):
     print(f"VERSION CHECK FAILED: invalid version format: {version}")
     sys.exit(1)
 
@@ -46,7 +46,7 @@ for rel, patterns in checks.items():
         if not re.search(pattern, text):
             errors.append(f"✗ {rel}: missing {label} for {version}")
 
-# Scan tracked source/config files for managed old versions.
+# Scan tracked source/config files for managed old four-part versions.
 ignore_dirs = {".git", "node_modules", "dist", "build", "__pycache__"}
 old_versions = set()
 all_files = []
@@ -58,7 +58,7 @@ for path in ROOT.rglob("*"):
     except (UnicodeDecodeError, OSError):
         continue
     all_files.append((path, text))
-    for found in re.findall(r"v\d+\.\d+\.\d+", text):
+    for found in re.findall(r"v\d+\.\d+\.\d+\.\d+", text):
         if found != version:
             old_versions.add(found)
 
@@ -83,5 +83,5 @@ print("✓ app.js VERSION")
 print("✓ bootstrap.js")
 print("✓ sw.js CACHE_NAME / CORE_ASSETS")
 print("✓ manifest.json")
-print("✓ no old semantic versions found")
+print("✓ no old four-part semantic versions found")
 print("\nVERSION CHECK PASSED")
