@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.10.1",
+    "date": "2026-08-30",
+    "type": "commit",
+    "message": "chore: remove unused admin icon logic",
+    "commit": "48f61b2ab3d54f1df96900291d7dbcd83793571d"
+  },
+  {
     "version": "3.0.9.1",
     "date": "2026-08-30",
     "type": "commit",
