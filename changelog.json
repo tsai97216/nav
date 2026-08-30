@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.8.1",
+    "date": "2026-08-30",
+    "type": "commit",
+    "message": "refactor: simplify descriptions in data",
+    "commit": "a8299e1d9d9add6e802e1c03e42ae0a6b333fab4"
+  },
+  {
     "version": "3.0.7.1",
     "date": "2026-08-30",
     "type": "commit",
