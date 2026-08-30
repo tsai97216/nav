@@ -1,6 +1,6 @@
 {
-  "version": "3.0.4.0",
+  "version": "3.0.5.0",
   "date": "2026-08-30",
   "type": "commit",
-  "message": "feat: automate commit version increments"
+  "message": "feat: support admin version increments"
 }
