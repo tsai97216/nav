@@ -1,6 +1,6 @@
 {
-  "version": "3.0.6.0",
+  "version": "3.0.6.1",
   "date": "2026-08-30",
-  "type": "commit",
-  "message": "feat: connect admin quick add to worker"
+  "type": "admin",
+  "message": "[admin] add: Chi’s Blog"
 }
