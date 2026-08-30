@@ -1,0 +1,74 @@
+name: Auto Version
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  version:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update version and changelog
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          version_path = Path('version.json')
+          changelog_path = Path('changelog.json')
+
+          info = json.loads(version_path.read_text(encoding='utf-8'))
+          parts = [int(x) for x in info['version'].split('.')]
+          if len(parts) != 4:
+              raise SystemExit('version must use MAJOR.MINOR.COMMIT.ADMIN format')
+
+          parts[2] += 1
+          new_version = '.'.join(map(str, parts))
+          now = datetime.now(timezone.utc).astimezone().strftime('%Y-%m-%d')
+
+          entry = {
+              'version': new_version,
+              'date': now,
+              'type': 'commit',
+              'message': __import__('os').environ['COMMIT_MESSAGE'].splitlines()[0],
+              'commit': __import__('os').environ['COMMIT_SHA']
+          }
+
+          info.update({
+              'version': new_version,
+              'date': now,
+              'type': 'commit',
+              'message': entry['message']
+          })
+          version_path.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          if changelog_path.exists():
+              log = json.loads(changelog_path.read_text(encoding='utf-8'))
+          else:
+              log = []
+          log.insert(0, entry)
+          changelog_path.write_text(json.dumps(log, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'Updated version to {new_version}')
+          PY
+
+      - name: Commit version update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add version.json changelog.json
+          git commit -m "chore: auto bump version [skip ci]" || exit 0
+          git push
