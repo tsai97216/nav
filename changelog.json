@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.6.0",
+    "date": "2026-08-30",
+    "type": "commit",
+    "message": "feat: connect admin quick add to worker",
+    "commit": "3196ea9513cb9f15bb6e97ea3fc54143d9aa50b4"
+  },
+  {
     "version": "3.0.5.0",
     "date": "2026-08-30",
     "type": "commit",
