@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.7.1",
+    "date": "2026-08-30",
+    "type": "commit",
+    "message": "refactor: keep descriptions from data.json",
+    "commit": "a34a5a509f7ec268fab7f163bb239a4e622e730c"
+  },
+  {
     "version": "3.0.6.1",
     "date": "2026-08-30",
     "type": "admin",
