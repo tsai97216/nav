@@ -8,8 +8,8 @@
       {"title": "YouTube", "url": "https://www.youtube.com/", "description": "影音平台"},
       {"title": "GitHub", "url": "https://github.com/", "description": "程式碼託管"},
       {"title": "Notion", "url": "https://app.notion.com/", "description": "筆記與知識管理"},
-      {"title": "Raindrop.io", "url": "https://app.raindrop.io/", "description": "網頁書籤管理"},
-      {"title": "Chi’s Blog", "url": "https://chi.qzz.io", "description": "個人blog", "icon": "fa-solid fa-globe"}
+      {"title": "Raindrop.io", "url": "https://app.raindrop.io/", "description": "網頁書籤管理"}
+  
     ]
   },
   {
