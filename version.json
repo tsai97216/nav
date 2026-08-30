@@ -1,6 +1,6 @@
 {
-  "version": "3.0.8.1",
+  "version": "3.0.9.1",
   "date": "2026-08-30",
   "type": "commit",
-  "message": "refactor: simplify descriptions in data"
+  "message": "chore: remove unused admin icon field"
 }
