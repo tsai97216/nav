@@ -1,6 +1,6 @@
 {
-  "version": "3.0.10.1",
+  "version": "3.0.11.1",
   "date": "2026-08-30",
   "type": "commit",
-  "message": "chore: remove unused admin icon logic"
+  "message": "Update data.json"
 }

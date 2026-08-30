@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.11.1",
+    "date": "2026-08-30",
+    "type": "commit",
+    "message": "Update data.json",
+    "commit": "cc0de3b5fdea91c29327904e1e5665e21c3dc322"
+  },
+  {
     "version": "3.0.10.1",
     "date": "2026-08-30",
     "type": "commit",
