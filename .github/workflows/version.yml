@@ -24,45 +24,42 @@ jobs:
           COMMIT_SHA: ${{ github.sha }}
         run: |
           python3 - <<'PY'
-          import json
+          import json, os
           from datetime import datetime, timezone
           from pathlib import Path
 
           version_path = Path('version.json')
           changelog_path = Path('changelog.json')
-
           info = json.loads(version_path.read_text(encoding='utf-8'))
           parts = [int(x) for x in info['version'].split('.')]
           if len(parts) != 4:
               raise SystemExit('version must use MAJOR.MINOR.COMMIT.ADMIN format')
 
-          parts[2] += 1
+          message = os.environ['COMMIT_MESSAGE'].splitlines()[0]
+          is_admin = message.lower().startswith('[admin]')
+          parts[3 if is_admin else 2] += 1
           new_version = '.'.join(map(str, parts))
           now = datetime.now(timezone.utc).astimezone().strftime('%Y-%m-%d')
 
           entry = {
               'version': new_version,
               'date': now,
-              'type': 'commit',
-              'message': __import__('os').environ['COMMIT_MESSAGE'].splitlines()[0],
-              'commit': __import__('os').environ['COMMIT_SHA']
+              'type': 'admin' if is_admin else 'commit',
+              'message': message,
+              'commit': os.environ['COMMIT_SHA']
           }
-
           info.update({
               'version': new_version,
               'date': now,
-              'type': 'commit',
-              'message': entry['message']
+              'type': entry['type'],
+              'message': message
           })
           version_path.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          if changelog_path.exists():
-              log = json.loads(changelog_path.read_text(encoding='utf-8'))
-          else:
-              log = []
+          log = json.loads(changelog_path.read_text(encoding='utf-8')) if changelog_path.exists() else []
           log.insert(0, entry)
           changelog_path.write_text(json.dumps(log, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          print(f'Updated version to {new_version}')
+          print(f'Updated version to {new_version} ({entry["type"]})')
           PY
 
       - name: Commit version update
