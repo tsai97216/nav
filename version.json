@@ -1,6 +1,6 @@
 {
-  "version": "3.0.3.0",
+  "version": "3.0.4.0",
   "date": "2026-08-30",
   "type": "commit",
-  "message": "測試版本號更新與快取刷新"
+  "message": "feat: automate commit version increments"
 }

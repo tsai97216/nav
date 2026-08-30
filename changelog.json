@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.4.0",
+    "date": "2026-08-30",
+    "type": "commit",
+    "message": "feat: automate commit version increments",
+    "commit": "c646c20aebb5c11fe5436deb9eb09753b1ef8957"
+  },
+  {
     "version": "3.0.1.0",
     "date": "2026-08-30",
     "type": "commit",
