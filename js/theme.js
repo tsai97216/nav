@@ -61,6 +61,7 @@
   }
 
   function init() {
+    if (!document.body) return;
     document.querySelector('.theme-control')?.remove();
     if (!document.querySelector('.floating-actions')) {
       const actions = document.createElement('div');
