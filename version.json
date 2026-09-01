@@ -1,6 +1,6 @@
 {
-  "version": "3.0.15.1",
+  "version": "3.0.16.1",
   "date": "2026-09-01",
   "type": "commit",
-  "message": "fix: refresh cached scripts and styles on updates"
+  "message": "fix: restore visible version placeholder"
 }
