@@ -1,6 +1,6 @@
 {
-  "version": "3.0.18.1",
+  "version": "3.0.19.1",
   "date": "2026-09-01",
   "type": "commit",
-  "message": "fix: align browser theme color with PWA manifest"
+  "message": "fix: clean PWA shortcut query after navigation"
 }

@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.19.1",
+    "date": "2026-09-01",
+    "type": "commit",
+    "message": "fix: clean PWA shortcut query after navigation",
+    "commit": "5f888e063f8d2d92f274f276398b2e599c2c9cf7"
+  },
+  {
     "version": "3.0.18.1",
     "date": "2026-09-01",
     "type": "commit",
