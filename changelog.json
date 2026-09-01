@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.13.1",
+    "date": "2026-09-01",
+    "type": "commit",
+    "message": "chore: prevent admin page indexing",
+    "commit": "7efac70fae4eb9b7c029fc5e2304ee3688419309"
+  },
+  {
     "version": "3.0.12.1",
     "date": "2026-09-01",
     "type": "commit",
