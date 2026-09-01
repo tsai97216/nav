@@ -1,6 +1,6 @@
 {
-  "version": "3.0.17.1",
+  "version": "3.0.18.1",
   "date": "2026-09-01",
   "type": "commit",
-  "message": "fix: open first search result on Enter"
+  "message": "fix: align browser theme color with PWA manifest"
 }

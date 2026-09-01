@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.18.1",
+    "date": "2026-09-01",
+    "type": "commit",
+    "message": "fix: align browser theme color with PWA manifest",
+    "commit": "bb50103f9ddaf2f95d1e651d85b657e9a7f4ffd7"
+  },
+  {
     "version": "3.0.17.1",
     "date": "2026-09-01",
     "type": "commit",
