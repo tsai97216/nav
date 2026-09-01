@@ -1,6 +1,6 @@
 {
-  "version": "3.0.13.1",
+  "version": "3.0.14.1",
   "date": "2026-09-01",
   "type": "commit",
-  "message": "chore: prevent admin page indexing"
+  "message": "fix: guard theme initialization before body exists"
 }

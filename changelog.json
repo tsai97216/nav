@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.14.1",
+    "date": "2026-09-01",
+    "type": "commit",
+    "message": "fix: guard theme initialization before body exists",
+    "commit": "cc590c2d1d2b95ee3f77e51545090d4f758934df"
+  },
+  {
     "version": "3.0.13.1",
     "date": "2026-09-01",
     "type": "commit",
