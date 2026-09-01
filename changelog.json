@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.15.1",
+    "date": "2026-09-01",
+    "type": "commit",
+    "message": "fix: refresh cached scripts and styles on updates",
+    "commit": "f5185f630754586bd50ee61720757140e79a313e"
+  },
+  {
     "version": "3.0.14.1",
     "date": "2026-09-01",
     "type": "commit",
