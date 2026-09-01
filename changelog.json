@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.20.1",
+    "date": "2026-09-01",
+    "type": "commit",
+    "message": "fix: correct service worker source and cache strategy",
+    "commit": "38f81bdbb6f0ea68a7afd8db3c642d7e600acbfd"
+  },
+  {
     "version": "3.0.19.1",
     "date": "2026-09-01",
     "type": "commit",
