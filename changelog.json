@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.17.1",
+    "date": "2026-09-01",
+    "type": "commit",
+    "message": "fix: open first search result on Enter",
+    "commit": "a75bf6bb2941679cbcfa1f06d7e4a0f02cc42635"
+  },
+  {
     "version": "3.0.16.1",
     "date": "2026-09-01",
     "type": "commit",
