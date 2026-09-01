@@ -8,15 +8,20 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: auto-version-main
+  cancel-in-progress: false
+
 jobs:
   version:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Update version and changelog
         env:
