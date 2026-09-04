@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.25.1",
+    "date": "2026-09-04",
+    "type": "commit",
+    "message": "docs: update todo progress",
+    "commit": "3f0868e5453e6972cec7bf5f7b4630b4bf173cdb"
+  },
+  {
     "version": "3.0.24.1",
     "date": "2026-09-04",
     "type": "commit",
