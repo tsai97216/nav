@@ -1,6 +1,6 @@
 {
-  "version": "3.0.23.1",
+  "version": "3.0.24.1",
   "date": "2026-09-04",
   "type": "commit",
-  "message": "docs: add website improvement todo"
+  "message": "refactor: extract metadata processing"
 }
