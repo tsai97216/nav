@@ -9,7 +9,6 @@
       {"title": "GitHub", "url": "https://github.com/", "description": "程式碼託管"},
       {"title": "Notion", "url": "https://app.notion.com/", "description": "筆記與知識管理"},
       {"title": "Raindrop.io", "url": "https://app.raindrop.io/", "description": "網頁書籤管理"}
-  
     ]
   },
   {
@@ -21,7 +20,8 @@
         {"title": "工具邦", "url": "https://tw.piliapp.com/", "description": "線上工具集合"},
         {"title": "is.gd", "url": "https://is.gd/", "description": "網址縮短"},
         {"title": "Raindrop.io", "url": "https://app.raindrop.io/", "description": "網頁書籤管理"},
-        {"title": "Speedtest", "url": "https://www.speedtest.net/zh-Hant", "description": "網路速度測試"}
+        {"title": "Speedtest", "url": "https://www.speedtest.net/zh-Hant", "description": "網路速度測試"},
+        {"title": "Ente", "url": "https://auth.ente.com/auth", "description": "2FA驗證碼"}
       ]},
       {"term": "筆記與知識管理", "links": [
         {"title": "Notion", "url": "https://app.notion.com/", "description": "筆記與知識管理"}
