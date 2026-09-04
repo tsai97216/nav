@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.22.1",
+    "date": "2026-09-04",
+    "type": "commit",
+    "message": "refactor: remove duplicate tab event handling",
+    "commit": "e357c30d93f99890a6df50fe0c5f49d20b847b20"
+  },
+  {
     "version": "3.0.21.1",
     "date": "2026-09-04",
     "type": "commit",
