@@ -1,6 +1,6 @@
 {
-  "version": "3.0.22.1",
+  "version": "3.0.23.1",
   "date": "2026-09-04",
   "type": "commit",
-  "message": "refactor: remove duplicate tab event handling"
+  "message": "docs: add website improvement todo"
 }
