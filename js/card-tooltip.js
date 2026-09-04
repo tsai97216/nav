@@ -19,15 +19,3 @@ document.addEventListener('mouseover', e => {
   tooltip.textContent = url;
   card.classList.add('has-url-tooltip');
 });
-
-// Sub-page tabs should only switch their content and must not move the page.
-document.addEventListener('click', e => {
-  const tab = e.target.closest('[data-group][data-tab]');
-  if (!tab) return;
-  e.preventDefault();
-  e.stopImmediatePropagation();
-  if (typeof active === 'object' && active) {
-    active[tab.dataset.group] = tab.dataset.tab;
-  }
-  if (typeof home === 'function') home();
-}, true);
