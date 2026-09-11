@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.26.1",
+    "date": "2026-09-11",
+    "type": "commit",
+    "message": "docs: rescan nav and refresh todo",
+    "commit": "0a098f11649982d4161160e4a99d08daf404828f"
+  },
+  {
     "version": "3.0.25.1",
     "date": "2026-09-04",
     "type": "commit",
