@@ -1,6 +1,6 @@
 {
-  "version": "3.0.26.1",
+  "version": "3.0.27.1",
   "date": "2026-09-11",
   "type": "commit",
-  "message": "docs: rescan nav and refresh todo"
+  "message": "feat: add Ente QR"
 }

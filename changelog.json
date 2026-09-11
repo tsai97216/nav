@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.27.1",
+    "date": "2026-09-11",
+    "type": "commit",
+    "message": "feat: add Ente QR",
+    "commit": "1a8a8b2a4d7d85812f7ba46761b0013e7467f474"
+  },
+  {
     "version": "3.0.26.1",
     "date": "2026-09-11",
     "type": "commit",
