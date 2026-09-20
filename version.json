@@ -1,6 +1,6 @@
 {
-  "version": "3.0.28.1",
-  "date": "2026-09-11",
+  "version": "3.0.29.1",
+  "date": "2026-09-20",
   "type": "commit",
-  "message": "chore: rename Ente to Ente Auth"
+  "message": "Modify personal services URLs in data.json"
 }

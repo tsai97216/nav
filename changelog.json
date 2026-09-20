@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.29.1",
+    "date": "2026-09-20",
+    "type": "commit",
+    "message": "Modify personal services URLs in data.json",
+    "commit": "192cb8af393be315e4cbf93068212951ca03e036"
+  },
+  {
     "version": "3.0.28.1",
     "date": "2026-09-11",
     "type": "commit",
