@@ -42,7 +42,7 @@
       {"term": "雲端與主機", "links": [{"title": "Cloudflare Dashboard", "url": "https://dash.cloudflare.com/", "description": "Cloudflare 管理"}, {"title": "Oracle Cloud Console", "url": "https://cloud.oracle.com/", "description": "Oracle Cloud 管理"}]},
       {"term": "iOS", "links": [{"title": "Decrypt.day", "url": "https://decrypt.day/home/", "description": "iOS 應用資訊"}, {"title": "AppTesters", "url": "https://apps.apptesters.org", "description": "iOS 測試分發"}]},
       {"term": "資安", "links": [{"title": "CyberChef", "url": "https://gchq.github.io/CyberChef/", "description": "資料編碼處理"}, {"title": "VirusTotal", "url": "https://www.virustotal.com/gui/home/upload", "description": "檔案與網址掃描"}, {"title": "Have I Been Pwned", "url": "https://haveibeenpwned.com/", "description": "資料外洩查詢"}]},
-      {"term": "個人服務", "links": [{"title": "Alist", "url": "https://alist.chi.dpdns.org", "description": "雲端儲存整合"}, {"title": "Bilitool", "url": "https://bili.chi.dpdns.org", "description": "Bilibili 自動化"}, {"title": "Twitch Miner", "url": "https://twitch.chi.dpdns.org", "description": "Twitch Drops 自動化"}]}
+      {"term": "個人服務", "links": [{"title": "Alist", "url": "https://alist.chi.qzz.io", "description": "雲端儲存整合"}, {"title": "Bilitool", "url": "https://bili.chi.qzz.io", "description": "Bilibili 自動化"}, {"title": "Twitch Miner", "url": "https://twitch.chi.qzz.io", "description": "Twitch Drops 自動化"}]}
     ]
   },
   {
