@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.33.1",
+    "date": "2026-09-20",
+    "type": "commit",
+    "message": "chore: organize nav data categories",
+    "commit": "639f866a17b55d533cd4495a51e3911ca3fab7e5"
+  },
+  {
     "version": "3.0.32.1",
     "date": "2026-09-20",
     "type": "commit",
