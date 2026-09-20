@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.30.1",
+    "date": "2026-09-20",
+    "type": "commit",
+    "message": "feat: add AI assistant websites",
+    "commit": "75648737cd0f06352d23b6fe61c3c20ca26cf3ca"
+  },
+  {
     "version": "3.0.29.1",
     "date": "2026-09-20",
     "type": "commit",
