@@ -43,6 +43,11 @@
         "term": "AI 助手",
         "links": [
           {
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "description": "OpenAI AI 助手"
+          },
+          {
             "title": "Gemini",
             "url": "https://gemini.google.com/",
             "description": "Google AI 助手"
