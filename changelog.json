@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.34.1",
+    "date": "2026-09-20",
+    "type": "commit",
+    "message": "chore: refine nav data categories",
+    "commit": "e086e623134f172d54472ababb379a9980961824"
+  },
+  {
     "version": "3.0.33.1",
     "date": "2026-09-20",
     "type": "commit",
