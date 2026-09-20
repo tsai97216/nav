@@ -1,6 +1,6 @@
 {
-  "version": "3.0.31.1",
+  "version": "3.0.32.1",
   "date": "2026-09-20",
   "type": "commit",
-  "message": "feat: add ChatGPT to AI assistants"
+  "message": "chore: tidy data descriptions"
 }

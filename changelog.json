@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.32.1",
+    "date": "2026-09-20",
+    "type": "commit",
+    "message": "chore: tidy data descriptions",
+    "commit": "1adecded1c96c8d0f8ba09d3e67bd68c71675003"
+  },
+  {
     "version": "3.0.31.1",
     "date": "2026-09-20",
     "type": "commit",
