@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.35.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "feat: add Squoosh to image tools",
+    "commit": "acafea53d7cb7d83c8dfa00c0abf1e129f4fe0d0"
+  },
+  {
     "version": "3.0.34.1",
     "date": "2026-09-20",
     "type": "commit",
