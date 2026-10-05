@@ -86,13 +86,8 @@
     "icon": "fa-solid fa-screwdriver-wrench",
     "list": [
       {
-        "term": "實用",
+        "term": "實用工具",
         "links": [
-          {
-            "title": "能不能好好說話",
-            "url": "https://lab.magiconch.com/nbnhhsh/",
-            "description": "中文縮寫轉換"
-          },
           {
             "title": "工具邦",
             "url": "https://tw.piliapp.com/",
@@ -112,6 +107,26 @@
             "title": "Regex101",
             "url": "https://regex101.com/",
             "description": "正規表示式測試"
+          }
+        ]
+      },
+      {
+        "term": "文字與語言",
+        "links": [
+          {
+            "title": "能不能好好說話",
+            "url": "https://lab.magiconch.com/nbnhhsh/",
+            "description": "中文縮寫轉換"
+          },
+          {
+            "title": "Google 翻譯",
+            "url": "https://translate.google.com.tw/",
+            "description": "文字與網頁翻譯"
+          },
+          {
+            "title": "DeepL 翻譯",
+            "url": "https://www.deepl.com/translator",
+            "description": "文字與文件翻譯"
           }
         ]
       },
@@ -147,21 +162,6 @@
             "title": "Notion",
             "url": "https://app.notion.com/",
             "description": "筆記與知識管理"
-          }
-        ]
-      },
-      {
-        "term": "翻譯",
-        "links": [
-          {
-            "title": "Google 翻譯",
-            "url": "https://translate.google.com.tw/",
-            "description": "文字與網頁翻譯"
-          },
-          {
-            "title": "DeepL 翻譯",
-            "url": "https://www.deepl.com/translator",
-            "description": "文字與文件翻譯"
           }
         ]
       },
@@ -304,16 +304,6 @@
             "description": "線上白板"
           }
         ]
-      },
-      {
-        "term": "資料與參考",
-        "links": [
-          {
-            "title": "Wikipedia",
-            "url": "https://www.wikipedia.org/",
-            "description": "線上百科"
-          }
-        ]
       }
     ]
   },
@@ -404,6 +394,27 @@
     ]
   },
   {
+    "taxonomy": "資料與參考",
+    "icon": "fa-solid fa-book",
+    "list": [
+      {
+        "term": "百科與資料庫",
+        "links": [
+          {
+            "title": "Wikipedia",
+            "url": "https://www.wikipedia.org/",
+            "description": "線上百科"
+          },
+          {
+            "title": "Bangumi 番組計畫",
+            "url": "https://bgm.tv/",
+            "description": "ACG 資料庫"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "taxonomy": "娛樂",
     "icon": "fa-solid fa-tv",
     "list": [
@@ -459,11 +470,6 @@
             "title": "Anime1",
             "url": "https://anime1.me/",
             "description": "動畫觀看"
-          },
-          {
-            "title": "Bangumi 番組計畫",
-            "url": "https://bgm.tv/",
-            "description": "ACG 資料庫"
           }
         ]
       },
