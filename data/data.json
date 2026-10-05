@@ -232,6 +232,11 @@
             "title": "iLoveIMG",
             "url": "https://www.iloveimg.com/zh-tw",
             "description": "圖片處理"
+          },
+          {
+            "title": "Squoosh",
+            "url": "https://squoosh.app/editor",
+            "description": "圖片壓縮與轉換"
           }
         ]
       },
