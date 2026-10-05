@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.47.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "備份舊版 NAV 資料",
+    "commit": "eb79c4b6d1239e9585c3776e07eab63456e13b85"
+  },
+  {
     "version": "3.0.46.1",
     "date": "2026-10-05",
     "type": "commit",
