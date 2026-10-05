@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.45.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "整理社群與 iOS 分類",
+    "commit": "c410d2510f14764f24ee9bd0f41204b904beaaf9"
+  },
+  {
     "version": "3.0.44.1",
     "date": "2026-10-05",
     "type": "commit",
