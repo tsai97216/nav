@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.41.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "整理 Bangumi 分類至動畫與 ACG",
+    "commit": "7b6d91c0648b65586e1a8e6d797dbd5eb7dbfeec"
+  },
+  {
     "version": "3.0.40.1",
     "date": "2026-10-05",
     "type": "commit",
