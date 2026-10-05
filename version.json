@@ -1,6 +1,6 @@
 {
-  "version": "3.0.42.1",
+  "version": "3.0.43.1",
   "date": "2026-10-05",
   "type": "commit",
-  "message": "調整 CyberChef 與 CloudMoon 分類"
+  "message": "整理網站分類與常用程度排序"
 }

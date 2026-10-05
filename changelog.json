@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.43.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "整理網站分類與常用程度排序",
+    "commit": "d65170e12f5fcbfe4a30ba60e7192d11ee21fb1f"
+  },
+  {
     "version": "3.0.42.1",
     "date": "2026-10-05",
     "type": "commit",
