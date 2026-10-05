@@ -12,8 +12,7 @@
     ]
   },
   {
-    "taxonomy":"AI","icon":"fa-solid fa-wand-magic-sparkles",
-    "list":[
+    "taxonomy":"AI","icon":"fa-solid fa-wand-magic-sparkles","list":[
       {"term":"AI 助手","links":[
         {"title":"ChatGPT","url":"https://chatgpt.com/","description":"OpenAI AI 助手"},
         {"title":"Gemini","url":"https://gemini.google.com/","description":"Google AI 助手"},
@@ -31,7 +30,8 @@
         {"title":"工具邦","url":"https://tw.piliapp.com/","description":"線上工具集合"},
         {"title":"is.gd","url":"https://is.gd/","description":"網址縮短"},
         {"title":"Speedtest","url":"https://www.speedtest.net/zh-Hant","description":"網路速度測試"},
-        {"title":"Regex101","url":"https://regex101.com/","description":"正規表示式測試"}
+        {"title":"Regex101","url":"https://regex101.com/","description":"正規表示式測試"},
+        {"title":"CyberChef","url":"https://gchq.github.io/CyberChef/","description":"資料編碼處理"}
       ]},
       {"term":"文字與語言","links":[
         {"title":"能不能好好說話","url":"https://lab.magiconch.com/nbnhhsh/","description":"中文縮寫轉換"},
@@ -90,7 +90,6 @@
         {"title":"AppTesters","url":"https://apps.apptesters.org","description":"iOS 測試分發"}
       ]},
       {"term":"資安","links":[
-        {"title":"CyberChef","url":"https://gchq.github.io/CyberChef/","description":"資料編碼處理"},
         {"title":"VirusTotal","url":"https://www.virustotal.com/gui/home/upload","description":"檔案與網址掃描"},
         {"title":"Have I Been Pwned","url":"https://haveibeenpwned.com/","description":"資料外洩查詢"}
       ]},
@@ -155,10 +154,12 @@
         {"title":"寶可夢兌換碼","url":"https://store.pokemongo.com/zh-Hant/offer-redemption","description":"Pokémon GO 優惠兌換"}
       ]},
       {"term":"遊戲資訊","links":[
-        {"title":"CloudMoon","url":"https://web.cloudmoonapp.com/zh/","description":"雲端遊戲"},
         {"title":"SteamDB","url":"https://steamdb.info/","description":"Steam 資料庫"},
         {"title":"IsThereAnyDeal","url":"https://isthereanydeal.com/giveaways/","description":"遊戲折扣追蹤"},
         {"title":"4Gamers 限免","url":"https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB","description":"遊戲限免資訊"}
+      ]},
+      {"term":"雲端遊戲","links":[
+        {"title":"CloudMoon","url":"https://web.cloudmoonapp.com/zh/","description":"雲端遊戲"}
       ]}
     ]
   },
