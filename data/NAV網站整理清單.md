@@ -45,7 +45,7 @@
 
 #### 文字與語言
 
-- Google （已在書籤，刪除 NAV） 翻譯
+- Google 翻譯
 - DeepL 翻譯
 - 能不能好好說話 （移至 Raindrop）
 
@@ -151,7 +151,7 @@
 - Twitch
 - Spotify
 - Netflix
-- YouTube （已在書籤，刪除 NAV） Music
+- YouTube Music （已在書籤，刪除 NAV）
 - ofiii 歐飛
 
 #### 動畫與 ACG
