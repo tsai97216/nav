@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.44.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "新增 Block OTA 到 iOS 分類",
+    "commit": "f503cb32442ecdde94817adf867ea223cbd57236"
+  },
+  {
     "version": "3.0.43.1",
     "date": "2026-10-05",
     "type": "commit",

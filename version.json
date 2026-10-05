@@ -1,6 +1,6 @@
 {
-  "version": "3.0.43.1",
+  "version": "3.0.44.1",
   "date": "2026-10-05",
   "type": "commit",
-  "message": "整理網站分類與常用程度排序"
+  "message": "新增 Block OTA 到 iOS 分類"
 }
