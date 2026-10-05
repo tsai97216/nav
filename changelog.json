@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.52.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "docs: 標記 NAV 後續整理項目",
+    "commit": "3906efbb2bd89b4e7b59e1b2075fc22a6d26ed1d"
+  },
+  {
     "version": "3.0.51.1",
     "date": "2026-10-05",
     "type": "commit",
