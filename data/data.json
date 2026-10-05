@@ -27,8 +27,8 @@
       ]},
       {"term":"圖片與設計","links":[
         {"title":"Photopea","url":"https://www.photopea.com/","description":"圖片編輯"},
-        {"title":"Canva","url":"https://www.canva.com/zh_tw/","description":"設計製作"},
-        {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"圖片處理"},
+        {"title":"Canva","url":"https://www.canva.com/zh_tw/","description":"設計工具"},
+        {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"圖片處理工具"},
         {"title":"圖片壓縮","url":"https://squoosh.app/editor","description":"圖片壓縮與轉換"},
         {"title":"Polarr","url":"https://photoeditor.polarr.co/","description":"照片調色"},
         {"title":"Edit.photo","url":"https://edit.photo/","description":"圖片編輯"}
@@ -82,8 +82,8 @@
     "taxonomy":"開發與服務","icon":"fa-solid fa-code","list":[
       {"term":"開發","links":[{"title":"GitHub","url":"https://github.com/","description":"程式碼託管"}]},
       {"term":"雲端與主機","links":[
-        {"title":"Cloudflare Dashboard","url":"https://dash.cloudflare.com/","description":"Cloudflare 管理"},
-        {"title":"Oracle Cloud Console","url":"https://cloud.oracle.com/","description":"Oracle Cloud 管理"}
+        {"title":"Cloudflare Dashboard","url":"https://dash.cloudflare.com/","description":"Cloudflare 管理後台"},
+        {"title":"Oracle Cloud Console","url":"https://cloud.oracle.com/","description":"Oracle Cloud 管理後台"}
       ]},
       {"term":"個人服務","links":[
         {"title":"Alist","url":"https://alist.chi.qzz.io","description":"雲端儲存整合"},
@@ -122,16 +122,16 @@
         {"title":"包子漫畫","url":"https://www.baozimh.com/","description":"漫畫閱讀"},
         {"title":"列車組的不專業烤肉翻譯","url":"https://www.shironkestrel.com/","description":"二遊漫畫翻譯"}
       ]},
-      {"term":"繪師與作品","links":[{"title":"Pixiv","url":"https://www.pixiv.net/","description":"創作社群"}]}
+      {"term":"繪師與作品","links":[{"title":"Pixiv","url":"https://www.pixiv.net/","description":"插畫與創作社群"}]}
     ]
   },
   {
     "taxonomy":"遊戲","icon":"fa-solid fa-gamepad","list":[
       {"term":"二次元遊戲資料","links":[
-        {"title":"HoYoLAB","url":"https://www.hoyolab.com/","description":"米哈遊官方社群"},
+        {"title":"HoYoLAB","url":"https://www.hoyolab.com/","description":"米哈遊遊戲社群"},
         {"title":"Prydwen","url":"https://www.prydwen.gg/","description":"遊戲攻略資料庫"},
         {"title":"Nanoka","url":"https://nanoka.cc/","description":"遊戲資料庫"},
-        {"title":"Bwiki","url":"https://wiki.biligame.com/","description":"遊戲 Wiki"}
+        {"title":"Bwiki","url":"https://wiki.biligame.com/","description":"遊戲 Wiki 資料庫"}
       ]},
       {"term":"遊戲資訊","links":[
         {"title":"SteamDB","url":"https://steamdb.info/","description":"Steam 資料庫"},
@@ -150,8 +150,8 @@
   },
   {
     "taxonomy":"社群","icon":"fa-solid fa-users","list":[
-      {"term":"社群與通訊","links":
-        {"title":"Discord","url":"https://discord.com/","description":"社群與通訊"},
+      {"term":"社群與通訊","links":[
+        {"title":"Discord","url":"https://discord.com/","description":"社群與通訊平台"},
         {"title":"Instagram","url":"https://www.instagram.com/","description":"圖片與影音社群"},
         {"title":"X (Twitter)","url":"https://x.com/","description":"即時社群"},
         {"title":"Facebook","url":"https://www.facebook.com/","description":"社群平台"},
