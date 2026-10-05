@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.42.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "調整 CyberChef 與 CloudMoon 分類",
+    "commit": "dc9bd377c8d42b0f7219b9077a7fea9abff465a5"
+  },
+  {
     "version": "3.0.41.1",
     "date": "2026-10-05",
     "type": "commit",
