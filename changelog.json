@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.48.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "Add bookmarks page",
+    "commit": "ba541b2cc10b7ce4923e765a71c64e11de1b99ac"
+  },
+  {
     "version": "3.0.47.1",
     "date": "2026-10-05",
     "type": "commit",
