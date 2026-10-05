@@ -29,7 +29,7 @@
         {"title":"Photopea","url":"https://www.photopea.com/","description":"圖片編輯"},
         {"title":"Canva","url":"https://www.canva.com/zh_tw/","description":"設計工具"},
         {"title":"iLoveIMG","url":"https://www.iloveimg.com/zh-tw","description":"圖片處理工具"},
-        {"title":"圖片壓縮","url":"https://squoosh.app/editor","description":"圖片壓縮與轉換"},
+        {"title":"Squoosh","url":"https://squoosh.app/editor","description":"圖片壓縮"},
         {"title":"Polarr","url":"https://photoeditor.polarr.co/","description":"照片調色"},
         {"title":"Edit.photo","url":"https://edit.photo/","description":"圖片編輯"}
       ]},
