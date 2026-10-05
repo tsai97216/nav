@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.36.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "chore: rename Squoosh link",
+    "commit": "e72309efea22c95f8a4bf8bd8bbe721310f2b213"
+  },
+  {
     "version": "3.0.35.1",
     "date": "2026-10-05",
     "type": "commit",
