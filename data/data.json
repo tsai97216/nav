@@ -576,6 +576,11 @@
             "title": "PoGo Coordinates",
             "url": "https://pogocoordinates.com/search",
             "description": "寶可夢座標"
+          },
+          {
+            "title": "寶可夢兌換碼",
+            "url": "https://store.pokemongo.com/zh-Hant/offer-redemption",
+            "description": "Pokémon GO 優惠兌換"
           }
         ]
       },
