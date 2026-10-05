@@ -107,6 +107,11 @@
             "title": "Speedtest",
             "url": "https://www.speedtest.net/zh-Hant",
             "description": "網路速度測試"
+          },
+          {
+            "title": "Regex101",
+            "url": "https://regex101.com/",
+            "description": "正規表示式測試"
           }
         ]
       },
