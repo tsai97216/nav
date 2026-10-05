@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#356ae6">
+<meta name="description" content="Chi 的快速書籤列">
+<link rel="icon" type="image/png" href="../assets/icon/icon-wb.png">
+<title>Chi 的書籤列</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/update.css">
+<link rel="stylesheet" href="../css/card-tooltip.css">
+<link rel="stylesheet" href="../css/enhancements.css">
+<link rel="stylesheet" href="../css/loading.css">
+<link rel="stylesheet" href="../css/category-page.css">
+<link rel="stylesheet" href="../css/design-system.css">
+<link rel="stylesheet" href="../css/card-layout.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="../" aria-label="回到 Chi 的工具箱">
+    <div class="brand-mark">
+      <img class="brand-icon brand-icon-light" src="../assets/icon/icon-bw.png" alt="">
+      <img class="brand-icon brand-icon-dark" src="../assets/icon/icon-wb.png" alt="">
+      <i class="fa-solid fa-grip-lines-vertical sidebar-open-icon" aria-hidden="true"></i>
+    </div>
+    <div><h1>Chi 的書籤列</h1><p>Personal Bookmarks</p></div>
+  </a>
+  <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="收合側邊欄" title="收合側邊欄"><i class="fa-solid fa-grip-lines-vertical" aria-hidden="true"></i></button>
+  <nav class="nav-menu" aria-label="書籤分類">
+    <a class="nav-item active" href="#bookmarks"><i class="fa-solid fa-bookmark" aria-hidden="true"></i><span>書籤列</span></a>
+  </nav>
+</aside>
+<main id="home" class="main-content">
+  <header class="topbar">
+    <div class="page-intro">
+      <span class="eyebrow">CHI BOOKMARKS</span>
+      <h2>我的書籤列</h2>
+      <p>平常最常用的網站，集中放在這裡。</p>
+    </div>
+    <div class="search-box" role="search">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input id="search-input" type="search" placeholder="搜尋書籤…" autocomplete="off" aria-label="搜尋書籤">
+      <button class="search-clear" id="search-clear" type="button" aria-label="清除搜尋"><i class="fa-solid fa-xmark"></i></button>
+      <span class="shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+    </div>
+  </header>
+  <section class="section" id="bookmarks">
+    <div class="section-header"><i class="fa-solid fa-bookmark" aria-hidden="true"></i><span>書籤列</span></div>
+    <div class="grid" id="bookmark-grid"></div>
+    <div class="empty-state" id="empty-state" hidden>找不到符合的書籤。</div>
+  </section>
+  <footer class="site-footer"><span>Chi Bookmarks</span><span>·</span><span>15 bookmarks</span></footer>
+</main>
+<script src="../js/utils.js"></script>
+<script src="bookmarks.js"></script>
+</body>
+</html>
