@@ -95,9 +95,9 @@
         {"title":"Have I Been Pwned","url":"https://haveibeenpwned.com/","description":"資料外洩查詢"}
       ]},
       {"term":"iOS","links":[
+        {"title":"Block OTA","url":"https://betaprofiles.dev/install/block-ota/","description":"封鎖 iOS OTA 更新"},
         {"title":"Decrypt.day","url":"https://decrypt.day/home/","description":"iOS 應用資訊"},
-        {"title":"AppTesters","url":"https://apps.apptesters.org","description":"iOS 測試分發"},
-        {"title":"Block OTA","url":"https://betaprofiles.dev/install/block-ota/","description":"封鎖 iOS OTA 更新"}
+        {"title":"AppTesters","url":"https://apps.apptesters.org","description":"iOS 測試分發"}
       ]}
     ]
   },
@@ -150,7 +150,7 @@
   },
   {
     "taxonomy":"社群","icon":"fa-solid fa-users","list":[
-      {"term":"社群平台","links":[
+      {"term":"社群與通訊","links":
         {"title":"Discord","url":"https://discord.com/","description":"社群與通訊"},
         {"title":"Instagram","url":"https://www.instagram.com/","description":"圖片與影音社群"},
         {"title":"X (Twitter)","url":"https://x.com/","description":"即時社群"},
