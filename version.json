@@ -1,6 +1,6 @@
 {
-  "version": "3.0.39.1",
+  "version": "3.0.40.1",
   "date": "2026-10-05",
   "type": "commit",
-  "message": "整理 data.json 分類與排序"
+  "message": "整理 data.json 描述文字"
 }

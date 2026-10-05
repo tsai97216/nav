@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.40.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "整理 data.json 描述文字",
+    "commit": "99259efb1c6c127218c4c3533672def3e04f7c22"
+  },
+  {
     "version": "3.0.39.1",
     "date": "2026-10-05",
     "type": "commit",
