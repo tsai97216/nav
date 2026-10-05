@@ -7,31 +7,31 @@
 ## 書籤
 
 - Chi 的工具箱
-- Google
+- Google （已在書籤，刪除 NAV）
 - FB
 - YT
 - YT Music
 - bilibili
-- GitHub
+- GitHub （已在書籤，刪除 NAV）
 - IG
-- ChatGPT
-- Threads
+- ChatGPT （已在書籤，刪除 NAV）
+- Threads （已在書籤，刪除 NAV）
 - Gmail
-- Notion
-- Ente Auth
-- Raindrop.io
-- Alist
+- Notion （已在書籤，刪除 NAV）
+- Ente Auth （已在書籤，刪除 NAV）
+- Raindrop.io （已在書籤，刪除 NAV）
+- Alist （已在書籤，刪除 NAV）
 
 ## NAV
 
 ### 常用推薦
 
-- Google
-- ChatGPT
-- YouTube
-- GitHub
-- Notion
-- Raindrop.io
+- Google （已在書籤，刪除 NAV）
+- ChatGPT （已在書籤，刪除 NAV）
+- YouTube （已在書籤，刪除 NAV）
+- GitHub （已在書籤，刪除 NAV）
+- Notion （已在書籤，刪除 NAV）
+- Raindrop.io （已在書籤，刪除 NAV）
 
 ### 工具
 
@@ -41,13 +41,13 @@
 - Speedtest
 - Regex101
 - CyberChef
-- is.gd
+- is.gd （移至 Raindrop）
 
 #### 文字與語言
 
-- Google 翻譯
+- Google （已在書籤，刪除 NAV） 翻譯
 - DeepL 翻譯
-- 能不能好好說話
+- 能不能好好說話 （移至 Raindrop）
 
 #### 圖片與設計
 
@@ -55,14 +55,14 @@
 - Canva
 - iLoveIMG
 - 圖片壓縮（Squoosh）
-- Polarr
-- Edit.photo
+- Polarr （移至 Raindrop）
+- Edit.photo （移至 Raindrop）
 
 #### 影片處理
 
 - CapCut Web
-- Flixier
-- 123Apps 影片
+- Flixier （移至 Raindrop）
+- 123Apps 影片 （移至 Raindrop）
 
 #### 文件與轉換
 
@@ -79,23 +79,23 @@
 
 #### 書籤管理
 
-- Raindrop.io
+- Raindrop.io （已在書籤，刪除 NAV）
 
 #### 筆記與知識管理
 
-- Notion
+- Notion （已在書籤，刪除 NAV）
 
 #### 音訊處理
 
 - Adobe Podcast
 - Vocal Remover
-- AudioMass
-- Audio Converter
-- 123Apps 音訊
+- AudioMass （移至 Raindrop）
+- Audio Converter （移至 Raindrop）
+- 123Apps 音訊 （移至 Raindrop）
 
 #### 安全與驗證
 
-- Ente Auth
+- Ente Auth （已在書籤，刪除 NAV）
 - Ente QR
 
 #### 繪圖與白板
@@ -106,7 +106,7 @@
 
 #### AI 助手
 
-- ChatGPT
+- ChatGPT （已在書籤，刪除 NAV）
 - Gemini
 - Claude
 - Perplexity
@@ -118,7 +118,7 @@
 
 #### 開發
 
-- GitHub
+- GitHub （已在書籤，刪除 NAV）
 
 #### 雲端與主機
 
@@ -127,7 +127,7 @@
 
 #### 個人服務
 
-- Alist
+- Alist （已在書籤，刪除 NAV）
 - Bilitool
 - Twitch Miner
 
@@ -146,25 +146,25 @@
 
 #### 影音與音樂
 
-- YouTube
-- Bilibili
+- YouTube （已在書籤，刪除 NAV）
+- Bilibili （已在書籤，刪除 NAV）
 - Twitch
 - Spotify
 - Netflix
-- YouTube Music
+- YouTube （已在書籤，刪除 NAV） Music
 - ofiii 歐飛
 
 #### 動畫與 ACG
 
 - 巴哈姆特動畫瘋
 - Bangumi 番組計畫
-- Anime1
+- Anime1 （移至 Raindrop）
 
 #### 漫畫與小說
 
-- 漫畫櫃
-- 包子漫畫
-- 列車組的不專業烤肉翻譯
+- 漫畫櫃 （移至 Raindrop）
+- 包子漫畫 （移至 Raindrop）
+- 列車組的不專業烤肉翻譯 （移至 Raindrop）
 
 #### 繪師與作品
 
@@ -200,10 +200,10 @@
 #### 社群與通訊
 
 - Discord
-- Instagram
+- Instagram （已在書籤，刪除 NAV）
 - X (Twitter)
-- Facebook
-- Threads
+- Facebook （已在書籤，刪除 NAV）
+- Threads （已在書籤，刪除 NAV）
 - Messenger
 
 #### 論壇
@@ -211,7 +211,7 @@
 - 巴哈姆特
 - Reddit
 - NGA 玩家社區
-- APK.tw
+- APK.tw （移至 Raindrop）
 
 ### 購物
 
