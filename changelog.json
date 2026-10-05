@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.46.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "統一網站描述並修正分類格式",
+    "commit": "dd58d61c04d40c09538672f6c2a3b9dd5d7ab003"
+  },
+  {
     "version": "3.0.45.1",
     "date": "2026-10-05",
     "type": "commit",
