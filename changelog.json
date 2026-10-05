@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.53.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "修正 NAV 網站整理清單的重複判定",
+    "commit": "d0372381837212aaac86b026930b4f765d3bc39c"
+  },
+  {
     "version": "3.0.52.1",
     "date": "2026-10-05",
     "type": "commit",

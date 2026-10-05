@@ -1,6 +1,6 @@
 {
-  "version": "3.0.52.1",
+  "version": "3.0.53.1",
   "date": "2026-10-05",
   "type": "commit",
-  "message": "docs: 標記 NAV 後續整理項目"
+  "message": "修正 NAV 網站整理清單的重複判定"
 }
