@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.51.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "docs: 將網站整理清單分為書籤 NAV Raindrop",
+    "commit": "098835e5e81b011646da1d7f45cc356111a8b795"
+  },
+  {
     "version": "3.0.50.1",
     "date": "2026-10-05",
     "type": "commit",
