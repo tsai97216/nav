@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.54.1",
+    "date": "2026-10-05",
+    "type": "commit",
+    "message": "更新 Squoosh 名稱與介紹",
+    "commit": "66d2f3f5d5fe87496b5b340b8998117e1ee7d05a"
+  },
+  {
     "version": "3.0.53.1",
     "date": "2026-10-05",
     "type": "commit",

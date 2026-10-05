@@ -1,6 +1,6 @@
 {
-  "version": "3.0.53.1",
+  "version": "3.0.54.1",
   "date": "2026-10-05",
   "type": "commit",
-  "message": "修正 NAV 網站整理清單的重複判定"
+  "message": "更新 Squoosh 名稱與介紹"
 }
