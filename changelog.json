@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.55.1",
+    "date": "2026-10-08",
+    "type": "commit",
+    "message": "新增 Simplenote",
+    "commit": "0cb9d17f07cbf0ffacf837fc4fac795b81b5e277"
+  },
+  {
     "version": "3.0.54.1",
     "date": "2026-10-05",
     "type": "commit",
